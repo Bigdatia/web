@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Activaciones | BigdatIA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;600&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#caf161",
+              "inverse-on-surface": "#31302e",
+              "on-secondary": "#390093",
+              "secondary": "#cfbdff",
+              "primary-fixed": "#caf161",
+              "background": "#131312",
+              "secondary-fixed": "#e8ddff",
+              "tertiary": "#ffffff",
+              "tertiary-container": "#e5e3d4",
+              "on-secondary-fixed-variant": "#5300cd",
+              "error-container": "#93000a",
+              "surface-container-high": "#2a2a28",
+              "on-tertiary-fixed-variant": "#47473d",
+              "on-primary-container": "#546d00",
+              "on-primary": "#283500",
+              "on-tertiary": "#313127",
+              "surface-variant": "#353532",
+              "secondary-fixed-dim": "#cfbdff",
+              "inverse-primary": "#4f6600",
+              "secondary-container": "#6000eb",
+              "on-error-container": "#ffdad6",
+              "inverse-surface": "#e5e2de",
+              "on-secondary-fixed": "#22005d",
+              "on-secondary-container": "#cebcff",
+              "on-error": "#690005",
+              "on-surface": "#e5e2de",
+              "error": "#ffb4ab",
+              "surface-container-low": "#1c1c1a",
+              "surface-container-highest": "#353532",
+              "on-background": "#e5e2de",
+              "surface-dim": "#131312",
+              "tertiary-fixed-dim": "#c8c7b9",
+              "surface-tint": "#afd448",
+              "surface": "#131312",
+              "surface-container": "#20201e",
+              "primary-fixed-dim": "#afd448",
+              "on-tertiary-container": "#656559",
+              "on-tertiary-fixed": "#1c1c13",
+              "on-primary-fixed-variant": "#3b4d00",
+              "primary": "#ffffff",
+              "surface-container-lowest": "#0e0e0c",
+              "outline": "#8f937e",
+              "on-primary-fixed": "#161f00",
+              "surface-bright": "#3a3937",
+              "tertiary-fixed": "#e5e3d4",
+              "on-surface-variant": "#c5c9b2",
+              "outline-variant": "#444937"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "display": ["Montserrat"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .purple-glow-on-hover:hover {
+            box-shadow: 0 0 30px 5px rgba(117, 51, 255, 0.4);
+        }
+        .bento-card-gradient {
+            background: linear-gradient(135deg, rgba(53, 53, 50, 1) 0%, rgba(28, 28, 26, 1) 100%);
+        }
+        .holographic-overlay {
+            background: linear-gradient(135deg, rgba(213, 252, 107, 0.05) 0%, rgba(117, 51, 255, 0.05) 50%, transparent 100%);
+        }
+        .inner-purple-glow-top {
+            box-shadow: inset 0 20px 40px -20px rgba(117, 51, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131312] dark:bg-[#131312] backdrop-blur-xl bg-opacity-80 border-b border-[#444937] border-opacity-15">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#FFFDEE] font-headline">
+                BigdatIA
+            </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-headline font-bold tracking-tight text-[#FFFDEE] opacity-80 hover:opacity-100 transition-opacity hover:text-[#D5FC6B] hover:bg-[#7533FF] hover:bg-opacity-10 px-3 py-1" href="#">Strategy</a>
+<a class="font-headline font-bold tracking-tight text-[#FFFDEE] opacity-80 hover:opacity-100 transition-opacity hover:text-[#D5FC6B] hover:bg-[#7533FF] hover:bg-opacity-10 px-3 py-1" href="#">Marketing</a>
+<a class="font-headline font-bold tracking-tight text-[#D5FC6B] border-b-2 border-[#D5FC6B] pb-1" href="#">Activations</a>
+<a class="font-headline font-bold tracking-tight text-[#FFFDEE] opacity-80 hover:opacity-100 transition-opacity hover:text-[#D5FC6B] hover:bg-[#7533FF] hover:bg-opacity-10 px-3 py-1" href="#">Ecosystem</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-headline font-bold tracking-tight rounded-none scale-95 active:scale-90 transition-transform purple-glow-on-hover">
+                Contact
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-8 overflow-hidden">
+<!-- Ambient Glows -->
+<div class="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-secondary-container opacity-20 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-primary-fixed opacity-10 blur-[120px] rounded-full"></div>
+<div class="relative z-10 max-w-6xl w-full text-center">
+<span class="inline-block px-4 py-1 mb-6 border border-outline-variant border-opacity-30 font-label text-xs uppercase tracking-[0.2em] text-secondary">
+                Activaciones de Marca 2024
+            </span>
+<h1 class="font-display text-6xl md:text-9xl font-black text-on-surface leading-[0.9] tracking-tighter mb-8">
+                Experiencias <span class="text-primary-fixed">Inmersivas</span> que Conectan
+            </h1>
+<p class="max-w-2xl mx-auto font-body text-xl md:text-2xl text-on-surface opacity-80 mb-12">
+                Fusionamos lo físico y lo digital para generar impacto mediático y conversión real.
+            </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="bg-primary-container text-on-primary px-10 py-5 font-headline font-bold text-lg uppercase tracking-wider rounded-none transition-all hover:scale-105 purple-glow-on-hover">
+                    Iniciar Proyecto
+                </button>
+<button class="border-2 border-secondary text-secondary px-10 py-5 font-headline font-bold text-lg uppercase tracking-wider rounded-none hover:bg-secondary hover:bg-opacity-10 transition-all">
+                    Ver Portafolio
+                </button>
+</div>
+</div>
+<!-- Video Placeholder / Motion Element -->
+<div class="mt-24 w-full max-w-5xl relative group">
+<div class="absolute -inset-1 bg-secondary opacity-20 blur-2xl group-hover:opacity-30 transition-opacity"></div>
+<div class="relative bg-surface-container-highest aspect-video w-full overflow-hidden border border-outline-variant border-opacity-15 shadow-2xl">
+<img alt="Immersive digital installation" class="w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale group-hover:grayscale-0 group-hover:opacity-90 transition-all duration-700" data-alt="Futuristic immersive digital art installation with glowing purple and green lights in a dark industrial space, cinematic wide shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZAFqm9Hkfodlp0XtfQ3Q9Tt7oVNTlDrRc1r8IE7wDM03F7Pqg78hPH_B48AI6JmpfaBliUxzihFXRKNNBYxa75b1UlBd9IP1V62TFAIZxCpPEYe6MRtGijRWRjxWzydFSF3LGVqQrQIzs1jL3AJr3NfkCmig-QWhqvVb7no7DKqGTDAjXLzD0yhk9OrEi5Br1eocPWQxHeI0Ix-C78op_5MOOn9XfBZp-hVNwaEcUha-0TS715qD-N7kZhMQrQdlVs6EKncUMr4A8"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-primary-container flex items-center justify-center text-on-primary cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-20 bg-surface-variant bg-opacity-60 backdrop-blur-2xl flex items-center px-8">
+<div class="flex-1 h-1 bg-on-surface-variant bg-opacity-30 relative overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-1/3 bg-primary-fixed"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Portfolio Grid -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-display text-4xl md:text-6xl font-black text-on-surface tracking-tighter uppercase">Instalaciones</h2>
+<p class="text-secondary-fixed opacity-60 font-label tracking-widest uppercase mt-4">Precision &amp; Impact</p>
+</div>
+<div class="hidden md:block">
+<span class="text-outline-variant font-label text-sm tracking-widest">SCROLL TO DISCOVER</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+<!-- Card 1 -->
+<div class="md:col-span-8 md:row-span-2 relative group overflow-hidden bg-surface-container-highest border border-outline-variant border-opacity-15">
+<img alt="Big Event" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Massive technological event stage with giant LED screens and laser light show in vibrant neon purple and green" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHyOX4K9-dtDY8Sc1F6HHXzN_Fa-6qFddOYTFohDzVse1KYsgJg6NinsqkZiMIL3IqtGRtOtM7K1wFmjH19hHt8pJf_SDo3g6M6_EIaxXgm6-DTeTtt4i1VHlVmPXr5j1bFdfT6Uyd4hEpqtGN8_zieQCC2ssj4Z0_NxVK2Nnw7LKRc0qa5Xbm2nuj39BtZRZbxUOXcC82tLyTrxCHMWZbMUfGJZJPMcFkzOmrdutokkhB34m5tt8Ua2AsCdBeW2kS8garondSbcAC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="font-label text-xs uppercase tracking-widest text-primary-fixed mb-2 block">Campaña Global</span>
+<h3 class="font-headline text-4xl font-black text-on-surface uppercase mb-4">Cyber-Punk Activation</h3>
+<p class="text-on-surface-variant max-w-md">Transformación de espacios urbanos en entornos digitales interactivos para el lanzamiento de flagship stores.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="md:col-span-4 md:row-span-1 relative group overflow-hidden bg-surface-container-highest border border-outline-variant border-opacity-15">
+<img alt="VR Experience" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Person wearing high-tech VR headset in a minimalist dark studio with purple ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbuLaKVPf7rq7TaiP5KCpv9DMZUSE60vbvDwv4bgVQG_HNBwnveZxIkGx-8I1UNrDQZs9KOAn1pL5QUYVbyaTQ43WfZ3fCRgXrh-lmefsRDVuzCkHVQmvcuI-_Lk3LP4aMRuhadD868KBb7GL-MSog-i8MTbkHS9uH9SkcLRDnDDCt4ZO9G-_Ub5ltOpbpeqxsuJbV8VXRawtWcbUutzcYGk0l0C4XX27Uc5eaxU_VJvvdM9mfp3pKmV3Qdi9_NvNHLdw9aXZqlA5A"/>
+<div class="absolute inset-0 holographic-overlay"></div>
+<div class="absolute top-6 right-6 font-label text-xs text-secondary-fixed">2024 / TECH</div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline text-xl font-bold text-on-surface uppercase">VR Eco-Systems</h3>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="md:col-span-4 md:row-span-1 relative group overflow-hidden bg-surface-container-highest border border-outline-variant border-opacity-15">
+<img alt="Neon Installation" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Geometric neon light sculptures hanging in a dark gallery space with misty atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5qvPq_mPyG6aWc35etvURPoCxTlFtnzVlMtJ3nMM5QnQBs4QBbEq_nDT4nCM_EiJDtNtSZktmxtGYawDbSdd6dwGxVQ9nsbUGR7dV9VPD9LuOPpzfC0CSlQCrTXMZFeMk6uNdJBIq-O0qIqglHWnOnywlTF8um7mAnijgPcz4Fk0szRkpkr1gfdIhAS_gY4ulV4pG0XdC1D1Jfu62tQc7BHhYL94g8ILpZs9K0D9H5wPpN6Za9zT9-8RZq9ETkJHFS4_1w5kbg9Ua"/>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline text-xl font-bold text-on-surface uppercase">Phygital Pop-ups</h3>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="md:col-span-12 md:row-span-1 bg-surface-container-highest border border-outline-variant border-opacity-15 p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<div class="absolute -right-20 top-0 w-64 h-64 bg-secondary opacity-10 blur-3xl"></div>
+<div class="flex items-center gap-12">
+<div>
+<div class="font-display text-5xl font-black text-primary-fixed">98%</div>
+<div class="font-label text-xs text-on-surface-variant tracking-widest mt-1">BRAND RECALL</div>
+</div>
+<div class="h-16 w-px bg-outline-variant opacity-30 hidden md:block"></div>
+<div>
+<div class="font-display text-5xl font-black text-secondary">4.2M</div>
+<div class="font-label text-xs text-on-surface-variant tracking-widest mt-1">SOCIAL REACH</div>
+</div>
+</div>
+<p class="max-w-md text-on-surface-variant text-sm md:text-right italic">
+                    "BigdatIA ha redefinido lo que significa interactuar con nuestra marca. El impacto en redes sociales superó todas las proyecciones."
+                </p>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-32 bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-24 text-center">
+<h2 class="font-display text-5xl md:text-7xl font-black text-on-surface uppercase tracking-tighter">Nuestro Proceso</h2>
+<p class="mt-4 text-on-surface-variant font-body text-lg">De la neurona a la activación física.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Step 1 -->
+<div class="relative group">
+<div class="mb-8 font-display text-8xl font-black text-outline-variant opacity-10 group-hover:opacity-30 transition-opacity">01</div>
+<h3 class="font-headline text-2xl font-black text-primary-fixed uppercase mb-4 tracking-tight">Strategy</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Analizamos el ADN de la marca y el comportamiento de la audiencia para definir el concepto rector y los KPIs de conversión.
+                    </p>
+<div class="mt-8 flex gap-2">
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant border-opacity-20 text-[10px] uppercase font-label">Data Analysis</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant border-opacity-20 text-[10px] uppercase font-label">Persona Mapping</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative group">
+<div class="mb-8 font-display text-8xl font-black text-outline-variant opacity-10 group-hover:opacity-30 transition-opacity">02</div>
+<h3 class="font-headline text-2xl font-black text-secondary uppercase mb-4 tracking-tight">Creation</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Diseñamos el ecosistema inmersivo: hardware, software, arte digital y escenografía brutalista integrada con tecnología.
+                    </p>
+<div class="mt-8 flex gap-2">
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant border-opacity-20 text-[10px] uppercase font-label">3D Rendering</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant border-opacity-20 text-[10px] uppercase font-label">UX Design</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative group">
+<div class="mb-8 font-display text-8xl font-black text-outline-variant opacity-10 group-hover:opacity-30 transition-opacity">03</div>
+<h3 class="font-headline text-2xl font-black text-primary-fixed uppercase mb-4 tracking-tight">Execution</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Producción técnica de alto nivel, despliegue en campo y monitoreo de datos en tiempo real para optimizar la experiencia.
+                    </p>
+<div class="mt-8 flex gap-2">
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant border-opacity-20 text-[10px] uppercase font-label">Real-time Analytics</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant border-opacity-20 text-[10px] uppercase font-label">Live Support</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#1C1C1A] dark:bg-[#1C1C1A] w-full rounded-t-none border-t border-[#444937] border-opacity-15 inner-purple-glow-top">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full mt-24">
+<div class="mb-10 md:mb-0">
+<div class="text-xl font-extrabold text-[#D5FC6B] font-headline mb-4">BigdatIA</div>
+<p class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 max-w-xs">
+                    © 2024 BigdatIA. Precision Luminescence in Data.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mb-10 md:mb-0">
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all hover:translate-x-1" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all hover:translate-x-1" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all hover:translate-x-1" href="#">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all hover:translate-x-1" href="#">Twitter</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-12 h-px bg-outline-variant"></div>
+<span class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant">Global Agency</span>
+</div>
+</div>
+</footer>
+</body></html>

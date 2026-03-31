@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#caf161",
+              "inverse-on-surface": "#31302e",
+              "on-secondary": "#390093",
+              "secondary": "#cfbdff",
+              "primary-fixed": "#caf161",
+              "background": "#131312",
+              "secondary-fixed": "#e8ddff",
+              "tertiary": "#ffffff",
+              "tertiary-container": "#e5e3d4",
+              "on-secondary-fixed-variant": "#5300cd",
+              "error-container": "#93000a",
+              "surface-container-high": "#2a2a28",
+              "on-tertiary-fixed-variant": "#47473d",
+              "on-primary-container": "#546d00",
+              "on-primary": "#283500",
+              "on-tertiary": "#313127",
+              "surface-variant": "#353532",
+              "secondary-fixed-dim": "#cfbdff",
+              "inverse-primary": "#4f6600",
+              "secondary-container": "#6000eb",
+              "on-error-container": "#ffdad6",
+              "inverse-surface": "#e5e2de",
+              "on-secondary-fixed": "#22005d",
+              "on-secondary-container": "#cebcff",
+              "on-error": "#690005",
+              "on-surface": "#e5e2de",
+              "error": "#ffb4ab",
+              "surface-container-low": "#1c1c1a",
+              "surface-container-highest": "#353532",
+              "on-background": "#e5e2de",
+              "surface-dim": "#131312",
+              "tertiary-fixed-dim": "#c8c7b9",
+              "surface-tint": "#afd448",
+              "surface": "#131312",
+              "surface-container": "#20201e",
+              "primary-fixed-dim": "#afd448",
+              "on-tertiary-container": "#656559",
+              "on-tertiary-fixed": "#1c1c13",
+              "on-primary-fixed-variant": "#3b4d00",
+              "primary": "#ffffff",
+              "surface-container-lowest": "#0e0e0c",
+              "outline": "#8f937e",
+              "on-primary-fixed": "#161f00",
+              "surface-bright": "#3a3937",
+              "tertiary-fixed": "#e5e3d4",
+              "on-surface-variant": "#c5c9b2",
+              "outline-variant": "#444937"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "display": ["Montserrat"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .purple-glow-on-hover:hover {
+        box-shadow: 0 0 30px rgba(117, 51, 255, 0.3);
+      }
+      .inner-purple-glow-top {
+        box-shadow: inset 0 20px 40px -20px rgba(117, 51, 255, 0.2);
+      }
+      .bg-void-gradient {
+        background: radial-gradient(circle at 80% 20%, rgba(117, 51, 255, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 20% 80%, rgba(213, 252, 107, 0.03) 0%, transparent 40%);
+      }
+      .glass-card {
+        backdrop-filter: blur(20px);
+        background: rgba(53, 53, 50, 0.6);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131312] dark:bg-[#131312] backdrop-blur-xl bg-opacity-80 border-b border-[#444937] border-opacity-15">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#FFFDEE] font-headline">BigdatIA</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#FFFDEE] opacity-60 hover:opacity-100 transition-opacity font-headline font-bold tracking-tight" href="#">Strategy</a>
+<a class="text-[#D5FC6B] border-b-2 border-[#D5FC6B] pb-1 font-headline font-bold tracking-tight" href="#">Marketing</a>
+<a class="text-[#FFFDEE] opacity-60 hover:opacity-100 transition-opacity font-headline font-bold tracking-tight" href="#">Activations</a>
+<a class="text-[#FFFDEE] opacity-60 hover:opacity-100 transition-opacity font-headline font-bold tracking-tight" href="#">Ecosystem</a>
+</div>
+<button class="bg-[#D5FC6B] text-[#283500] px-6 py-2 font-headline font-bold tracking-tight scale-95 active:scale-90 transition-transform purple-glow-on-hover">
+                Contact
+            </button>
+</div>
+</nav>
+<main class="pt-24 bg-void-gradient min-h-screen">
+<!-- Hero Section -->
+<section class="px-8 py-20 md:py-32 flex flex-col items-center text-center max-w-6xl mx-auto">
+<div class="inline-flex items-center space-x-2 bg-surface-container-highest px-3 py-1 rounded-full mb-8 outline-variant outline-[1px] outline-opacity-15">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="text-[10px] uppercase tracking-[0.2em] font-label font-bold text-on-surface-variant">Marketing Integral 4.0</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-display font-black text-on-surface mb-8 tracking-tighter leading-[0.9]">
+                Marketing con <br/>
+<span class="text-primary-container">Inteligencia Algorítmica</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-3xl font-light mb-12">
+                Campañas de performance basadas en atribución algorítmica y segmentación avanzada para escalar negocios con precisión matemática.
+            </p>
+<div class="flex flex-col md:flex-row gap-6">
+<button class="bg-primary-container text-on-primary px-10 py-5 font-headline font-bold text-lg hover:shadow-[0_0_25px_rgba(202,241,97,0.4)] transition-all">
+                    INICIAR AUDITORÍA
+                </button>
+<button class="border-2 border-secondary text-secondary px-10 py-5 font-headline font-bold text-lg hover:bg-secondary hover:bg-opacity-10 transition-all">
+                    VER ECOSISTEMA
+                </button>
+</div>
+</section>
+<!-- Bento Grid Features -->
+<section class="px-8 py-24 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<!-- Feature 1: Predictive Audiences -->
+<div class="md:col-span-2 bg-surface-container-highest p-8 relative overflow-hidden flex flex-col justify-end group">
+<div class="absolute top-0 right-0 p-8">
+<span class="text-xs font-label font-bold tracking-widest text-primary-fixed uppercase opacity-50">Tech Stack: Neural Networks</span>
+</div>
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary opacity-10 blur-[100px] group-hover:opacity-20 transition-opacity"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4" data-icon="target">target</span>
+<h3 class="text-3xl font-display font-black text-on-surface mb-2 tracking-tight">Predictive Audiences</h3>
+<p class="text-on-surface-variant max-w-md">Modelamos comportamientos futuros para encontrar a tus clientes antes de que ellos sepan que te necesitan.</p>
+</div>
+</div>
+<!-- Feature 2: Real-time -->
+<div class="bg-surface-container-high p-8 flex flex-col justify-between border border-outline-variant border-opacity-10">
+<span class="material-symbols-outlined text-secondary text-5xl" data-icon="bolt" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<div>
+<h3 class="text-xl font-headline font-bold text-on-surface mb-2">Optimización Real-time</h3>
+<p class="text-sm text-on-surface-variant">Ajustes automáticos de puja y creatividades cada 60 segundos basados en señales de conversión.</p>
+</div>
+</div>
+<!-- Feature 3: ROI Attribution -->
+<div class="bg-surface-container-low p-8 flex flex-col justify-between border border-outline-variant border-opacity-10 relative group">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent"></div>
+<div class="relative z-10">
+<div class="text-4xl font-display font-black text-primary-container mb-1 tracking-tighter">99.8%</div>
+<div class="text-[10px] font-label tracking-widest uppercase text-tertiary-fixed-dim">Precision ROI</div>
+</div>
+<div class="relative z-10">
+<h3 class="text-xl font-headline font-bold text-on-surface mb-2">ROI Attribution</h3>
+<p class="text-sm text-on-surface-variant">Adiós a la ambigüedad. Atribución Multi-Touch algorítmica para cada centavo invertido.</p>
+</div>
+</div>
+<!-- Feature 4: High-Tech Visualization (Large Bento) -->
+<div class="md:col-span-2 bg-surface-container-highest relative overflow-hidden border border-outline-variant border-opacity-10">
+<img alt="Data Visualization" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Futuristic high-tech data dashboard with glowing purple lines, interconnected nodes, and vibrant lime green bar charts against a dark interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCUTY5i9-6WGCsDCAD0S3WeO7HNwRDT9WxO6jG8m82o3a7vt63JDwsNkdvufO9QHgCCP0uUNU5D7G-Qq_QoLGtj0J_Q1-FaLjD54L0yCoeuAsCGEMBgRUvQzWn8OsPyMWju7Ex-ZXQGx_fbXcfKPTzrgngCUBZp1DWRKspBVyfd2XhRC0M9gKqTyGeeUTubyl08dO__0pXGS_Y48JG1cFSn2LQS5JnmuJwfMmFNdNicRky2iluwGcUyptvEWjCcbz3ucLniVp-NENc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-2xl font-display font-black text-on-surface tracking-tight">Visualización Cuántica</h3>
+<p class="text-on-surface-variant max-w-sm">Dashboards en vivo que transforman billones de puntos de datos en decisiones estratégicas claras.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Study Section -->
+<section class="px-8 py-24 bg-surface-container-low relative overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -inset-4 bg-secondary/15 blur-3xl rounded-full"></div>
+<div class="glass-card p-1 border border-outline-variant border-opacity-10 relative overflow-hidden">
+<img alt="Case Study" class="w-full aspect-video object-cover" data-alt="Abstract cinematic technology visual showing glowing particles forming a human silhouette amidst a stream of digital binary code in shades of purple and black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgX-io77k_Y-LJimVyGWDKfLwWzjdzn0_18OC4SrSqAVRwZWncyl5p_yZEEMbzaUssTb_lTcg77TQ9MZ9-PqCHNKMgjNYSyGgzVOBLtHdN1IA48U3VgQ_ndIz6noRPG-HdAXf1Bd5vB4S3M33abl_B-wdpgPpw_yYbBVoM_l_7Syb6Igi-4G3fGr06Q04W0Oz6D-4T1qu-3hMCGL-XMHM4X5JM7hHGvYSnCUXk62ckc6BNJEm32HC3lkh5YXMlXzD25Mj1ueUXpWHi"/>
+<div class="absolute bottom-4 left-4 right-4 glass-card px-6 py-4 flex justify-between items-center border border-outline-variant border-opacity-10">
+<div>
+<div class="text-[10px] font-label font-bold text-primary-container uppercase tracking-widest">Client Success</div>
+<div class="text-lg font-headline font-bold text-on-surface">NeoBank Global</div>
+</div>
+<div class="text-right">
+<div class="text-2xl font-display font-black text-secondary">+240%</div>
+<div class="text-[10px] font-label text-on-surface-variant uppercase">Conversion Lift</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="text-secondary font-label font-bold tracking-[0.3em] uppercase mb-4">Caso de Éxito</div>
+<h2 class="text-4xl md:text-5xl font-display font-black text-on-surface mb-6 tracking-tight">Escalando el futuro de las Fintech</h2>
+<p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                        Implementamos nuestro motor de segmentación psicográfica para NeoBank, logrando reducir el CPL en un 45% mientras aumentábamos la calidad del lead en un mercado saturado.
+                    </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface">Algoritmos de Propensión de Compra</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface">Creative Testing Automatizado (A/B/n)</span>
+</li>
+</ul>
+<a class="inline-flex items-center space-x-2 text-on-surface font-headline font-bold hover:text-primary-container transition-colors group" href="#">
+<span>LEER ESTUDIO COMPLETO</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-8 py-32 text-center max-w-4xl mx-auto">
+<h2 class="text-5xl md:text-6xl font-display font-black mb-8 tracking-tighter">¿Listo para la precisión absoluta?</h2>
+<p class="text-on-surface-variant text-xl mb-12">No dejes tu crecimiento al azar. Utiliza la arquitectura de datos más avanzada del mercado.</p>
+<div class="bg-surface-container-highest p-10 relative overflow-hidden border border-outline-variant border-opacity-20 group hover:border-primary-container transition-all">
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary-container opacity-5 blur-[80px]"></div>
+<h3 class="text-2xl font-headline font-bold mb-4">Solicita una Demo del Algoritmo</h3>
+<form class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+<input class="flex-grow bg-surface-container-low border-outline-variant border-opacity-30 focus:border-primary-container focus:ring-0 text-on-surface font-headline px-6 py-4" placeholder="tu@empresa.com" type="email"/>
+<button class="bg-primary-container text-on-primary font-headline font-bold px-8 py-4 transition-transform active:scale-95">EMPEZAR AHORA</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1C1C1A] dark:bg-[#1C1C1A] w-full rounded-t-none border-t border-[#444937] border-opacity-15 inner-purple-glow-top">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-7xl mx-auto mt-24">
+<div class="flex flex-col items-center md:items-start mb-12 md:mb-0">
+<div class="text-xl font-extrabold text-[#D5FC6B] font-headline mb-4">BigdatIA</div>
+<p class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60">© 2024 BigdatIA. Precision Luminescence in Data.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-center md:text-left">
+<div class="flex flex-col space-y-3">
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all hover:translate-x-1" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all hover:translate-x-1" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all hover:translate-x-1" href="#">Cookie Settings</a>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all hover:translate-x-1" href="#">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all hover:translate-x-1" href="#">Twitter</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all hover:translate-x-1" href="#">Instagram</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

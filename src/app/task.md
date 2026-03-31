@@ -1,0 +1,27 @@
+# Tareas de Integración Textos BigdatIA
+
+- [x] Modificar Hero Section en `src/app/page.tsx`
+  - Reemplazar título, subtítulo y textos de botones.
+- [x] Modificar Bloque de Credibilidad (Data Block)
+  - Agregar encabezado: "No hablamos desde la teoría..."
+  - Configurar las 3 columnas: +50 Empresas, +100 Proyectos, 3 Áreas.
+  - Agregar subtextos sobre pymes y marcas consolidadas.
+- [x] Modificar bloque de Servicios Principales (Bento Grid)
+  - Actualizar títulos y descripciones de las 3 tarjetas de servicio.
+  - Actualizar enlaces/CTAs en cada tarjeta.
+- [x] Añadir bloque "Marcas que han confiado"
+  - Marquee o grid tipográfico: Jugalista, Tu licorera, Gatorade, Adams realty.
+- [x] Actualizar bloque "Nuestro Ecosistema"
+  - Ajustar textos: Trabajamos con aliados, Creemos en la inteligencia colectiva.
+  - Mantener Darrum, Nueve99, Four44.
+- [x] Añadir bloque "Servicios Específicos"
+  - Listado de servicios en grilla.
+  - Call to action final: "👉 Cotizar un servicio".
+- [x] Añadir "Bloque de Conversión"
+  - Texto: "¿No sabes exactamente qué necesitas? Es normal... Agenda tu consultoría."
+- [x] Modificar "Contenido Social"
+  - Cambiar títulos por: "Así se ve BigdatIA en acción" / "Procesos reales, proyectos en curso..."
+- [x] Añadir "Frase de Cierre / Manifiesto"
+  - Texto centralizado de gran impacto antes del Footer.
+- [x] Modificar `src/components/layout/Footer.tsx`
+  - Añadir dirección, enlaces legales y teléfono proporcionado (+573164151731).

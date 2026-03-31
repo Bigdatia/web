@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>BigdatIA | Estrategia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#20201e",
+              "on-tertiary-fixed-variant": "#47473d",
+              "surface-container-low": "#1c1c1a",
+              "surface-tint": "#afd448",
+              "secondary-container": "#6000eb",
+              "on-surface": "#e5e2de",
+              "on-secondary-fixed": "#22005d",
+              "background": "#131312",
+              "outline": "#8f937e",
+              "on-error": "#690005",
+              "secondary-fixed": "#e8ddff",
+              "tertiary-fixed-dim": "#c8c7b9",
+              "surface-dim": "#131312",
+              "on-secondary-fixed-variant": "#5300cd",
+              "primary-container": "#caf161",
+              "outline-variant": "#444937",
+              "on-primary-fixed-variant": "#3b4d00",
+              "tertiary": "#ffffff",
+              "surface-container-highest": "#353532",
+              "on-primary": "#283500",
+              "on-primary-fixed": "#161f00",
+              "surface-bright": "#3a3937",
+              "secondary-fixed-dim": "#cfbdff",
+              "primary-fixed": "#caf161",
+              "on-primary-container": "#546d00",
+              "on-tertiary-container": "#656559",
+              "secondary": "#cfbdff",
+              "tertiary-container": "#e5e3d4",
+              "primary": "#ffffff",
+              "tertiary-fixed": "#e5e3d4",
+              "surface-variant": "#353532",
+              "error-container": "#93000a",
+              "inverse-primary": "#4f6600",
+              "error": "#ffb4ab",
+              "on-surface-variant": "#c5c9b2",
+              "surface-container-high": "#2a2a28",
+              "on-secondary-container": "#cebcff",
+              "surface": "#131312",
+              "on-tertiary": "#313127",
+              "on-background": "#e5e2de",
+              "on-error-container": "#ffdad6",
+              "on-secondary": "#390093",
+              "surface-container-lowest": "#0e0e0c",
+              "on-tertiary-fixed": "#1c1c13",
+              "primary-fixed-dim": "#afd448",
+              "inverse-surface": "#e5e2de",
+              "inverse-on-surface": "#31302e"
+            },
+            fontFamily: {
+              "headline": ["Montserrat", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"],
+              "brand": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        body {
+            background-color: #131312;
+            color: #e5e2de;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(53, 53, 50, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .purple-glow-underlay {
+            position: absolute;
+            z-index: -1;
+            filter: blur(60px);
+            background: #6000eb;
+            opacity: 0.15;
+            border-radius: 50%;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-[#444937]/15 flex items-center justify-between px-6 h-16 shadow-[0_0_40px_rgba(117,51,255,0.15)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#D5FC6B] active:scale-95 duration-200 cursor-pointer">menu</span>
+<span class="text-[#FFFDEE] text-2xl font-black tracking-tighter font-brand">BigdatIA</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-[#D5FC6B]/30">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional corporate headshot of a business executive with a neutral background and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTROYSW0DKeNi4QTkwsGW27RxM4aSzWS0rIJlSCC8EJIilGehH6uM85xp530VGdsxxF_0FcX1nntGGM55_MlF3V7xscWPtsTt6su9DviqMJtPNrsm8jXAx6916bYbM26w2uDYZ61OW5lfbajrOSNr93mswikztgzHkL_FKCtLh51lo3iucSGMOqUEkZUjEpzrVsskXzxvy9d8mqPMCMgf6ZsLobOBajaRvsZq6yvOeAQl1y9Lv16hkdNJoSKTsPO9gXnmZthcSw90V"/>
+</div>
+</header>
+<main class="pt-16 pb-24 overflow-x-hidden">
+<!-- Mobile Hero -->
+<section class="relative px-6 pt-12 pb-20 overflow-hidden">
+<div class="purple-glow-underlay w-64 h-64 -top-20 -right-20"></div>
+<div class="relative z-10">
+<span class="font-brand uppercase tracking-[0.2em] text-[10px] text-primary-fixed mb-4 block font-bold">Strategy &amp; Consulting</span>
+<h1 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface leading-[1.1] mb-6">
+                    Consultoría Estratégica que Escala Negocios
+                </h1>
+<p class="text-on-surface-variant text-base leading-relaxed mb-10 max-w-xs">
+                    Alineamos sus objetivos comerciales con el mercado global mediante inteligencia de datos pura y ejecución táctica.
+                </p>
+<div class="flex flex-col gap-4">
+<button class="bg-primary-container text-on-primary font-bold py-4 px-8 flex items-center justify-center gap-2 rounded-sm hover:opacity-80 transition-opacity active:scale-95 duration-200 shadow-[0_0_20px_rgba(213,252,107,0.3)]">
+                        SOLICITAR AUDITORÍA
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="border-2 border-secondary-container text-secondary-fixed font-bold py-4 px-8 flex items-center justify-center rounded-sm hover:bg-secondary-container/10 transition-colors active:scale-95 duration-200">
+                        VER ECOSISTEMA
+                    </button>
+</div>
+</div>
+<div class="mt-16 relative">
+<div class="aspect-video w-full rounded-sm overflow-hidden border border-outline-variant/15 shadow-2xl relative">
+<img class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="futuristic digital dashboard showing complex data visualizations with glowing purple and lemon accents on a dark glass interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSFqh7Ah7Ikale-5TbP4PlXnCxu3MzM6-KXpKekh1g9D-SZJvPDzwcUhcumaEGoy8F91oui-Mbr4IX6GEym0PfS0xDPcKfFiMZ_EGxbCKHKrcttO7AbGJG6fqV99jaQJdV9Xyal8sv4FKOkg4u8cmCjHrja3pAsPd75idJBIKcjsiusPxooLppC4U-_rqOk4pfnlS4wpGhQGYALkH5-AEze10IqZF2u1HNXsJdk4BD6_BMdIRf2S9aoJiYUC-PJrayyCjMFGoNj8nr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="purple-glow-underlay w-80 h-40 bottom-0 left-1/2 -translate-x-1/2 opacity-30"></div>
+</div>
+</section>
+<!-- ROI & Decision Speed (Impact Cards) -->
+<section class="px-6 py-12 space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-highest p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary-fixed/5 rounded-full -mr-8 -mt-8"></div>
+<span class="font-headline text-4xl font-black text-primary-fixed block mb-2 tracking-tighter">+45%</span>
+<span class="font-brand text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Growth ROI</span>
+<p class="text-[10px] mt-4 text-on-tertiary-fixed-variant leading-tight">Optimización de activos digitales en Q1-Q3.</p>
+</div>
+<div class="bg-surface-container-highest p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary-container/5 rounded-full -mr-8 -mt-8"></div>
+<span class="font-headline text-4xl font-black text-secondary-fixed block mb-2 tracking-tighter">3X</span>
+<span class="font-brand text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Speed Scale</span>
+<p class="text-[10px] mt-4 text-on-tertiary-fixed-variant leading-tight">Velocidad en toma de decisiones críticas.</p>
+</div>
+</div>
+</section>
+<!-- Metodología de Impacto -->
+<section class="px-6 py-16">
+<div class="flex items-center gap-4 mb-10">
+<div class="h-[1px] flex-1 bg-outline-variant/30"></div>
+<h2 class="font-headline text-xl font-extrabold uppercase tracking-widest text-on-surface">Metodología</h2>
+<div class="h-[1px] flex-1 bg-outline-variant/30"></div>
+</div>
+<div class="space-y-4">
+<!-- Exploration -->
+<div class="bg-surface-container-low p-8 border-l-4 border-primary-fixed relative">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-fixed text-3xl">insights</span>
+<span class="font-brand text-[10px] text-on-surface-variant opacity-50 font-bold">PHASE 01</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Exploration</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Auditoría profunda de datos y análisis de brechas competitivas en tiempo real.</p>
+</div>
+<!-- Architecture -->
+<div class="bg-surface-container-low p-8 border-l-4 border-secondary-container relative">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">account_tree</span>
+<span class="font-brand text-[10px] text-on-surface-variant opacity-50 font-bold">PHASE 02</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Architecture</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Diseño de infraestructuras escalables y modelos de atribución multicanal.</p>
+</div>
+<!-- Execution -->
+<div class="bg-surface-container-low p-8 border-l-4 border-tertiary-fixed-dim relative">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-tertiary-fixed text-3xl">rocket_launch</span>
+<span class="font-brand text-[10px] text-on-surface-variant opacity-50 font-bold">PHASE 03</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Execution</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Implementación ágil con ciclos de feedback de 48 horas para máxima precisión.</p>
+</div>
+</div>
+</section>
+<!-- Integración Ecosistémica -->
+<section class="px-6 py-12">
+<div class="bg-surface-container-high rounded-sm p-8 relative overflow-hidden">
+<div class="purple-glow-underlay w-40 h-40 -bottom-10 -left-10 opacity-20"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-2xl font-black mb-4">Integración Ecosistémica</h2>
+<p class="text-on-surface-variant text-sm mb-8">Nuestra plataforma se conecta nativamente con su stack tecnológico actual para una transición sin fricciones.</p>
+<div class="flex flex-wrap gap-6 items-center justify-center opacity-60">
+<span class="material-symbols-outlined text-4xl">hub</span>
+<span class="material-symbols-outlined text-4xl">cloud_sync</span>
+<span class="material-symbols-outlined text-4xl">api</span>
+<span class="material-symbols-outlined text-4xl">database</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Roadmap Estratégico -->
+<section class="px-6 py-16">
+<h2 class="font-headline text-2xl font-black mb-12">Roadmap Estratégico</h2>
+<div class="relative ml-4 border-l border-outline-variant/30 pl-8 space-y-12">
+<!-- Step 1 -->
+<div class="relative">
+<div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-primary-fixed border-4 border-background"></div>
+<div class="flex flex-col">
+<span class="font-brand text-[10px] uppercase font-black text-primary-fixed mb-1">Weeks 1-4</span>
+<h4 class="font-headline text-lg font-bold text-on-surface mb-2">Data Audit &amp; Blueprint</h4>
+<p class="text-on-surface-variant text-sm">Escaneo total de la infraestructura y definición del norte estratégico.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-secondary-container border-4 border-background"></div>
+<div class="flex flex-col">
+<span class="font-brand text-[10px] uppercase font-black text-secondary-fixed mb-1">Weeks 5-12</span>
+<h4 class="font-headline text-lg font-bold text-on-surface mb-2">Core Transformation</h4>
+<h4 class="font-headline text-lg font-bold text-on-surface mb-2">Core Transformation</h4>
+<p class="text-on-surface-variant text-sm">Despliegue de los motores de IA y reestructuración de canales de marketing.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-on-tertiary-fixed-variant border-4 border-background"></div>
+<div class="flex flex-col">
+<span class="font-brand text-[10px] uppercase font-black text-tertiary-fixed-dim mb-1">Weeks 13+</span>
+<h4 class="font-headline text-lg font-bold text-on-surface mb-2">Continuous Optimization</h4>
+<p class="text-on-surface-variant text-sm">Escalado progresivo basado en resultados empíricos y modelos predictivos.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 py-20 bg-surface-container-low border-t border-outline-variant/10 text-center relative overflow-hidden">
+<div class="purple-glow-underlay w-96 h-96 -top-48 -right-48 opacity-10"></div>
+<h2 class="font-headline text-3xl font-black text-on-surface mb-6 px-4">Listo para transformar su modelo de negocio?</h2>
+<p class="text-on-surface-variant mb-10 text-sm">Nuestros consultores están listos para analizar su caso específico.</p>
+<button class="w-full bg-primary-container text-on-primary font-black py-5 px-8 rounded-none hover:opacity-90 transition-all active:scale-95 shadow-[0_10px_30px_rgba(213,252,107,0.2)] font-brand uppercase tracking-tighter text-lg">
+                SOLICITAR AUDITORÍA ESTRATÉGICA
+            </button>
+</section>
+</main>
+<!-- NavigationDrawer (Mobile Placeholder) -->
+<div class="fixed inset-y-0 left-0 z-[60] flex flex-col py-8 bg-[#131312] h-full w-80 rounded-r-none -translate-x-full transition-transform duration-300 ease-in-out shadow-[20px_0_60px_-10px_rgba(117,51,255,0.2)]" id="drawer">
+<div class="px-6 mb-12">
+<span class="text-[#FFFDEE] font-extrabold font-brand text-2xl">BigdatIA Navigator</span>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-6 py-4 bg-[#D5FC6B] text-black font-bold rounded-sm mx-4" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-brand uppercase tracking-[0.1em] text-xs">Strategy</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#FFFDEE]/70 hover:bg-[#353532] hover:text-[#FFFDEE] mx-4 transition-all" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<span class="font-brand uppercase tracking-[0.1em] text-xs">Marketing</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#FFFDEE]/70 hover:bg-[#353532] hover:text-[#FFFDEE] mx-4 transition-all" href="#">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span class="font-brand uppercase tracking-[0.1em] text-xs">Activations</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#FFFDEE]/70 hover:bg-[#353532] hover:text-[#FFFDEE] mx-4 transition-all" href="#">
+<span class="material-symbols-outlined">hub</span>
+<span class="font-brand uppercase tracking-[0.1em] text-xs">Ecosystem</span>
+</a>
+</nav>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-safe px-4 bg-[#1C1C1A]/80 backdrop-blur-md border-t border-[#444937]/15 shadow-[0_-10px_40px_rgba(117,51,255,0.1)]">
+<div class="flex flex-col items-center justify-center text-[#FFFDEE]/40 hover:text-[#FFFDEE] transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined text-2xl" data-icon="ads_click">ads_click</span>
+<span class="font-brand text-[10px] font-medium mt-1">Ads</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#D5FC6B] drop-shadow-[0_0_8px_rgba(213,252,107,0.5)] active:scale-90 duration-150">
+<span class="material-symbols-outlined text-2xl" data-icon="query_stats">query_stats</span>
+<span class="font-brand text-[10px] font-medium mt-1">Strategy</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#FFFDEE]/40 hover:text-[#FFFDEE] transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined text-2xl" data-icon="account_tree">account_tree</span>
+<span class="font-brand text-[10px] font-medium mt-1">Flows</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#FFFDEE]/40 hover:text-[#FFFDEE] transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined text-2xl" data-icon="layers">layers</span>
+<span class="font-brand text-[10px] font-medium mt-1">Assets</span>
+</div>
+</nav>
+</body></html>

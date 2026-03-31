@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#caf161",
+              "inverse-on-surface": "#31302e",
+              "on-secondary": "#390093",
+              "secondary": "#cfbdff",
+              "primary-fixed": "#caf161",
+              "background": "#131312",
+              "secondary-fixed": "#e8ddff",
+              "tertiary": "#ffffff",
+              "tertiary-container": "#e5e3d4",
+              "on-secondary-fixed-variant": "#5300cd",
+              "error-container": "#93000a",
+              "surface-container-high": "#2a2a28",
+              "on-tertiary-fixed-variant": "#47473d",
+              "on-primary-container": "#546d00",
+              "on-primary": "#283500",
+              "on-tertiary": "#313127",
+              "surface-variant": "#353532",
+              "secondary-fixed-dim": "#cfbdff",
+              "inverse-primary": "#4f6600",
+              "secondary-container": "#6000eb",
+              "on-error-container": "#ffdad6",
+              "inverse-surface": "#e5e2de",
+              "on-secondary-fixed": "#22005d",
+              "on-secondary-container": "#cebcff",
+              "on-error": "#690005",
+              "on-surface": "#e5e2de",
+              "error": "#ffb4ab",
+              "surface-container-low": "#1c1c1a",
+              "surface-container-highest": "#353532",
+              "on-background": "#e5e2de",
+              "surface-dim": "#131312",
+              "tertiary-fixed-dim": "#c8c7b9",
+              "surface-tint": "#afd448",
+              "surface": "#131312",
+              "surface-container": "#20201e",
+              "primary-fixed-dim": "#afd448",
+              "on-tertiary-container": "#656559",
+              "on-tertiary-fixed": "#1c1c13",
+              "on-primary-fixed-variant": "#3b4d00",
+              "primary": "#ffffff",
+              "surface-container-lowest": "#0e0e0c",
+              "outline": "#8f937e",
+              "on-primary-fixed": "#161f00",
+              "surface-bright": "#3a3937",
+              "tertiary-fixed": "#e5e3d4",
+              "on-surface-variant": "#c5c9b2",
+              "outline-variant": "#444937"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .purple-glow-on-hover:hover {
+        box-shadow: 0 0 20px 2px rgba(117, 51, 255, 0.3);
+      }
+      .inner-purple-glow-top {
+        box-shadow: inset 0 10px 30px -10px rgba(117, 51, 255, 0.15);
+      }
+      .text-glow-lemon:focus {
+        box-shadow: 0 0 15px rgba(213, 252, 107, 0.4);
+      }
+      .bg-aura-purple {
+        background: radial-gradient(circle at 80% 20%, rgba(96, 0, 235, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 20% 80%, rgba(96, 0, 235, 0.1) 0%, transparent 40%);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131312] dark:bg-[#131312] backdrop-blur-xl bg-opacity-80 border-b border-[#444937] border-opacity-15">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#FFFDEE] font-headline">
+                BigdatIA
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline font-bold tracking-tight text-[#FFFDEE] opacity-80 hover:opacity-100 transition-opacity hover:text-[#D5FC6B] hover:bg-[#7533FF] hover:bg-opacity-10 px-3 py-1 scale-95 active:scale-90 transition-transform" href="#">Strategy</a>
+<a class="font-headline font-bold tracking-tight text-[#FFFDEE] opacity-80 hover:opacity-100 transition-opacity hover:text-[#D5FC6B] hover:bg-[#7533FF] hover:bg-opacity-10 px-3 py-1 scale-95 active:scale-90 transition-transform" href="#">Marketing</a>
+<a class="font-headline font-bold tracking-tight text-[#FFFDEE] opacity-80 hover:opacity-100 transition-opacity hover:text-[#D5FC6B] hover:bg-[#7533FF] hover:bg-opacity-10 px-3 py-1 scale-95 active:scale-90 transition-transform" href="#">Activations</a>
+<a class="font-headline font-bold tracking-tight text-[#FFFDEE] opacity-80 hover:opacity-100 transition-opacity hover:text-[#D5FC6B] hover:bg-[#7533FF] hover:bg-opacity-10 px-3 py-1 scale-95 active:scale-90 transition-transform" href="#">Ecosystem</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="font-headline font-bold tracking-tight text-[#D5FC6B] border-b-2 border-[#D5FC6B] pb-1 purple-glow-on-hover scale-95 active:scale-90 transition-transform" href="#">
+                    Contact
+                </a>
+</div>
+</div>
+</nav>
+<main class="relative pt-32 min-h-screen bg-aura-purple overflow-hidden">
+<!-- Hero Section -->
+<section class="px-8 md:px-24 mb-24">
+<div class="max-w-5xl">
+<span class="inline-block px-4 py-1 mb-6 text-xs font-label tracking-[0.2em] uppercase text-secondary border border-outline-variant border-opacity-30 bg-surface-container-low">Conectemos</span>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-8">
+                    Hablemos de <br/>
+<span class="text-primary-container">Datos y Estrategia</span>
+</h1>
+<p class="text-on-surface-variant max-w-xl text-lg leading-relaxed font-light">
+                    Transformamos la complejidad algorítmica en decisiones de negocio con impacto real. Cuéntanos tu desafío.
+                </p>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="px-8 md:px-24 pb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Contact Form: Bento Box -->
+<div class="lg:col-span-7 bg-surface-container-low p-8 md:p-12 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container opacity-5 blur-[100px] pointer-events-none"></div>
+<form action="#" class="space-y-8 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2">Nombre</label>
+<input class="w-full bg-surface-container-highest border-b border-outline-variant px-0 py-3 text-on-surface placeholder:text-on-surface-variant/30 focus:outline-none focus:border-primary-container focus:ring-0 transition-all text-glow-lemon" placeholder="Ej. Alex Rivera" type="text"/>
+</div>
+<div class="relative">
+<label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2">Compañía</label>
+<input class="w-full bg-surface-container-highest border-b border-outline-variant px-0 py-3 text-on-surface placeholder:text-on-surface-variant/30 focus:outline-none focus:border-primary-container focus:ring-0 transition-all text-glow-lemon" placeholder="Tu empresa" type="text"/>
+</div>
+</div>
+<div class="relative">
+<label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2">Email Corporativo</label>
+<input class="w-full bg-surface-container-highest border-b border-outline-variant px-0 py-3 text-on-surface placeholder:text-on-surface-variant/30 focus:outline-none focus:border-primary-container focus:ring-0 transition-all text-glow-lemon" placeholder="alex@empresa.com" type="email"/>
+</div>
+<div class="relative">
+<label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2">Mensaje</label>
+<textarea class="w-full bg-surface-container-highest border-b border-outline-variant px-0 py-3 text-on-surface placeholder:text-on-surface-variant/30 focus:outline-none focus:border-primary-container focus:ring-0 transition-all resize-none text-glow-lemon" placeholder="¿Cómo podemos ayudarte a escalar?" rows="4"></textarea>
+</div>
+<button class="mt-8 px-12 py-4 bg-primary-container text-on-primary font-headline font-extrabold text-sm tracking-tighter uppercase hover:shadow-[0_0_20px_rgba(213,252,107,0.4)] transition-all active:scale-95" type="submit">
+                            Enviar Propuesta
+                        </button>
+</form>
+</div>
+<!-- Contact Info & Visuals -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<!-- Madrid HQ Card -->
+<div class="bg-surface-container-highest p-8 border-l-4 border-secondary border-opacity-50">
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-headline font-bold text-xl tracking-tight text-on-surface">Madrid HQ</h3>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<p class="text-on-surface-variant font-light mb-8 leading-relaxed">
+                            Calle de la Precisión 124, Planta 4<br/>
+                            28046 Madrid, España
+                        </p>
+<div class="aspect-video w-full bg-surface-container-lowest overflow-hidden group">
+<img class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700" data-alt="Modern architectural view of Madrid business district towers against a dramatic twilight sky with deep purple and blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_In3fmPchmBxFcFSIP78cQqDtC0AOWHg1E6d2L7ASgulqLtfAybVY1mzVrHYosbTfb5vEJcbLG1dzqu0b7vr7XdczotjlRh_kZp5RvetwwBfSeusHEjGaRQJJ8CHt8ro0tJwO5JwwsHp149y5qFb2kuVj0m1WFOszMe2N-7wH14_Xqb3wXffN5Wh8-Z9aQlNRkXyBGLgs4asxGaa1WazKM-m1SyaP1a0syz7lDIowuWM9mAuI3ifIm_B179uKHRVfH4ggWOZPiunE"/>
+</div>
+</div>
+<!-- Social & Digital Links -->
+<div class="grid grid-cols-2 gap-4">
+<a class="bg-surface-container-low p-6 flex items-center justify-between group hover:bg-surface-container-high transition-colors" href="#">
+<div>
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant opacity-60">Seguir en</p>
+<p class="font-headline font-bold text-on-surface">LinkedIn</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all">north_east</span>
+</a>
+<a class="bg-surface-container-low p-6 flex items-center justify-between group hover:bg-surface-container-high transition-colors" href="#">
+<div>
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant opacity-60">Hablemos por</p>
+<p class="font-headline font-bold text-on-surface">Twitter / X</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all">north_east</span>
+</a>
+</div>
+<!-- Ambient Stat/Badge -->
+<div class="flex-grow bg-surface-container-lowest p-8 flex flex-col justify-end border border-outline-variant border-opacity-10 relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary-container opacity-5 rounded-full blur-3xl"></div>
+<p class="text-primary-container font-headline font-black text-4xl tracking-tighter mb-2">99.9%</p>
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Disponibilidad de Datos Críticos</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#1C1C1A] dark:bg-[#1C1C1A] border-t border-[#444937] border-opacity-15 inner-purple-glow-top">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full">
+<div class="mb-8 md:mb-0">
+<div class="text-xl font-extrabold text-[#D5FC6B] font-headline mb-4 uppercase tracking-tighter">BigdatIA</div>
+<p class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE]">© 2024 BigdatIA. Precision Luminescence in Data.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all duration-200 hover:translate-x-1" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all duration-200 hover:translate-x-1" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all duration-200 hover:translate-x-1" href="#">Cookie Settings</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all duration-200 hover:translate-x-1" href="#">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all duration-200 hover:translate-x-1" href="#">Twitter</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-[#FFFDEE] opacity-60 hover:opacity-100 hover:text-[#7533FF] transition-all duration-200 hover:translate-x-1" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+</body></html>
