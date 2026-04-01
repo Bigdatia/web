@@ -14,7 +14,7 @@ export default function Estrategia() {
       <Navbar />
       <main className="pt-24 md:pt-32 pb-24 md:pb-0">
         {/* Hero Section */}
-        <section className="relative min-h-[calc(100vh-8rem)] flex items-center px-8 overflow-hidden">
+        <section className="relative min-h-[calc(100dvh-8rem)] flex items-center px-8 overflow-hidden">
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-l from-secondary-container/30 to-transparent"></div>
             <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary/40 via-transparent to-transparent blur-[120px]"></div>

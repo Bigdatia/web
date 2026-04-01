@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
       <main className="pt-24 md:pt-32 pb-24 md:pb-0">
         {/* Hero Section */}
-        <section className="max-w-[1440px] mx-auto px-8 min-h-[calc(100vh-8rem)] flex items-center justify-center">
+        <section className="max-w-[1440px] mx-auto px-8 min-h-[calc(100dvh-8rem)] flex items-center justify-center">
           <div className="grid md:grid-cols-2 gap-16 items-center w-full">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl font-black font-headline leading-[1.1] md:leading-[0.9] tracking-tighter text-brand-cream text-center md:text-left">

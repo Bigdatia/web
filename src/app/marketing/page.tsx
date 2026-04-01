@@ -14,7 +14,7 @@ export default function Marketing() {
       <Navbar />
       <main className="pt-24 lg:pt-32 pb-24 md:pb-0">
         {/* Hero Section */}
-        <header className="relative min-h-[calc(100vh-8rem)] flex items-center px-6 md:px-8 overflow-hidden">
+        <header className="relative min-h-[calc(100dvh-8rem)] flex items-center px-6 md:px-8 overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-30">
             <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-secondary-container blur-[120px] rounded-full opacity-20"></div>
             <div className="absolute bottom-0 left-0 w-[800px] h-[400px] bg-primary-container blur-[150px] rounded-full opacity-10"></div>

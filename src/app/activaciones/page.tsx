@@ -14,7 +14,7 @@ export default function Activaciones() {
       <Navbar />
       <main className="pt-24 md:pt-32 pb-24 md:pb-0">
         {/* Hero Section */}
-        <section className="relative min-h-[calc(100vh-8rem)] flex flex-col items-center justify-center px-8 overflow-hidden">
+        <section className="relative min-h-[calc(100dvh-8rem)] flex flex-col items-center justify-center px-8 overflow-hidden">
           <div className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-secondary-container opacity-20 blur-[120px] rounded-full"></div>
           <div className="absolute bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-primary-fixed opacity-10 blur-[120px] rounded-full"></div>
           
