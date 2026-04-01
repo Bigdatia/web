@@ -228,7 +228,7 @@ export default function PortfolioPage() {
 
             {/* Filters - FORCED SINGLE LINE */}
             <div className="flex flex-nowrap md:flex-wrap gap-2 overflow-x-auto max-w-full no-scrollbar pb-4 xl:pb-0 pt-4 xl:pt-0 w-full xl:w-auto">
-              <FilterButton active={filter === 'all'} onClick={() => setFilter('all')}>
+              <FilterButton icon="grid_view" active={filter === 'all'} onClick={() => setFilter('all')}>
                 {t.portfolio.filters.all}
               </FilterButton>
               <FilterButton icon="videocam" active={filter === 'video'} onClick={() => setFilter('video')}>
