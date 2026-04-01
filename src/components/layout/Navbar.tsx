@@ -25,7 +25,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full flex justify-between items-center px-6 md:px-8 py-4 max-w-[1440px] left-1/2 -translate-x-1/2 z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant/10">
+      <nav className="fixed top-0 left-0 right-0 flex justify-between items-center px-6 md:px-12 py-4 z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant/10">
         <Link href="/" className="text-xl md:text-2xl font-black tracking-tighter text-brand-cream uppercase font-brand">
           BigdatIA
         </Link>
