@@ -18,6 +18,7 @@ export function Navbar() {
     { href: '/marketing', label: t.nav.marketing },
     { href: '/activaciones', label: t.nav.activations },
     { href: '/ecosistema', label: t.nav.web },
+    { href: '/portafolio', label: t.nav.portfolio },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
