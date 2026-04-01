@@ -38,17 +38,14 @@ const ProjectCard = ({ item, onClick }: { item: any, onClick: (item: any) => voi
       onClick={() => onClick(item)}
     >
       {/* Imagen Thumbnail */}
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 w-full overflow-hidden bg-surface-container">
         <div className="absolute inset-0 bg-background/40 group-hover:bg-transparent transition-all duration-500 z-10" />
-        <img
+        <Image
           src={item.image}
           alt={item.title}
-          loading="lazy"
-          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-          onError={(e) => {
-            (e.target as HTMLImageElement).onerror = null;
-            (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800";
-          }}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
         />
         <div className="absolute top-4 right-4 bg-background/80 backdrop-blur-md p-2 text-brand-lemon border border-brand-lemon/30 z-20">
           <Icon name={getIcon()} className="w-5 h-5" />
@@ -110,14 +107,12 @@ const ProjectModal = ({ project, onClose, t }: { project: any, onClose: () => vo
                   />
                 </div>
               ) : (
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).onerror = null;
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800";
-                  }}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
               )}
           </div>
