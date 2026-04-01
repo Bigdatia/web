@@ -21,7 +21,7 @@ export default function Marketing() {
           </div>
           <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h1 className="text-4xl md:text-8xl font-headline font-extrabold tracking-[-0.03em] leading-[1.1] md:leading-none mb-8 text-center lg:text-left">
+              <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline font-black tracking-[-0.03em] leading-[1.1] md:leading-[0.9] mb-8 text-center lg:text-left uppercase">
                 {t.marketing.hero.title} <br className="hidden md:block" /> <span className="text-primary-container">{t.marketing.hero.titleAccent}</span>
               </h1>
               <p className="text-lg md:text-2xl text-on-surface/70 font-light max-w-xl leading-relaxed mb-12 text-center lg:text-left mx-auto lg:mx-0">
@@ -58,7 +58,7 @@ export default function Marketing() {
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-end mb-16">
               <div className="text-center md:text-left">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4 tracking-tighter uppercase">{t.marketing.features.title}</h2>
+                <h2 className="text-3xl md:text-5xl font-headline font-black mb-4 tracking-tighter uppercase">{t.marketing.features.title}</h2>
                 <p className="text-on-surface/50 font-label uppercase tracking-widest text-sm">{t.marketing.features.subtitle}</p>
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function Marketing() {
                 <div className="inline-block px-3 py-1 bg-secondary/10 border border-secondary/30 text-secondary text-[10px] uppercase font-bold tracking-[0.3em] mb-8">
                   {t.marketing.caseStudy.badge}
                 </div>
-                <h2 className="text-4xl md:text-5xl font-headline font-extrabold mb-6 tracking-tighter uppercase leading-tight">
+                <h2 className="text-3xl md:text-5xl font-headline font-black mb-6 tracking-tighter uppercase leading-tight">
                   {t.marketing.caseStudy.title} <span className="text-secondary italic">{t.marketing.caseStudy.titleAccent}</span>
                 </h2>
                 <p className="text-xl text-on-surface/70 mb-10 leading-relaxed italic border-l-2 border-primary-container pl-6">
@@ -190,7 +190,7 @@ export default function Marketing() {
         <section className="py-32 px-8 bg-primary-container text-on-primary relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-on-primary/5 -skew-x-12 translate-x-32"></div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-4xl md:text-6xl font-headline font-black mb-8 uppercase tracking-tighter leading-none">
+            <h2 className="text-3xl md:text-5xl font-headline font-black mb-8 uppercase tracking-tighter leading-none">
                 {t.marketing.cta.title}
             </h2>
             <p className="text-lg md:text-xl font-medium mb-12 opacity-80 max-w-2xl mx-auto uppercase tracking-wide">

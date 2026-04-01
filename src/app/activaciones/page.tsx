@@ -22,7 +22,7 @@ export default function Activaciones() {
             <span className="inline-block px-4 py-1 mb-6 border border-outline-variant border-opacity-30 font-label text-xs uppercase tracking-[0.2em] text-secondary">
               {t.activaciones.hero.badge} {new Date().getFullYear()}
             </span>
-            <h1 className="font-display text-4xl md:text-7xl font-black text-on-surface leading-[1.1] md:leading-[0.9] tracking-tighter mb-8">
+            <h1 className="font-headline text-4xl md:text-7xl lg:text-8xl font-black text-on-surface leading-[1.1] md:leading-[0.9] tracking-tighter mb-8 uppercase">
               {t.activaciones.hero.title} <span className="text-primary-fixed">{t.activaciones.hero.titleAccent}</span> {t.activaciones.hero.titleEnd}
             </h1>
             <p className="max-w-2xl mx-auto font-body text-xl md:text-2xl text-on-surface opacity-80 mb-12">
@@ -67,7 +67,7 @@ export default function Activaciones() {
         <section className="py-24 px-8 max-w-7xl mx-auto">
           <div className="flex justify-between items-end mb-16">
             <div>
-              <h2 className="font-display text-3xl md:text-5xl font-black text-on-surface tracking-tighter uppercase">{t.activaciones.portfolio.title}</h2>
+              <h2 className="font-headline text-3xl md:text-5xl font-black text-on-surface tracking-tighter uppercase">{t.activaciones.portfolio.title}</h2>
               <p className="text-secondary-fixed opacity-60 font-label tracking-widest uppercase mt-4">{t.activaciones.portfolio.subtitle}</p>
             </div>
             <div className="hidden md:block">
@@ -87,7 +87,7 @@ export default function Activaciones() {
               <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
               <div className="absolute bottom-0 left-0 p-10">
                 <span className="font-label text-xs uppercase tracking-widest text-primary-fixed mb-2 block">{t.activaciones.portfolio.card1.label}</span>
-                <h3 className="font-headline text-4xl font-black text-on-surface uppercase mb-4">{t.activaciones.portfolio.card1.title}</h3>
+                <h3 className="font-headline text-2xl md:text-4xl font-black text-on-surface uppercase mb-4 tracking-tighter">{t.activaciones.portfolio.card1.title}</h3>
                 <p className="text-on-surface-variant max-w-md">{t.activaciones.portfolio.card1.desc}</p>
               </div>
             </div>
@@ -143,13 +143,13 @@ export default function Activaciones() {
         <section className="py-32 bg-surface-container-low relative">
           <div className="max-w-7xl mx-auto px-8">
             <div className="mb-24 text-center">
-              <h2 className="font-display text-4xl md:text-6xl font-black text-on-surface uppercase tracking-tighter">{t.activaciones.process.title}</h2>
+              <h2 className="font-headline text-3xl md:text-5xl font-black text-on-surface uppercase tracking-tighter">{t.activaciones.process.title}</h2>
               <p className="mt-4 text-on-surface-variant font-body text-lg">{t.activaciones.process.subtitle}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div className="relative group">
                 <div className="mb-8 font-display text-6xl font-black text-outline-variant opacity-10 group-hover:opacity-30 transition-opacity">01</div>
-                <h3 className="font-headline text-2xl font-black text-primary-fixed uppercase mb-4 tracking-tight">{t.activaciones.process.step1.title}</h3>
+                <h3 className="font-headline text-2xl md:text-3xl font-black text-primary-fixed uppercase mb-4 tracking-tight">{t.activaciones.process.step1.title}</h3>
                 <p className="text-on-surface-variant leading-relaxed">{t.activaciones.process.step1.desc}</p>
                 <div className="mt-8 flex gap-2">
                   <span className="px-3 py-1 bg-surface-container-highest border border-outline-variant border-opacity-20 text-[10px] uppercase font-label">{t.activaciones.process.step1.tag1}</span>

@@ -18,7 +18,7 @@ export default function Home() {
         <section className="max-w-[1440px] mx-auto px-8 min-h-[calc(100dvh-8rem)] flex items-center justify-center">
           <div className="grid md:grid-cols-2 gap-16 items-center w-full">
           <div className="space-y-8">
-            <h1 className="text-4xl md:text-6xl font-black font-headline leading-[1.1] md:leading-[0.9] tracking-tighter text-brand-cream text-center md:text-left">
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black font-headline leading-[1.1] md:leading-[0.9] tracking-tighter text-brand-cream text-center md:text-left uppercase">
               {t.home.hero.title} <span className="text-brand-lemon">{t.home.hero.titleAccent}</span>
             </h1>
             <p className="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed text-center md:text-left mx-auto md:mx-0">
@@ -49,7 +49,7 @@ export default function Home() {
         <section className="w-full bg-surface-container-low py-16 mb-32">
           <div className="max-w-[1440px] mx-auto px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-black font-headline text-brand-cream tracking-tighter">
+              <h2 className="text-3xl md:text-5xl font-black font-headline text-brand-cream tracking-tighter uppercase mb-4">
                 {t.home.social.title}<br/>
                 <span className="text-brand-lemon">{t.home.social.titleAccent}</span>
               </h2>
@@ -78,7 +78,7 @@ export default function Home() {
 
         {/* Services (Bento Box Grid) */}
         <section className="max-w-[1440px] mx-auto px-8 mb-40">
-          <h2 className="text-3xl font-black font-headline mb-16 uppercase tracking-tighter text-center md:text-left">{t.home.services.title} <span className="text-brand-purple">{t.home.services.titleAccent}</span></h2>
+          <h2 className="text-3xl md:text-5xl font-black font-headline mb-16 uppercase tracking-tighter text-center md:text-left">{t.home.services.title} <span className="text-brand-purple">{t.home.services.titleAccent}</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[300px]">
             <div className="md:col-span-2 md:row-span-2 bg-surface-container-highest p-12 relative overflow-hidden flex flex-col justify-end group border border-outline-variant/10">
               <div className="absolute top-0 right-0 p-8">
@@ -136,7 +136,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
             <div>
               <span className="text-brand-purple font-space-grotesk text-sm uppercase tracking-widest mb-4 block">{t.home.content.label}</span>
-              <h2 className="text-4xl md:text-5xl font-black font-headline mb-4">{t.home.content.title}</h2>
+              <h2 className="text-3xl md:text-5xl font-black font-headline mb-4 uppercase tracking-tighter">{t.home.content.title}</h2>
               <p className="text-xl text-on-surface-variant max-w-lg">{t.home.content.subtitle}</p>
             </div>
             <a className="text-brand-cream/60 hover:text-brand-lemon transition-colors font-space-grotesk text-sm uppercase tracking-widest border-b border-brand-cream/20 pb-2 inline-flex items-center gap-2" href="https://instagram.com/bigdatia_agency" target="_blank" rel="noopener noreferrer">
