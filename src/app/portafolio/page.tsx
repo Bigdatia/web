@@ -219,7 +219,7 @@ export default function PortfolioPage() {
               <h2 className="text-sm font-bold tracking-widest text-brand-lemon uppercase mb-4">
                 {t.portfolio.hero.label}
               </h2>
-              <h1 className="text-4xl md:text-7xl lg:text-8xl font-black font-headline uppercase leading-[1.1] md:leading-[0.9] tracking-tighter text-brand-cream">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black font-headline uppercase leading-[1.1] md:leading-[0.9] tracking-tighter text-brand-cream">
                 {t.portfolio.hero.title}
                 <br />
                 {t.portfolio.hero.titleAccent}

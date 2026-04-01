@@ -21,7 +21,7 @@ export default function Marketing() {
           </div>
           <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline font-black tracking-[-0.03em] leading-[1.1] md:leading-[0.9] mb-8 text-center lg:text-left uppercase">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-black tracking-[-0.03em] leading-[1.1] md:leading-[0.9] mb-8 text-center lg:text-left uppercase">
                 {t.marketing.hero.title} <br className="hidden md:block" /> <span className="text-primary-container">{t.marketing.hero.titleAccent}</span>
               </h1>
               <p className="text-lg md:text-2xl text-on-surface/70 font-light max-w-xl leading-relaxed mb-12 text-center lg:text-left mx-auto lg:mx-0">

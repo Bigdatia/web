@@ -24,7 +24,7 @@ export default function Estrategia() {
               <div className="inline-flex items-center space-x-2 px-3 py-1 bg-surface-container-highest border-l-2 border-primary-container mx-auto lg:mx-0">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-primary-container">{t.estrategia.hero.badge}</span>
               </div>
-              <h1 className="text-4xl md:text-7xl lg:text-8xl font-black font-headline leading-[1.1] md:leading-[0.9] tracking-tighter text-on-surface text-center lg:text-left uppercase">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black font-headline leading-[1.1] md:leading-[0.9] tracking-tighter text-on-surface text-center lg:text-left uppercase">
                 {t.estrategia.hero.title} <span className="text-primary-container">{t.estrategia.hero.titleAccent}</span> {t.estrategia.hero.titleEnd}
               </h1>
               <p className="text-lg md:text-2xl text-on-surface-variant max-w-xl leading-relaxed text-center lg:text-left mx-auto lg:mx-0">

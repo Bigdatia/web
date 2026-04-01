@@ -22,7 +22,7 @@ export default function Activaciones() {
             <span className="inline-block px-4 py-1 mb-6 border border-outline-variant border-opacity-30 font-label text-xs uppercase tracking-[0.2em] text-secondary">
               {t.activaciones.hero.badge} {new Date().getFullYear()}
             </span>
-            <h1 className="font-headline text-4xl md:text-7xl lg:text-8xl font-black text-on-surface leading-[1.1] md:leading-[0.9] tracking-tighter mb-8 uppercase">
+            <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-black text-on-surface leading-[1.1] md:leading-[0.9] tracking-tighter mb-8 uppercase">
               {t.activaciones.hero.title} <span className="text-primary-fixed">{t.activaciones.hero.titleAccent}</span> {t.activaciones.hero.titleEnd}
             </h1>
             <p className="max-w-2xl mx-auto font-body text-xl md:text-2xl text-on-surface opacity-80 mb-12">
