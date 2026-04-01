@@ -27,7 +27,7 @@ const ProjectCard = ({ item, onClick }: { item: any, onClick: (item: any) => voi
       case 'video': return 'videocam';
       case 'social': return 'smartphone';
       case 'web': return 'desktop_windows';
-      case 'branding': return 'menu_book';
+      case 'branding': return 'edit';
       default: return 'layers';
     }
   };
@@ -237,7 +237,7 @@ export default function PortfolioPage() {
               <FilterButton icon="smartphone" active={filter === 'social'} onClick={() => setFilter('social')}>
                 {t.portfolio.filters.social}
               </FilterButton>
-              <FilterButton icon="menu_book" active={filter === 'branding'} onClick={() => setFilter('branding')}>
+              <FilterButton icon="edit" active={filter === 'branding'} onClick={() => setFilter('branding')}>
                 {t.portfolio.filters.branding}
               </FilterButton>
               <FilterButton icon="desktop_windows" active={filter === 'web'} onClick={() => setFilter('web')}>
