@@ -24,7 +24,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "BigDatIA | Agencia Estratégica",
+  title: "BigdatIA | Agencia Estratégica",
   description: "Transformamos la complejidad técnica en ejecución de mercado. Estrategia, tecnología y marketing impulsados por inteligencia real.",
 };
 

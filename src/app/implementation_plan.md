@@ -1,4 +1,4 @@
-# Integración de Textos Corporativos en BigDatIA
+# Integración de Textos Corporativos en BigdatIA
 
 El objetivo de este plan es reestructurar los contenidos de la página principal (`src/app/page.tsx`) y el pie de página (`src/components/layout/Footer.tsx`) para incorporar con precisión los nuevos copys entregados por el equipo directivo. Esto requerirá no solo reemplazar textos, sino agregar nuevas secciones manteniendo el diseño estético de alto impacto (oscuro, neones, grillas tipo bento).
 
