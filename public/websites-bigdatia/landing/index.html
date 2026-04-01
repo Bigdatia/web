@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page Demo - BigDatIA</title>
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind-config.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen relative overflow-x-hidden">
+
+  <!-- Floating Back Button (for demo navigation) -->
+  <a href="../index.html" class="fixed top-6 left-6 z-50 bg-white shadow-xl shadow-accent/20 rounded-full px-5 py-2 text-sm font-bold text-bgDark flex items-center gap-2 hover:bg-slate-100 transition-colors border border-slate-200">
+    <i class="fa-solid fa-arrow-left"></i> Volver al Hub
+  </a>
+
+  <!-- Demo Label -->
+  <div class="fixed top-6 right-6 z-50 bg-accent text-bgDark text-xs font-black uppercase tracking-widest py-1 px-3 rounded shadow-lg shadow-accent/20">
+    <i class="fa-solid fa-plane-arrival mr-1"></i> Nivel 1: Landing Page
+  </div>
+
+  <main class="w-full min-h-screen flex flex-col md:flex-row items-center pt-20 md:pt-0">
+    
+    <!-- Left Copy Area -->
+    <div class="w-full md:w-3/5 p-10 md:p-20 xl:p-32 flex flex-col justify-center animate-fade-in order-2 md:order-1">
+      <div class="inline-flex items-center gap-2 text-brandBlue font-bold bg-blue-50 px-3 py-1 rounded-full mb-6 w-max">
+        <i class="fa-solid fa-bolt"></i> Incrementa tus ventas un 40%
+      </div>
+      
+      <h1 class="text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-900">
+        Automatiza tu empresa sin esfuerzo técnico.
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl">
+        La plataforma todo-en-uno para gestionar clientes, enviar facturas y proyectar tus métricas en tiempo real. Deja de usar hojas de cálculo y enfócate en crecer.
+      </p>
+
+      <!-- Benefits -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+        <div class="flex items-start gap-4">
+          <div class="mt-1 bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-800">Soporte 24/7 B2B</h3>
+            <p class="text-sm text-slate-500">Un equipo listo para llevar tus operaciones al límite.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="mt-1 bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-800">Integración con 1 Clic</h3>
+            <p class="text-sm text-slate-500">Conecta tu CRM en menos de 5 minutos, sin código.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Proof -->
+      <div class="border-t border-slate-200 pt-8 mt-auto">
+        <p class="text-sm text-slate-400 font-medium mb-4 uppercase tracking-widest">Empresas líderes que confían</p>
+        <div class="flex flex-wrap gap-8 opacity-60 grayscale items-center">
+          <i class="fa-brands fa-microsoft text-3xl"></i>
+          <i class="fa-brands fa-aws text-3xl"></i>
+          <i class="fa-brands fa-stripe text-3xl"></i>
+          <i class="fa-brands fa-slack text-3xl"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Form Area -->
+    <div class="w-full md:w-2/5 p-6 md:p-12 xl:p-16 flex justify-center order-1 md:order-2">
+      <!-- Decorator Blob -->
+      <div class="absolute right-0 top-0 w-1/2 h-full bg-blue-50/50 -z-10 clip-path-polygon"></div>
+
+      <div class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl border border-slate-100 w-full max-w-md animate-slide-up" style="animation-delay: 0.2s;">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">Solicita una Demo Gratis</h2>
+        <p class="text-slate-500 text-sm mb-6">Agenda una cita gratuita de 15 minutos con nuestros especialistas.</p>
+
+        <form onsubmit="event.preventDefault(); alert('Formulario de Landing Page enviado. ¡Esto convierte visitantes a leads!');">
+          <div class="mb-4">
+            <label class="block text-sm font-semibold text-slate-700 mb-1">Nombre y Apellido</label>
+            <input type="text" class="w-full border border-slate-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brandBlue outline-none transition-shadow" placeholder="Juan Pérez" required>
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-semibold text-slate-700 mb-1">Email Profesional</label>
+            <input type="email" class="w-full border border-slate-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brandBlue outline-none transition-shadow" placeholder="juan@empresa.com" required>
+          </div>
+          <div class="mb-6">
+            <label class="block text-sm font-semibold text-slate-700 mb-1">Tamaño de la Empresa</label>
+            <select class="w-full border border-slate-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brandBlue outline-none transition-shadow bg-white cursor-pointer">
+              <option>1-10 Empleados</option>
+              <option>11-50 Empleados</option>
+              <option>51-200 Empleados</option>
+              <option>200+ Empleados</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="w-full bg-brandBlue hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-blue-600/30 flex justify-center items-center gap-2 group">
+            Agendar Demo Ahora <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </button>
+          
+          <p class="text-[11px] text-slate-400 mt-4 text-center">
+            Al registrarte aceptas nuestra política de privacidad. No enviamos spam.
+          </p>
+        </form>
+      </div>
+
+    </div>
+
+  </main>
+  
+  <style>
+    .clip-path-polygon {
+      clip-path: polygon(25% 0%, 100% 0, 100% 100%, 0% 100%);
+    }
+    @media (max-width: 768px) {
+      .clip-path-polygon { clip-path: none; width: 100%; height: 50%; opacity: 0.3; }
+    }
+</style>
+
+  <script>
+    // Hide demo navigation elements when loaded in an iframe
+    if (window.self !== window.top) {
+      document.querySelectorAll('.fixed').forEach(function(el) { el.style.display = 'none'; });
+    }
+  </script>
+
+</body>
+</html>

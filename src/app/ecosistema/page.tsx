@@ -1,192 +1,501 @@
+"use client";
+
+import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Icon } from "@/components/ui/Icon";
-import Image from "next/image";
+import { WebDemoModal } from "@/components/ui/WebDemoModal";
+
+const webTypes = [
+  {
+    id: "landing",
+    title: "Landing Page",
+    subtitle: "Conversión directa",
+    number: "01",
+    icon: "rocket_launch",
+    accentColor: "#D5FC6B",
+    accentClass: "brand-lemon",
+    description:
+      "Página única, enfocada 100% en convertir visitantes en clientes. Ideal para campañas de publicidad, lanzamientos de producto y captación de leads.",
+    idealFor: "Campañas de Ads, Lanzamientos, Captación de Leads",
+    pages: "1 página",
+    complexity: "Rápida",
+    features: [
+      "Formulario de contacto/lead optimizado",
+      "Copy persuasivo y CTA claros",
+      "Diseño responsivo y veloz",
+      "Integración con Google Ads / Meta Ads",
+    ],
+    demoUrl: "/websites-bigdatia/landing/index.html",
+    demoLabel: "Landing Page Demo",
+  },
+  {
+    id: "corporate",
+    title: "Web Corporativa",
+    subtitle: "Presencia institucional",
+    number: "02",
+    icon: "apartment",
+    accentColor: "#7533FF",
+    accentClass: "brand-purple",
+    description:
+      "Sitio multi-página que comunica la identidad, servicios y credibilidad de tu empresa. Perfecto para empresas que necesitan una presencia sólida y profesional en internet.",
+    idealFor: "Empresas establecidas, Firmas profesionales, Instituciones",
+    pages: "4-8 páginas",
+    complexity: "Media",
+    features: [
+      "Inicio, Nosotros, Servicios, Contacto",
+      "SEO optimizado para posicionamiento",
+      "Blog o sección de noticias",
+      "Formulario de contacto avanzado",
+    ],
+    demoUrl: "/websites-bigdatia/corporate/index.html",
+    demoLabel: "Web Corporativa Demo",
+  },
+  {
+    id: "ecommerce",
+    title: "E-Commerce",
+    subtitle: "Tienda en línea",
+    number: "03",
+    icon: "shopping_bag",
+    accentColor: "#cfbdff",
+    accentClass: "secondary",
+    description:
+      "Tienda virtual completa con catálogo, carrito de compras y pasarela de pago. Para negocios que necesitan vender productos o servicios directamente online.",
+    idealFor: "Retail, Marcas D2C, Negocios de productos",
+    pages: "Ilimitadas",
+    complexity: "Avanzada",
+    features: [
+      "Catálogo con filtros y búsqueda",
+      "Carrito y checkout seguro",
+      "Pasarela de pago integrada",
+      "Panel de administración de inventario",
+    ],
+    demoUrl: "/websites-bigdatia/ecommerce/index.html",
+    demoLabel: "E-Commerce Demo",
+  },
+];
+
+const comparisonRows = [
+  {
+    label: "Páginas",
+    landing: "1",
+    corporate: "4 – 8",
+    ecommerce: "Ilimitadas",
+  },
+  {
+    label: "Objetivo principal",
+    landing: "Convertir visitantes",
+    corporate: "Comunicar identidad",
+    ecommerce: "Vender productos",
+  },
+  {
+    label: "Complejidad",
+    landing: "Baja",
+    corporate: "Media",
+    ecommerce: "Alta",
+  },
+  {
+    label: "SEO",
+    landing: "Básico",
+    corporate: "Avanzado",
+    ecommerce: "Avanzado + Productos",
+  },
+  {
+    label: "Ideal para",
+    landing: "Campañas",
+    corporate: "Empresas",
+    ecommerce: "Tiendas online",
+  },
+  {
+    label: "Tiempo de entrega",
+    landing: "1 – 2 semanas",
+    corporate: "3 – 5 semanas",
+    ecommerce: "6 – 10 semanas",
+  },
+];
 
 export default function Ecosistema() {
+  const [activeDemo, setActiveDemo] = useState<(typeof webTypes)[0] | null>(null);
+
   return (
     <>
       <Navbar />
       <main className="pt-24 md:pt-32 pb-24 md:pb-0">
         {/* Hero Section */}
-        <section className="relative min-h-[calc(100vh-8rem)] flex items-center px-8 md:px-24 overflow-hidden">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary blur-[60px] opacity-15 rounded-full"></div>
-          <div className="absolute top-1/2 -left-24 w-64 h-64 bg-brand-lemon blur-[40px] opacity-10 rounded-full"></div>
-          <div className="relative z-10 max-w-4xl">
-            <span className="font-label text-primary-fixed uppercase tracking-[0.2em] text-[10px] font-bold mb-6 block text-center md:text-left">Alianzas Estratégicas</span>
-            <h1 className="font-headline text-4xl md:text-6xl font-black text-on-surface leading-[1.1] md:leading-[0.9] tracking-tighter mb-8 text-center md:text-left">
-                Un Ecosistema de <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-fixed via-secondary-fixed to-tertiary">Innovación</span>
+        <section className="relative min-h-[60vh] flex items-center px-8 md:px-24 overflow-hidden">
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-purple blur-[80px] opacity-15 rounded-full" />
+          <div className="absolute top-1/2 -left-24 w-64 h-64 bg-brand-lemon blur-[60px] opacity-10 rounded-full" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-secondary/5 blur-[100px] rounded-full" />
+
+          <div className="relative z-10 max-w-5xl mx-auto text-center">
+            <span className="font-label text-brand-lemon uppercase tracking-[0.3em] text-[10px] font-bold mb-6 block">
+              Portafolio de Servicios Web
+            </span>
+            <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-black text-brand-cream leading-[1.1] md:leading-[0.95] tracking-tighter mb-8">
+              Diseñamos tu{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-lemon via-brand-purple to-secondary">
+                Presencia Digital
+              </span>
             </h1>
-            <p className="text-lg md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed font-light text-center md:text-left mx-auto md:mx-0">
-                Nuestra red de partners tecnológicos y estratégicos para potenciar tu crecimiento a través de la inteligencia colectiva y datos integrados.
+            <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed font-light mb-8">
+              No todos los negocios necesitan el mismo tipo de web. Creamos desde
+              landing pages de alto impacto hasta tiendas online completas —
+              cada una diseñada para un objetivo específico.
+            </p>
+            <div className="flex items-center justify-center gap-8 text-brand-cream/30 font-space-grotesk text-[10px] uppercase tracking-[0.3em]">
+              <span>Landing Pages</span>
+              <span className="w-1 h-1 rounded-full bg-brand-lemon" />
+              <span>Web Corporativa</span>
+              <span className="w-1 h-1 rounded-full bg-brand-purple" />
+              <span>E-Commerce</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Showcase Cards */}
+        <section className="px-4 md:px-24 mb-32 mt-16 md:mt-24">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 max-w-[1440px] mx-auto">
+            {webTypes.map((type) => (
+              <div
+                key={type.id}
+                className="group relative bg-surface-container-low border border-outline-variant/10 p-8 md:p-10 flex flex-col transition-all duration-500 hover:border-outline-variant/30 hover:bg-surface-container-high overflow-hidden"
+              >
+                {/* Background glow on hover */}
+                <div
+                  className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full blur-[80px] opacity-0 group-hover:opacity-20 transition-opacity duration-700"
+                  style={{ backgroundColor: type.accentColor }}
+                />
+
+                {/* Number */}
+                <span className="font-space-grotesk text-brand-cream/15 text-7xl font-black absolute top-4 right-6 select-none group-hover:text-brand-cream/10 transition-colors">
+                  {type.number}
+                </span>
+
+                {/* Icon + Label */}
+                <div className="flex items-start gap-4 mb-8 relative z-10">
+                  <div
+                    className="w-14 h-14 rounded-lg flex items-center justify-center border border-outline-variant/20 transition-all duration-500 group-hover:scale-110"
+                    style={{
+                      backgroundColor: `${type.accentColor}15`,
+                    }}
+                  >
+                    <Icon
+                      name={type.icon}
+                      className="w-7 h-7"
+                      style={{ color: type.accentColor }}
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-headline text-2xl font-black text-brand-cream tracking-tight">
+                      {type.title}
+                    </h3>
+                    <span className="font-space-grotesk text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+                      {type.subtitle}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-on-surface-variant text-sm leading-relaxed mb-8 relative z-10 flex-1">
+                  {type.description}
+                </p>
+
+                {/* Features */}
+                <div className="space-y-3 mb-8 relative z-10">
+                  {type.features.map((feature, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <Icon
+                        name="check_circle"
+                        className="w-4 h-4 mt-0.5 flex-shrink-0"
+                        style={{ color: type.accentColor }}
+                        filled
+                      />
+                      <span className="text-brand-cream/80 text-xs leading-relaxed">
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Ideal For Tag */}
+                <div className="mb-8 relative z-10">
+                  <span className="font-space-grotesk text-[9px] uppercase tracking-[0.2em] text-on-surface-variant block mb-1">
+                    Ideal para
+                  </span>
+                  <span
+                    className="font-space-grotesk text-xs font-bold uppercase tracking-wider"
+                    style={{ color: type.accentColor }}
+                  >
+                    {type.idealFor}
+                  </span>
+                </div>
+
+                {/* CTA Button */}
+                <button
+                  onClick={() => setActiveDemo(type)}
+                  className="relative z-10 w-full py-4 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-2 group/btn border-2 hover:scale-[0.98] active:scale-95"
+                  style={{
+                    borderColor: type.accentColor,
+                    color: type.accentColor,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = type.accentColor;
+                    e.currentTarget.style.color = "#131312";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.color = type.accentColor;
+                  }}
+                >
+                  Ver Demo Interactivo
+                  <Icon name="arrow_forward" className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Comparison Table Section */}
+        <section className="px-4 md:px-24 mb-32 max-w-[1440px] mx-auto">
+          <div className="text-center mb-16">
+            <span className="font-space-grotesk text-brand-purple text-sm uppercase tracking-widest mb-4 block">
+              Comparativa
+            </span>
+            <h2 className="font-headline text-3xl md:text-4xl font-black text-brand-cream tracking-tighter mb-4">
+              ¿Cuál es la mejor opción{" "}
+              <span className="text-brand-lemon">para ti</span>?
+            </h2>
+            <p className="text-on-surface-variant max-w-xl mx-auto">
+              Cada tipo de web resuelve un problema diferente. Esta tabla te
+              ayuda a identificar cuál necesitas.
             </p>
           </div>
+
+          {/* Desktop Table */}
+          <div className="hidden md:block overflow-hidden border border-outline-variant/15">
+            {/* Header */}
+            <div className="grid grid-cols-4 bg-surface-container-highest">
+              <div className="p-6 border-r border-outline-variant/10">
+                <span className="font-space-grotesk text-xs uppercase tracking-widest text-brand-cream/40">
+                  Característica
+                </span>
+              </div>
+              <div className="p-6 border-r border-outline-variant/10 text-center">
+                <span className="font-headline font-bold text-brand-lemon">
+                  Landing Page
+                </span>
+              </div>
+              <div className="p-6 border-r border-outline-variant/10 text-center">
+                <span className="font-headline font-bold text-brand-purple">
+                  Web Corporativa
+                </span>
+              </div>
+              <div className="p-6 text-center">
+                <span className="font-headline font-bold text-secondary">
+                  E-Commerce
+                </span>
+              </div>
+            </div>
+
+            {/* Rows */}
+            {comparisonRows.map((row, i) => (
+              <div
+                key={row.label}
+                className={`grid grid-cols-4 ${
+                  i % 2 === 0
+                    ? "bg-surface-container-low"
+                    : "bg-surface-container"
+                } border-t border-outline-variant/10 hover:bg-surface-container-high transition-colors`}
+              >
+                <div className="p-5 border-r border-outline-variant/10">
+                  <span className="font-space-grotesk text-sm font-bold text-brand-cream/70 uppercase tracking-wider">
+                    {row.label}
+                  </span>
+                </div>
+                <div className="p-5 border-r border-outline-variant/10 text-center">
+                  <span className="text-on-surface-variant text-sm">
+                    {row.landing}
+                  </span>
+                </div>
+                <div className="p-5 border-r border-outline-variant/10 text-center">
+                  <span className="text-on-surface-variant text-sm">
+                    {row.corporate}
+                  </span>
+                </div>
+                <div className="p-5 text-center">
+                  <span className="text-on-surface-variant text-sm">
+                    {row.ecommerce}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile Cards Comparison */}
+          <div className="md:hidden space-y-4">
+            {comparisonRows.map((row) => (
+              <div
+                key={row.label}
+                className="bg-surface-container-low border border-outline-variant/10 p-5"
+              >
+                <span className="font-space-grotesk text-[10px] uppercase tracking-widest text-brand-cream/40 block mb-3">
+                  {row.label}
+                </span>
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="text-center">
+                    <span className="block text-[9px] font-bold text-brand-lemon uppercase tracking-wider mb-1">
+                      Landing
+                    </span>
+                    <span className="text-brand-cream/80 text-xs">
+                      {row.landing}
+                    </span>
+                  </div>
+                  <div className="text-center border-x border-outline-variant/10 px-2">
+                    <span className="block text-[9px] font-bold text-brand-purple uppercase tracking-wider mb-1">
+                      Corporativa
+                    </span>
+                    <span className="text-brand-cream/80 text-xs">
+                      {row.corporate}
+                    </span>
+                  </div>
+                  <div className="text-center">
+                    <span className="block text-[9px] font-bold text-secondary uppercase tracking-wider mb-1">
+                      E-Commerce
+                    </span>
+                    <span className="text-brand-cream/80 text-xs">
+                      {row.ecommerce}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
-        {/* Node Visualization Section */}
-        <section className="px-8 md:px-24 mb-40">
-          <div className="grid grid-cols-12 gap-6 h-[400px]">
-            <div className="col-span-12 md:col-span-8 relative bg-surface-container-low overflow-hidden rounded-sm group">
-              <Image 
-                className="object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" 
-                alt="Ecosystem Network" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRhgwET38coZksX5zlgfitbEWdKYNF6cua3BBRgDvSfGxpa42d7Vd9tK9nZBAQL3BRiOJgFotYeACBpF7QJeZzcLq8y4mTDor1FN6F6BH1bZIT6D5ccTrw4cpXIwHxHqgpO4vRb8kMWnOJCGhO9jGEmmlN_iuC_eLDIy_RNNUPre_ZiUNMIVw2Q-LfxEAhnL5VSY1S5oH-ECUxav44s7G3vvlVfA_HFyAdQwHfe9TQLox5pjTXE2VXNvxjMJmUHWVBumD288R4aNlr"
-                fill
-                sizes="(max-width: 768px) 100vw, 66vw"
+        {/* Process Section */}
+        <section className="px-4 md:px-24 mb-32 max-w-[1440px] mx-auto">
+          <div className="bg-surface-container-lowest py-20 md:py-28 px-8 md:px-20 relative overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
+              <div
+                className="absolute top-0 left-0 w-full h-full"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at 2px 2px, #D5FC6B 1px, transparent 0)",
+                  backgroundSize: "48px 48px",
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-              <div className="absolute bottom-10 left-10">
-                <h3 className="font-headline text-3xl font-bold mb-2">Interconexión Total</h3>
-                <p className="text-on-surface-variant font-label uppercase tracking-widest text-xs">Latencia Cero · Sincronización Global</p>
-              </div>
             </div>
-            <div className="col-span-12 md:col-span-4 bg-surface-container-highest p-10 flex flex-col justify-end relative border-l border-outline-variant border-opacity-20">
-              <div className="absolute top-10 right-10">
-                <Icon name="hub" className="w-12 h-12 text-primary-fixed" filled />
-              </div>
-              <h4 className="text-primary-fixed font-headline text-4xl font-extrabold mb-4">99.9%</h4>
-              <p className="text-on-surface-variant text-sm leading-relaxed">Eficiencia operativa garantizada mediante nuestra arquitectura de integración distribuida con partners certificados.</p>
-            </div>
-          </div>
-        </section>
 
-        {/* Partner Grid */}
-        <section className="px-8 md:px-24 mb-40">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-outline-variant border-opacity-10 pb-8">
-            <div>
-              <h2 className="font-headline text-3xl font-bold mb-2 tracking-tight">Ecosistema de Partners</h2>
-              <p className="text-on-surface-variant">Líderes tecnológicos impulsando la próxima frontera de datos.</p>
-            </div>
-            <div className="hidden md:block">
-              <span className="text-xs font-label text-outline uppercase tracking-widest">Filtrar por Especialidad / 04 Aliados</span>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0.5 bg-outline-variant bg-opacity-20">
-            {/* Partner 1 */}
-            <div className="bg-surface-container-low p-12 group hover:bg-surface-container-high transition-colors duration-500">
-              <div className="h-12 w-full mb-12 flex items-center">
-                <span className="font-headline font-black text-3xl tracking-tighter text-on-surface group-hover:text-primary-fixed transition-colors">Darrum</span>
-              </div>
-              <p className="text-on-surface-variant text-sm leading-relaxed mb-8 h-20">
-                Especialistas en infraestructura cloud de alta resiliencia y orquestación de contenedores para Big Data.
+            <div className="relative z-10 text-center mb-16">
+              <h2 className="font-headline text-3xl md:text-4xl font-black text-brand-cream tracking-tighter mb-4">
+                Nuestro Proceso
+              </h2>
+              <p className="text-on-surface-variant max-w-lg mx-auto">
+                De la idea al sitio en producción, con acompañamiento total.
               </p>
-              <div className="flex items-center text-primary-fixed font-label text-xs font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                Ver Alianza <Icon name="arrow_forward" className="w-4 h-4 ml-2" />
-              </div>
             </div>
-            {/* Partner 2 */}
-            <div className="bg-surface-container-low p-12 group hover:bg-surface-container-high transition-colors duration-500">
-              <div className="h-12 w-full mb-12 flex items-center">
-                <span className="font-headline font-black text-3xl tracking-tighter text-on-surface group-hover:text-primary-fixed transition-colors">Nueve99</span>
-              </div>
-              <p className="text-on-surface-variant text-sm leading-relaxed mb-8 h-20">
-                Consultora líder en transformación digital y diseño de experiencias centradas en el análisis predictivo.
-              </p>
-              <div className="flex items-center text-primary-fixed font-label text-xs font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                Ver Alianza <Icon name="arrow_forward" className="w-4 h-4 ml-2" />
-              </div>
-            </div>
-            {/* Partner 3 */}
-            <div className="bg-surface-container-low p-12 group hover:bg-surface-container-high transition-colors duration-500">
-              <div className="h-12 w-full mb-12 flex items-center">
-                <span className="font-headline font-black text-3xl tracking-tighter text-on-surface group-hover:text-primary-fixed transition-colors">Four44</span>
-              </div>
-              <p className="text-on-surface-variant text-sm leading-relaxed mb-8 h-20">
-                Expertos en ciberseguridad avanzada y protocolos de protección de datos para entornos corporativos críticos.
-              </p>
-              <div className="flex items-center text-primary-fixed font-label text-xs font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                Ver Alianza <Icon name="arrow_forward" className="w-4 h-4 ml-2" />
-              </div>
-            </div>
-            {/* Partner 4 */}
-            <div className="bg-surface-container-low p-12 group hover:bg-surface-container-high transition-colors duration-500">
-              <div className="h-12 w-full mb-12 flex items-center">
-                <span className="font-headline font-black text-3xl tracking-tighter text-on-surface group-hover:text-primary-fixed transition-colors">ApexNode</span>
-              </div>
-              <p className="text-on-surface-variant text-sm leading-relaxed mb-8 h-20">
-                Plataforma de IA generativa aplicada al procesamiento de lenguaje natural y automatización de procesos.
-              </p>
-              <div className="flex items-center text-primary-fixed font-label text-xs font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                Ver Alianza <Icon name="arrow_forward" className="w-4 h-4 ml-2" />
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Integration Section */}
-        <section className="px-8 md:px-24 mb-40 bg-surface-container-lowest py-32 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10 pointer-events-none">
-            <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, #444937 1px, transparent 0)", backgroundSize: "40px 40px" }}></div>
-          </div>
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="relative">
-              <div className="relative z-10 p-1 bg-gradient-to-br from-primary-fixed/20 to-secondary-container/20 rounded-sm">
-                <Image 
-                  alt="Global Integration" 
-                  className="object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-1000" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcjcMscoHhuDFAY3I2x6b-ob1KftRrSw_Rt-yS-zWR5Hjh8prcVXBR-LnDPGzEypbT3aPgIlg-toDG8KTEGRp2tDq7QGwcEbQi-p59ajlErL2MKCv9FTGqcvCJxebFwKPMIGwP0JpHgMNHMXa49POYINVrPu8hfM1aiw7K6po78ABAx-V02kf7JAFgzodA9KYrMDDaTXynmsNlShd480O_dpVSjy_ym0SnG3IJY-8V8H6rELhopngX9cCTqltD_O9_fdpc2pc3B-pl"
-                  width={800}
-                  height={500}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-              <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-primary-fixed/10 blur-3xl"></div>
-            </div>
-            <div>
-              <h2 className="font-headline text-4xl font-bold mb-10 leading-tight">Integración Sin Fisuras</h2>
-              <div className="space-y-12">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 glass-card flex items-center justify-center border border-outline-variant border-opacity-20">
-                    <Icon name="api" className="w-6 h-6 text-primary-fixed" />
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
+              {[
+                {
+                  step: "01",
+                  icon: "chat",
+                  title: "Diagnóstico",
+                  desc: "Entendemos tu negocio, tu audiencia y tus objetivos para definir qué tipo de web necesitas.",
+                },
+                {
+                  step: "02",
+                  icon: "palette",
+                  title: "Diseño UI/UX",
+                  desc: "Creamos mockups de alto impacto visual con tu identidad de marca y flujos optimizados para conversión.",
+                },
+                {
+                  step: "03",
+                  icon: "code",
+                  title: "Desarrollo",
+                  desc: "Construimos con tecnologías modernas, responsivas y optimizadas para SEO y rendimiento.",
+                },
+                {
+                  step: "04",
+                  icon: "rocket_launch",
+                  title: "Lanzamiento",
+                  desc: "Desplegamos tu sitio con monitoreo, analytics y soporte continuo para asegurar resultados.",
+                },
+              ].map((item, i) => (
+                <div key={item.step} className="relative group text-center md:text-left">
+                  {/* Connector line (desktop) */}
+                  {i < 3 && (
+                    <div className="hidden md:block absolute top-7 left-[60%] w-[calc(100%-20%)] h-px bg-gradient-to-r from-outline-variant/30 to-transparent" />
+                  )}
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-surface-container-high border border-outline-variant/20 mb-4 group-hover:border-brand-lemon/40 transition-colors">
+                    <Icon
+                      name={item.icon}
+                      className="w-6 h-6 text-brand-lemon"
+                    />
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-2">API-First Design</h4>
-                    <p className="text-on-surface-variant leading-relaxed">Nuestra arquitectura permite una conexión bidireccional instantánea con Darrum y ApexNode, asegurando que el flujo de datos sea constante y seguro.</p>
+                  <div className="font-space-grotesk text-[10px] text-brand-cream/30 uppercase tracking-[0.3em] mb-2">
+                    Paso {item.step}
                   </div>
+                  <h4 className="font-headline text-lg font-bold text-brand-cream mb-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-on-surface-variant text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 glass-card flex items-center justify-center border border-outline-variant border-opacity-20">
-                    <Icon name="auto_awesome" className="w-6 h-6 text-primary-fixed" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-2">Sinergia Operativa</h4>
-                    <p className="text-on-surface-variant leading-relaxed">Colaboramos con Nueve99 para integrar sus insights estratégicos directamente en nuestro motor de visualización, transformando datos brutos en decisiones tácticas.</p>
-                  </div>
-                </div>
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 glass-card flex items-center justify-center border border-outline-variant border-opacity-20">
-                    <Icon name="shield" className="w-6 h-6 text-primary-fixed" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-2">Seguridad Unificada</h4>
-                    <p className="text-on-surface-variant leading-relaxed">Mediante los protocolos de Four44, cada integración en nuestro ecosistema cumple con los más altos estándares de encriptación y cumplimiento normativo.</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="px-8 md:px-24 mb-40">
-          <div className="bg-gradient-to-r from-surface-container-high to-surface-container-low p-20 relative overflow-hidden text-center">
-            <div className="absolute inset-0 bg-secondary blur-[60px] opacity-10 scale-150"></div>
-            <h3 className="font-headline text-4xl md:text-5xl font-black mb-8 tracking-tighter">¿Listo para unirte al <span className="text-primary-fixed">Ecosistema</span>?</h3>
-            <p className="text-on-surface-variant max-w-2xl mx-auto mb-12 text-lg relative z-10">
-              Buscamos aliados que compartan nuestra visión de un futuro impulsado por la precisión y la luminescencia de los datos.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
-              <button className="bg-brand-lemon text-on-primary rounded-full px-10 py-4 font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_20px_#D5FC6B] transition-all duration-300">
-                Ser Partner
-              </button>
-              <button className="border-2 border-brand-purple rounded-full text-brand-lemon px-10 py-4 font-bold uppercase tracking-widest text-sm hover:bg-brand-purple hover:bg-opacity-10 transition-all duration-300">
-                Explorar Docs
-              </button>
+        <section className="px-4 md:px-24 mb-32 max-w-[1440px] mx-auto">
+          <div className="bg-gradient-to-br from-surface-container-high to-surface-container-low p-12 md:p-20 relative overflow-hidden text-center">
+            <div className="absolute inset-0 bg-brand-purple blur-[80px] opacity-10 scale-150" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-lemon blur-[100px] opacity-5 rounded-full" />
+
+            <div className="relative z-10">
+              <h3 className="font-headline text-3xl md:text-5xl font-black mb-6 tracking-tighter text-brand-cream">
+                ¿Listo para{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-lemon to-brand-purple">
+                  tu nueva web
+                </span>
+                ?
+              </h3>
+              <p className="text-on-surface-variant max-w-xl mx-auto mb-10 text-lg">
+                Cuéntanos tu proyecto y te diremos exactamente qué tipo de web
+                necesitas, con cotización personalizada en 24 horas.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://wa.me/573164151731?text=Hola%2C%20me%20interesa%20cotizar%20un%20sitio%20web"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-brand-lemon text-on-primary rounded-full px-10 py-4 font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_30px_#D5FC6B] transition-all duration-300 hover:scale-[0.98] active:scale-95"
+                >
+                  Cotizar mi Web
+                </a>
+                <button
+                  onClick={() => setActiveDemo(webTypes[0])}
+                  className="border-2 border-brand-purple rounded-full text-brand-purple px-10 py-4 font-bold uppercase tracking-widest text-sm hover:bg-brand-purple/10 transition-all duration-300"
+                >
+                  Explorar Demos
+                </button>
+              </div>
             </div>
           </div>
         </section>
       </main>
       <Footer />
+
+      {/* Demo Modal */}
+      <WebDemoModal
+        isOpen={activeDemo !== null}
+        onClose={() => setActiveDemo(null)}
+        demoUrl={activeDemo?.demoUrl || ""}
+        demoLabel={activeDemo?.demoLabel || ""}
+        accentColor={activeDemo?.accentColor || "#D5FC6B"}
+      />
     </>
   );
 }

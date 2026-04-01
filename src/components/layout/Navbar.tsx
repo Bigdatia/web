@@ -14,7 +14,7 @@ export function Navbar() {
     { href: '/estrategia', label: 'Estrategia' },
     { href: '/marketing', label: 'Marketing' },
     { href: '/activaciones', label: 'Activaciones' },
-    { href: '/ecosistema', label: 'Ecosistema' },
+    { href: '/ecosistema', label: 'Web' },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);

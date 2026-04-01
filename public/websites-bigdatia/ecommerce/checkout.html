@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - TechStore</title>
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind-config.js"></script>
+</head>
+<body class="bg-[#F9FAFB] text-slate-800 font-sans min-h-screen flex flex-col">
+
+  <!-- Minimal Header for Checkout -->
+  <header class="bg-white border-b border-gray-200 py-6 text-center shadow-sm">
+    <a href="index.html" class="font-black text-2xl tracking-tighter inline-flex items-center gap-2 text-slate-900">
+      <i class="fa-solid fa-bolt text-brandIndigo"></i> Tech<span class="font-light">Store</span>
+    </a>
+  </header>
+
+  <main class="flex-1 animate-fade-in max-w-5xl mx-auto px-6 w-full py-12 flex flex-col md:flex-row gap-12">
+    
+    <!-- Left form area -->
+    <div class="flex-1">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold mb-6 text-slate-900">Información de Envío</h2>
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <input type="text" placeholder="Nombre" value="Juan" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-brandIndigo outline-none" required>
+          <input type="text" placeholder="Apellido" value="Pérez" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-brandIndigo outline-none" required>
+        </div>
+        <input type="text" placeholder="Dirección completa" value="Av. Principal 123" class="border border-gray-300 rounded-lg p-3 w-full mb-4 focus:ring-2 focus:ring-brandIndigo outline-none" required>
+        <div class="grid grid-cols-2 gap-4">
+          <input type="text" placeholder="Ciudad" value="Ciudad de México" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-brandIndigo outline-none" required>
+          <input type="text" placeholder="Código Postal" value="01000" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-brandIndigo outline-none" required>
+        </div>
+      </div>
+      
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold mb-6 text-slate-900">Método de Pago</h2>
+        <div class="bg-white border-2 border-brandIndigo rounded-xl p-4 flex items-center justify-between mb-4 shadow-sm">
+          <div class="flex items-center gap-3">
+            <input type="radio" checked class="w-5 h-5 text-brandIndigo focus:ring-brandIndigo">
+            <span class="font-bold">Tarjeta de Crédito</span>
+          </div>
+          <div class="flex gap-2 text-2xl opacity-60">
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+          </div>
+        </div>
+        
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <input type="text" placeholder="Número de Tarjeta" value="**** **** **** 4242" class="border border-gray-300 rounded-lg p-3 w-full mb-4 focus:ring-2 focus:ring-brandIndigo outline-none font-mono" required>
+          <div class="grid grid-cols-2 gap-4">
+            <input type="text" placeholder="MM/AA" value="12/28" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-brandIndigo outline-none font-mono" required>
+            <input type="text" placeholder="CVC" value="123" class="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-brandIndigo outline-none font-mono" required>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Summary Area -->
+    <div class="w-full md:w-[380px]">
+      <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 sticky top-8">
+        <h3 class="text-lg font-bold mb-4 text-slate-900">Resumen</h3>
+        
+        <div class="flex items-center gap-4 border-b border-gray-200 pb-4 mb-4">
+          <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center border border-gray-100 relative">
+            <span class="absolute -top-2 -right-2 bg-gray-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">1</span>
+            <i class="fa-solid fa-headphones text-2xl text-gray-300"></i>
+          </div>
+          <div class="flex-1">
+            <p class="font-bold text-sm leading-tight text-slate-800">Auriculares Pro</p>
+            <p class="font-bold text-slate-900">$299.00</p>
+          </div>
+        </div>
+
+        <div class="space-y-2 text-sm text-gray-600 mb-4 border-b border-gray-200 pb-4">
+          <div class="flex justify-between"><span>Subtotal</span><span>$299.00</span></div>
+          <div class="flex justify-between"><span>Envío</span><span>Gratis</span></div>
+          <div class="flex justify-between text-brandIndigo font-bold"><span>Descuento aplicado</span><span>-$0.00</span></div>
+        </div>
+        
+        <div class="flex justify-between items-center mb-6">
+          <span class="text-lg font-bold text-slate-900">Total a pagar</span>
+          <span class="text-2xl font-black text-slate-900">$322.92</span>
+        </div>
+
+        <button onclick="alert('¡Compra simulada con éxito! Esto concluye la demo de E-commerce.'); window.location.href='../index.html';" class="w-full bg-slate-900 hover:bg-black text-white font-bold py-4 rounded-xl shadow-lg transition-colors flex justify-center items-center gap-2">
+          Pagar y Finalizar <i class="fa-solid fa-check"></i>
+        </button>
+        <p class="text-xs text-center text-gray-400 mt-4 leading-relaxed"><i class="fa-solid fa-lock mr-1"></i> Pagos procesados de forma segura con encriptación AES-256 bits.</p>
+      </div>
+    </div>
+
+  </main>
+  <script>
+    if (window.self !== window.top) {
+      document.querySelectorAll('.fixed').forEach(function(el) { el.style.display = 'none'; });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BigDatIA - Selector de Demos</title>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+</head>
+<body class="bg-bgDark text-textLight min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden">
+
+  <!-- Background decorative elements -->
+  <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- Header -->
+  <div class="text-center mb-16 relative z-10 animate-fade-in">
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent text-bgDark text-3xl font-bold mb-6 mx-auto shadow-[0_0_30px_rgba(222,255,154,0.3)]">
+      <i class="fa-solid fa-brain"></i>
+    </div>
+    <h1 class="text-5xl font-extrabold tracking-tight mb-4">BigDat<span class="text-accent">IA</span> Demos</h1>
+    <p class="text-xl text-gray-400 max-w-xl mx-auto">Selecciona el tipo de sitio web interactivo que deseas explorar. Estos son ejemplos sin herramientas de monitoreo activas en frontend.</p>
+  </div>
+
+  <!-- Cards Container -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl relative z-10">
+    
+    <!-- Landing Page -->
+    <a href="landing/index.html" class="glass-panel-dark rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(222,255,154,0.1)] group">
+      <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-accent text-2xl mb-6 group-hover:bg-accent group-hover:text-bgDark transition-colors">
+        <i class="fa-solid fa-plane-arrival"></i>
+      </div>
+      <h2 class="text-2xl font-bold mb-3 text-white">Landing Page</h2>
+      <p class="text-gray-400 text-sm mb-6 flex-1">Diseño enfocado 100% en la conversión rápida. Captura estructurada de leads para campañas.</p>
+      <span class="text-accent font-semibold text-sm flex items-center gap-2">Ver Demo <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-2"></i></span>
+    </a>
+
+    <!-- Corporate Web -->
+    <a href="corporate/index.html" class="glass-panel-dark rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(37,99,235,0.2)] group border-white/5 hover:border-blue-500/50">
+      <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+        <i class="fa-solid fa-building"></i>
+      </div>
+      <h2 class="text-2xl font-bold mb-3 text-white">Web Corporativa</h2>
+      <p class="text-gray-400 text-sm mb-6 flex-1">Multi-página (Inicio, Nosotros, Servicios, Contacto). Ideal para presencia institucional fuerte.</p>
+      <span class="text-blue-400 font-semibold text-sm flex items-center gap-2">Ver Demo <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-2"></i></span>
+    </a>
+
+    <!-- E-Commerce -->
+    <a href="ecommerce/index.html" class="glass-panel-dark rounded-3xl p-8 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(79,70,229,0.2)] group border-white/5 hover:border-indigo-500/50">
+      <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-indigo-400 text-2xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+        <i class="fa-solid fa-store"></i>
+      </div>
+      <h2 class="text-2xl font-bold mb-3 text-white">E-Commerce</h2>
+      <p class="text-gray-400 text-sm mb-6 flex-1">Flujo completo de tienda online. Catálogo, detalles de producto, carrito y pasarela de pago.</p>
+      <span class="text-indigo-400 font-semibold text-sm flex items-center gap-2">Ver Demo <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-2"></i></span>
+    </a>
+
+  </div>
+
+</body>
+</html>

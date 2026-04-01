@@ -12,7 +12,7 @@ export function BottomNav() {
     { href: '/estrategia', label: 'Strategy', icon: 'insights' },
     { href: '/marketing', label: 'Marketing', icon: 'campaign' },
     { href: '/activaciones', label: 'Actives', icon: 'bolt' },
-    { href: '/ecosistema', label: 'System', icon: 'hub' },
+    { href: '/ecosistema', label: 'Web', icon: 'devices' },
   ];
 
   return (

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto Detalle - TechStore</title>
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind-config.js"></script>
+</head>
+<body class="bg-[#F9FAFB] text-slate-800 font-sans min-h-screen flex flex-col pt-20">
+
+  <a href="../index.html" class="fixed top-24 left-6 z-50 bg-white shadow-xl rounded-full px-4 py-2 text-xs font-bold text-slate-800 flex items-center gap-2 hover:bg-slate-50 transition-colors border border-slate-200">
+    <i class="fa-solid fa-arrow-left"></i> E-commerce Demo | Volver
+  </a>
+
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200 fixed top-0 w-full z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <a href="index.html" class="font-black text-2xl tracking-tighter flex items-center gap-2 text-slate-900">
+        <i class="fa-solid fa-bolt text-brandIndigo"></i> Tech<span class="font-light">Store</span>
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="cart.html" class="text-gray-900 hover:text-brandIndigo transition-colors relative">
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <span class="absolute -top-2 -right-2 bg-brandIndigo text-white text-[10px] rounded-full w-[18px] h-[18px] flex items-center justify-center font-bold">1</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="max-w-7xl mx-auto px-6 py-4 text-xs font-semibold text-gray-500">
+    <a href="index.html" class="hover:text-brandIndigo">Inicio</a> <span class="mx-2 text-gray-300">/</span> 
+    <a href="#" class="hover:text-brandIndigo">Audio</a> <span class="mx-2 text-gray-300">/</span> 
+    <span class="text-slate-800">Auriculares Noise-Cancelling Pro</span>
+  </div>
+
+  <main class="flex-1 animate-fade-in pb-20 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">
+    
+    <!-- Image Gallery -->
+    <div class="w-full">
+      <div class="bg-white rounded-3xl border border-gray-100 h-[500px] flex items-center justify-center shadow-sm relative mb-4">
+        <span class="absolute top-6 left-6 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-md z-10">-15% Descuento</span>
+        <button class="absolute top-6 right-6 text-gray-300 hover:text-red-500 transition-colors z-10 text-2xl"><i class="fa-solid fa-heart"></i></button>
+        <i class="fa-solid fa-headphones text-[160px] text-gray-300"></i>
+      </div>
+      <!-- Thumbnails mockup -->
+      <div class="flex gap-4">
+        <div class="w-1/4 h-24 bg-gray-100 rounded-2xl border-2 border-brandIndigo flex justify-center items-center"><i class="fa-solid fa-headphones text-2xl text-gray-400"></i></div>
+        <div class="w-1/4 h-24 bg-white border border-gray-100 rounded-2xl flex justify-center items-center opacity-60"><i class="fa-solid fa-box text-2xl text-gray-300"></i></div>
+        <div class="w-1/4 h-24 bg-white border border-gray-100 rounded-2xl flex justify-center items-center opacity-60"><i class="fa-solid fa-image text-2xl text-gray-300"></i></div>
+      </div>
+    </div>
+
+    <!-- Product Info -->
+    <div class="flex flex-col">
+      <div class="flex items-center text-yellow-400 text-sm mb-3">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        <span class="text-gray-500 ml-2 font-semibold">4.8 (124 reviews)</span>
+      </div>
+      
+      <h1 class="text-4xl font-extrabold text-slate-900 mb-2 leading-tight">Auriculares Noise-Cancelling Pro</h1>
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-6">SKU: HP-NCP-092</p>
+
+      <div class="flex items-end gap-3 mb-6 border-b border-gray-100 pb-6">
+        <span class="text-4xl font-black text-slate-900">$299.00</span>
+        <span class="text-xl font-medium text-gray-400 line-through mb-1">$350.00</span>
+        <span class="bg-red-500/10 text-red-600 text-xs font-bold px-2 py-1 rounded-md mb-2">Ahorras $51.00</span>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed mb-8">
+        Diseñados pensando en el confort y el rendimiento acústico superior. Su sistema de cancelación activa de ruido analiza continuamente tu entorno para bloquear distracciones. Conéctalos vía Bluetooth 5.3 o úsalos cableados.
+      </p>
+
+      <!-- Options -->
+      <div class="mb-8">
+        <p class="font-bold text-sm mb-3">Color Seleccionado: <span class="text-slate-500">Midnight Black</span></p>
+        <div class="flex gap-3">
+          <button class="w-10 h-10 rounded-full bg-slate-900 ring-2 ring-offset-2 ring-slate-900 shadow-md"></button>
+          <button class="w-10 h-10 rounded-full bg-gray-300 ring-1 ring-gray-300 hover:ring-2 hover:ring-offset-2 transition-all"></button>
+          <button class="w-10 h-10 rounded-full bg-blue-900 ring-1 ring-gray-300 hover:ring-2 hover:ring-offset-2 transition-all"></button>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex gap-4 mb-8">
+        <div class="w-32 bg-white border border-gray-200 rounded-xl flex items-center justify-between px-2 font-bold select-none h-14">
+          <button class="px-3 hover:text-brandIndigo text-gray-500 text-xl">-</button>
+          <span>1</span>
+          <button class="px-3 hover:text-brandIndigo text-gray-500 text-xl">+</button>
+        </div>
+        
+        <script>
+          function simulateAddCart() {
+            const btn = document.getElementById('addBtn');
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Agregando...';
+            setTimeout(() => {
+              window.location.href = 'cart.html';
+            }, 600);
+          }
+        </script>
+        
+        <button id="addBtn" onclick="simulateAddCart()" class="flex-1 bg-brandIndigo hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-xl shadow-brandIndigo/30 transition-all flex justify-center items-center gap-2 h-14 text-lg">
+          Añadir al Carrito <i class="fa-solid fa-bag-shopping"></i>
+        </button>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="bg-gray-50 rounded-xl p-4 flex gap-6 border border-gray-100 text-sm font-semibold text-slate-700">
+        <div class="flex items-center gap-2"><i class="fa-solid fa-shield-cat text-green-500 text-lg"></i> 2 Años Garantía</div>
+        <div class="flex items-center gap-2"><i class="fa-solid fa-box-open text-blue-500 text-lg"></i> Devolución Gratis</div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    if (window.self !== window.top) {
+      document.querySelectorAll('.fixed').forEach(function(el) { el.style.display = 'none'; });
+    }
+  </script>
+
+</body>
+</html>
