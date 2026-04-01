@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Icon } from '@/components/ui/Icon';
 
 export function BottomNav() {
   const pathname = usePathname();
@@ -26,12 +27,11 @@ export function BottomNav() {
               isActive ? 'text-brand-lemon font-bold' : 'text-brand-cream/50 hover:text-brand-lemon'
             }`}
           >
-            <span 
-                className={`material-symbols-outlined mb-1 text-2xl ${isActive ? 'fill-current' : ''}`}
-                style={isActive ? { fontVariationSettings: "'FILL' 1" } : {}}
-            >
-              {link.icon}
-            </span>
+            <Icon 
+              name={link.icon} 
+              className="w-6 h-6 mb-1"
+              filled={isActive}
+            />
             <span>{link.label}</span>
           </Link>
         );

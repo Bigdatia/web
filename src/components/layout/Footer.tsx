@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Icon } from '@/components/ui/Icon';
 
 export function Footer() {
   return (
@@ -6,11 +7,11 @@ export function Footer() {
       <div className="space-y-4">
         <div className="text-3xl font-black text-brand-cream tracking-tighter">BigdatIA</div>
         <div className="font-space-grotesk text-sm uppercase tracking-widest text-brand-cream/70 flex items-center gap-2">
-           <span className="material-symbols-outlined text-brand-lemon text-lg">location_on</span>
+           <Icon name="location_on" className="w-5 h-5 text-brand-lemon" filled />
            Bucaramanga, Colombia
         </div>
         <div className="font-space-grotesk text-sm uppercase tracking-widest text-brand-cream/70 flex items-center gap-2">
-           <span className="material-symbols-outlined text-brand-lemon text-lg">call</span>
+           <Icon name="call" className="w-5 h-5 text-brand-lemon" filled />
            <a href="https://wa.me/573164151731" target="_blank" rel="noopener noreferrer" className="hover:text-brand-lemon transition-colors">WhatsApp: +57 316 415 1731</a>
         </div>
       </div>

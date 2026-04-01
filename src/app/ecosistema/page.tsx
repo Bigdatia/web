@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Icon } from "@/components/ui/Icon";
+import Image from "next/image";
 
 export default function Ecosistema() {
   return (
@@ -25,10 +27,12 @@ export default function Ecosistema() {
         <section className="px-8 md:px-24 mb-40">
           <div className="grid grid-cols-12 gap-6 h-[400px]">
             <div className="col-span-12 md:col-span-8 relative bg-surface-container-low overflow-hidden rounded-sm group">
-              <img 
-                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" 
+              <Image 
+                className="object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" 
                 alt="Ecosystem Network" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRhgwET38coZksX5zlgfitbEWdKYNF6cua3BBRgDvSfGxpa42d7Vd9tK9nZBAQL3BRiOJgFotYeACBpF7QJeZzcLq8y4mTDor1FN6F6BH1bZIT6D5ccTrw4cpXIwHxHqgpO4vRb8kMWnOJCGhO9jGEmmlN_iuC_eLDIy_RNNUPre_ZiUNMIVw2Q-LfxEAhnL5VSY1S5oH-ECUxav44s7G3vvlVfA_HFyAdQwHfe9TQLox5pjTXE2VXNvxjMJmUHWVBumD288R4aNlr" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRhgwET38coZksX5zlgfitbEWdKYNF6cua3BBRgDvSfGxpa42d7Vd9tK9nZBAQL3BRiOJgFotYeACBpF7QJeZzcLq8y4mTDor1FN6F6BH1bZIT6D5ccTrw4cpXIwHxHqgpO4vRb8kMWnOJCGhO9jGEmmlN_iuC_eLDIy_RNNUPre_ZiUNMIVw2Q-LfxEAhnL5VSY1S5oH-ECUxav44s7G3vvlVfA_HFyAdQwHfe9TQLox5pjTXE2VXNvxjMJmUHWVBumD288R4aNlr"
+                fill
+                sizes="(max-width: 768px) 100vw, 66vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
               <div className="absolute bottom-10 left-10">
@@ -38,7 +42,7 @@ export default function Ecosistema() {
             </div>
             <div className="col-span-12 md:col-span-4 bg-surface-container-highest p-10 flex flex-col justify-end relative border-l border-outline-variant border-opacity-20">
               <div className="absolute top-10 right-10">
-                <span className="material-symbols-outlined text-primary-fixed text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>hub</span>
+                <Icon name="hub" className="w-12 h-12 text-primary-fixed" filled />
               </div>
               <h4 className="text-primary-fixed font-headline text-4xl font-extrabold mb-4">99.9%</h4>
               <p className="text-on-surface-variant text-sm leading-relaxed">Eficiencia operativa garantizada mediante nuestra arquitectura de integración distribuida con partners certificados.</p>
@@ -67,7 +71,7 @@ export default function Ecosistema() {
                 Especialistas en infraestructura cloud de alta resiliencia y orquestación de contenedores para Big Data.
               </p>
               <div className="flex items-center text-primary-fixed font-label text-xs font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                Ver Alianza <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                Ver Alianza <Icon name="arrow_forward" className="w-4 h-4 ml-2" />
               </div>
             </div>
             {/* Partner 2 */}
@@ -79,7 +83,7 @@ export default function Ecosistema() {
                 Consultora líder en transformación digital y diseño de experiencias centradas en el análisis predictivo.
               </p>
               <div className="flex items-center text-primary-fixed font-label text-xs font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                Ver Alianza <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                Ver Alianza <Icon name="arrow_forward" className="w-4 h-4 ml-2" />
               </div>
             </div>
             {/* Partner 3 */}
@@ -91,7 +95,7 @@ export default function Ecosistema() {
                 Expertos en ciberseguridad avanzada y protocolos de protección de datos para entornos corporativos críticos.
               </p>
               <div className="flex items-center text-primary-fixed font-label text-xs font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                Ver Alianza <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                Ver Alianza <Icon name="arrow_forward" className="w-4 h-4 ml-2" />
               </div>
             </div>
             {/* Partner 4 */}
@@ -103,7 +107,7 @@ export default function Ecosistema() {
                 Plataforma de IA generativa aplicada al procesamiento de lenguaje natural y automatización de procesos.
               </p>
               <div className="flex items-center text-primary-fixed font-label text-xs font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                Ver Alianza <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                Ver Alianza <Icon name="arrow_forward" className="w-4 h-4 ml-2" />
               </div>
             </div>
           </div>
@@ -117,10 +121,13 @@ export default function Ecosistema() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="relative">
               <div className="relative z-10 p-1 bg-gradient-to-br from-primary-fixed/20 to-secondary-container/20 rounded-sm">
-                <img 
+                <Image 
                   alt="Global Integration" 
-                  className="w-full h-[500px] object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-1000" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcjcMscoHhuDFAY3I2x6b-ob1KftRrSw_Rt-yS-zWR5Hjh8prcVXBR-LnDPGzEypbT3aPgIlg-toDG8KTEGRp2tDq7QGwcEbQi-p59ajlErL2MKCv9FTGqcvCJxebFwKPMIGwP0JpHgMNHMXa49POYINVrPu8hfM1aiw7K6po78ABAx-V02kf7JAFgzodA9KYrMDDaTXynmsNlShd480O_dpVSjy_ym0SnG3IJY-8V8H6rELhopngX9cCTqltD_O9_fdpc2pc3B-pl" 
+                  className="object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-1000" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcjcMscoHhuDFAY3I2x6b-ob1KftRrSw_Rt-yS-zWR5Hjh8prcVXBR-LnDPGzEypbT3aPgIlg-toDG8KTEGRp2tDq7QGwcEbQi-p59ajlErL2MKCv9FTGqcvCJxebFwKPMIGwP0JpHgMNHMXa49POYINVrPu8hfM1aiw7K6po78ABAx-V02kf7JAFgzodA9KYrMDDaTXynmsNlShd480O_dpVSjy_ym0SnG3IJY-8V8H6rELhopngX9cCTqltD_O9_fdpc2pc3B-pl"
+                  width={800}
+                  height={500}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-primary-fixed/10 blur-3xl"></div>
@@ -130,7 +137,7 @@ export default function Ecosistema() {
               <div className="space-y-12">
                 <div className="flex gap-6">
                   <div className="flex-shrink-0 w-12 h-12 glass-card flex items-center justify-center border border-outline-variant border-opacity-20">
-                    <span className="material-symbols-outlined text-primary-fixed">api</span>
+                    <Icon name="api" className="w-6 h-6 text-primary-fixed" />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold mb-2">API-First Design</h4>
@@ -139,7 +146,7 @@ export default function Ecosistema() {
                 </div>
                 <div className="flex gap-6">
                   <div className="flex-shrink-0 w-12 h-12 glass-card flex items-center justify-center border border-outline-variant border-opacity-20">
-                    <span className="material-symbols-outlined text-primary-fixed">auto_awesome</span>
+                    <Icon name="auto_awesome" className="w-6 h-6 text-primary-fixed" />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold mb-2">Sinergia Operativa</h4>
@@ -148,7 +155,7 @@ export default function Ecosistema() {
                 </div>
                 <div className="flex gap-6">
                   <div className="flex-shrink-0 w-12 h-12 glass-card flex items-center justify-center border border-outline-variant border-opacity-20">
-                    <span className="material-symbols-outlined text-primary-fixed">shield</span>
+                    <Icon name="shield" className="w-6 h-6 text-primary-fixed" />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold mb-2">Seguridad Unificada</h4>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Icon } from '@/components/ui/Icon';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -55,9 +56,7 @@ export function Navbar() {
             onClick={toggleMenu}
             className="md:hidden text-brand-lemon flex items-center justify-center"
           >
-            <span className="material-symbols-outlined text-3xl">
-              {isMenuOpen ? 'close' : 'menu'}
-            </span>
+            <Icon name={isMenuOpen ? 'close' : 'menu'} className="w-8 h-8" />
           </button>
         </div>
       </nav>
@@ -69,7 +68,7 @@ export function Navbar() {
             onClick={toggleMenu}
             className="absolute top-6 right-6 text-brand-lemon flex items-center justify-center p-2"
           >
-            <span className="material-symbols-outlined text-4xl">close</span>
+            <Icon name="close" className="w-10 h-10" />
           </button>
 
           <div className="flex flex-col items-center gap-8">

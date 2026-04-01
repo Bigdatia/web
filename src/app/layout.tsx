@@ -5,16 +5,22 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["700", "900"],
+  display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -34,9 +40,6 @@ export default function RootLayout({
       lang="es"
       className={`${inter.variable} ${montserrat.variable} ${spaceGrotesk.variable} dark`}
     >
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-      </head>
       <body className="font-body bg-background text-on-surface selection:bg-brand-lemon selection:text-on-primary">
         {children}
         <BottomNav />

@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Icon } from "@/components/ui/Icon";
+import Image from "next/image";
 
 export default function Marketing() {
   return (
@@ -32,10 +34,13 @@ export default function Marketing() {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-secondary to-primary-container opacity-20 blur-2xl group-hover:opacity-30 transition duration-1000"></div>
               <div className="relative bg-surface-container-highest aspect-video overflow-hidden border border-outline-variant/20 shadow-2xl">
-                <img 
-                  className="w-full h-full object-cover" 
+                <Image 
+                  className="object-cover" 
                   alt="Futuristic data visualization of high-frequency trading neural networks" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0upJvKd0b_WFqQVomGX5L2XpWAbYUPT45ws6uGYUwzs7Cyn6bdu9yg3WuiYi229GtkYPbwHflxsQQSHNOeHqDSlw0pgag9tsY7isUjp5JMMDyUfLXzeOenoz489WbpAIo_e3l34LEQcn0Pves7Ze2sA8Rry3NcyBa2lhmC6IV9BU5NKsRYdZCpyn1rmgdW9ZbkK4hQeBFvHLxZbWSNPHchjGXsR2W9fUaCi-qY0c5UzNELZl-ZzbBOwZUyrPgDBkzCEab7Tu9AMf4" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0upJvKd0b_WFqQVomGX5L2XpWAbYUPT45ws6uGYUwzs7Cyn6bdu9yg3WuiYi229GtkYPbwHflxsQQSHNOeHqDSlw0pgag9tsY7isUjp5JMMDyUfLXzeOenoz489WbpAIo_e3l34LEQcn0Pves7Ze2sA8Rry3NcyBa2lhmC6IV9BU5NKsRYdZCpyn1rmgdW9ZbkK4hQeBFvHLxZbWSNPHchjGXsR2W9fUaCi-qY0c5UzNELZl-ZzbBOwZUyrPgDBkzCEab7Tu9AMf4"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
               </div>
@@ -59,20 +64,22 @@ export default function Marketing() {
                   <span className="font-label text-xs uppercase tracking-[0.2em] text-on-surface/40">Status: Predictive_On</span>
                 </div>
                 <div className="h-full flex flex-col justify-end relative z-10">
-                  <span className="material-symbols-outlined text-primary-container mb-4 text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>insights</span>
+                  <Icon name="insights" className="w-10 h-10 text-primary-container mb-4" filled />
                   <h3 className="text-3xl font-headline font-extrabold mb-2 uppercase italic tracking-tighter">Predictive Audiences</h3>
                   <p className="text-on-surface/60 max-w-md">Modelado de comportamiento futuro basado en grafos de probabilidad profunda. Anticipamos la intención de compra antes que el usuario.</p>
                 </div>
-                <img 
-                  className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" 
+                <Image 
+                  className="absolute inset-0 object-cover opacity-20 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" 
                   alt="Abstract 3D data architecture" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxG9LpOhofCKAAZQ3OnLopFkDmCalahD9TpMBlnbNi28ti8iXLwfBIK2Y4px9eLCpWB1PX3RuF3aUQBOOkS8vdc6kXgMjjQBtHlk1oCawQy55-E57DF-0b5ZWl4t3Ek03e04H73SHP_KMynqQE2prVRI7nLDzajzAtAKg4KKp1slN1zFrKSHty78JzQRgRRMzJ6u5RYsE6iYxha_CHw6BZj1ULC0WP5g3lvRk8pnMiH15Lbac0AtDvgt_2IFrL2X1EbJxiQk085KVy" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxG9LpOhofCKAAZQ3OnLopFkDmCalahD9TpMBlnbNi28ti8iXLwfBIK2Y4px9eLCpWB1PX3RuF3aUQBOOkS8vdc6kXgMjjQBtHlk1oCawQy55-E57DF-0b5ZWl4t3Ek03e04H73SHP_KMynqQE2prVRI7nLDzajzAtAKg4KKp1slN1zFrKSHty78JzQRgRRMzJ6u5RYsE6iYxha_CHw6BZj1ULC0WP5g3lvRk8pnMiH15Lbac0AtDvgt_2IFrL2X1EbJxiQk085KVy"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 66vw"
                 />
               </div>
               {/* Card 2 */}
               <div className="md:col-span-4 bg-surface-container-high p-8 flex flex-col justify-between border-l-4 border-secondary purple-glow-underlay">
                 <div>
-                  <span className="material-symbols-outlined text-secondary text-3xl mb-6">timer</span>
+                  <Icon name="timer" className="w-8 h-8 text-secondary mb-6" />
                   <h3 className="text-2xl font-headline font-bold mb-4 leading-tight uppercase tracking-tight">Optimización Real-time</h3>
                   <p className="text-on-surface/60 text-sm">Ajustes de puja cada 60 segundos mediante redes neuronales recurrentes para maximizar inventario premium.</p>
                 </div>
@@ -103,16 +110,18 @@ export default function Marketing() {
                   <h3 className="text-2xl font-headline font-bold mb-4 uppercase tracking-tight">Visualización Cuántica</h3>
                   <p className="text-on-surface/60 text-sm mb-6">Dashboards inmersivos capaces de renderizar miles de millones de puntos de datos en milisegundos.</p>
                   <button className="text-primary-container font-label text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
-                    Open Console <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    Open Console <Icon name="arrow_forward" className="w-4 h-4" />
                   </button>
                 </div>
-                <div className="lg:w-1/2 relative">
-                  <img 
-                    className="rounded shadow-2xl opacity-80 group-hover:opacity-100 transition-opacity" 
+                <div className="lg:w-1/2 relative aspect-video">
+                  <Image 
+                    className="rounded shadow-2xl opacity-80 group-hover:opacity-100 transition-opacity object-cover" 
                     alt="High tech server room with glowing fiber optic cables" 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV4IRheU1Zq5kFBpYlyzlnmnWJgLMIn8hIU8l9PfvSb2Co0D9gY7BdXQ9YzwYZmjerepdmIEYH6Wv6zZnh_my8gXPpT2xMxHPaWkN_kdcIdSRJhpQ-2yHD_5FKlWIlGwh0YFg7sS-vrKugifPU8S3XA7kSgRh1fvMn9dWb9pJvhb1QPEDXrE51OS51BTtOg35ptL3FdBH_sI0UOobqEIsAgdPlmf9V5zEUqyQ89iSA_RXErrL_lEVKc7krlb0NLLufyG4D6GYotfgW" 
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV4IRheU1Zq5kFBpYlyzlnmnWJgLMIn8hIU8l9PfvSb2Co0D9gY7BdXQ9YzwYZmjerepdmIEYH6Wv6zZnh_my8gXPpT2xMxHPaWkN_kdcIdSRJhpQ-2yHD_5FKlWIlGwh0YFg7sS-vrKugifPU8S3XA7kSgRh1fvMn9dWb9pJvhb1QPEDXrE51OS51BTtOg35ptL3FdBH_sI0UOobqEIsAgdPlmf9V5zEUqyQ89iSA_RXErrL_lEVKc7krlb0NLLufyG4D6GYotfgW"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
                   />
-                  <div className="absolute -bottom-4 -right-4 bg-secondary p-4 text-on-secondary font-headline font-bold text-xs uppercase tracking-tighter">
+                  <div className="absolute -bottom-4 -right-4 bg-secondary p-4 text-on-secondary font-headline font-bold text-xs uppercase tracking-tighter z-10">
                     Billion Data Points / sec
                   </div>
                 </div>
@@ -129,11 +138,15 @@ export default function Marketing() {
               <div className="order-2 lg:order-1 relative">
                 <div className="absolute -inset-4 border border-secondary/20 rounded-none transform -rotate-1"></div>
                 <div className="relative bg-surface-container-highest p-2">
-                  <img 
-                    className="w-full grayscale brightness-75 hover:grayscale-0 transition-all duration-700 cursor-crosshair" 
-                    alt="Conceptual fintech interface" 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjQKwYIq-xhV0BOXGBrqbdKKdyCGPofnmXE4ub84pS3ajeOAFH3jcb__dXhPae-_-VBXAd8Vmalvmh4l2Q-6-LTH-69FVAjUU4cdb4Fx39Si_SzjIVgyDzIQgcK422IZdvV3dLRPEpgCOvk3mgxsxRARS4UstCgfJrINsiGwaj91lMV4MVTKX_qNCib6IqUs_4Y1MYGGGTMBQiCP_WrK6gRg66IA-YQ6AnLCO_KancDKjOoxTia41j2XPSIlFKlyigP6vtfvlheSnJ" 
-                  />
+                  <div className="relative aspect-video">
+                    <Image 
+                      className="grayscale brightness-75 hover:grayscale-0 transition-all duration-700 cursor-crosshair object-cover" 
+                      alt="Conceptual fintech interface" 
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjQKwYIq-xhV0BOXGBrqbdKKdyCGPofnmXE4ub84pS3ajeOAFH3jcb__dXhPae-_-VBXAd8Vmalvmh4l2Q-6-LTH-69FVAjUU4cdb4Fx39Si_SzjIVgyDzIQgcK422IZdvV3dLRPEpgCOvk3mgxsxRARS4UstCgfJrINsiGwaj91lMV4MVTKX_qNCib6IqUs_4Y1MYGGGTMBQiCP_WrK6gRg66IA-YQ6AnLCO_KancDKjOoxTia41j2XPSIlFKlyigP6vtfvlheSnJ"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  </div>
                   <div className="absolute top-8 left-8 bg-surface-container-lowest/90 backdrop-blur px-6 py-4 border border-outline-variant/20">
                     <p className="text-[10px] text-on-surface/40 uppercase mb-1 font-label">Result Metric</p>
                     <p className="text-3xl font-headline font-black text-primary-container italic leading-none">+240%</p>
@@ -149,7 +162,7 @@ export default function Marketing() {
                   Escalando el futuro de las <span className="text-secondary italic">Fintech</span>
                 </h2>
                 <p className="text-xl text-on-surface/70 mb-10 leading-relaxed italic border-l-2 border-primary-container pl-6">
-                  "El despliegue de BigdatIA redefinió nuestra estructura de adquisición, reduciendo el CAC en un 45% en menos de un trimestre fiscal."
+                  &quot;El despliegue de BigdatIA redefinió nuestra estructura de adquisición, reduciendo el CAC en un 45% en menos de un trimestre fiscal.&quot;
                 </p>
                 <div className="space-y-6">
                   <div className="flex items-center gap-4 text-sm font-label uppercase tracking-widest text-on-surface/50">

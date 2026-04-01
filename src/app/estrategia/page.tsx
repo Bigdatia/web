@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Icon } from "@/components/ui/Icon";
+import Image from "next/image";
 
 export default function Estrategia() {
   return (
@@ -35,16 +37,19 @@ export default function Estrategia() {
             <div className="relative group">
               <div className="absolute -inset-4 bg-secondary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative aspect-square surface-container-highest overflow-hidden border border-outline-variant/15">
-                <img 
+                <Image 
                   alt="Data visualization interface" 
-                  className="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKMMd0XxoWLWbIX-fhEj64SCN-zg9o0gkbMaMvX0vWgkdReSwz5kWMEtKtqAIQ0Zw1WKCszB1ORLoIzDQ4fwkhkCDCzAYTKAS5OMKxtUgkl8695uc0lk7-swYuF7ByBWJICiMWu2zp8bF0B8Obhg3VwgpcfB6RGy_wjKBIoWHIGOsr8IrxsVT29REr8LSrKUAuaBkris1tYiDUV_F6oQ5LZg9gmsopUjqpw99I80KhyuDZSsMqFZ3MJv2_3eveN_8IL4oi5RsxICOt" 
+                  className="object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKMMd0XxoWLWbIX-fhEj64SCN-zg9o0gkbMaMvX0vWgkdReSwz5kWMEtKtqAIQ0Zw1WKCszB1ORLoIzDQ4fwkhkCDCzAYTKAS5OMKxtUgkl8695uc0lk7-swYuF7ByBWJICiMWu2zp8bF0B8Obhg3VwgpcfB6RGy_wjKBIoWHIGOsr8IrxsVT29REr8LSrKUAuaBkris1tYiDUV_F6oQ5LZg9gmsopUjqpw99I80KhyuDZSsMqFZ3MJv2_3eveN_8IL4oi5RsxICOt"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
                 <div className="absolute bottom-8 left-8 right-8 p-6 glass-card border-l-4 border-primary-container">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold tracking-widest uppercase opacity-60">Real-time Analysis</span>
-                    <span className="material-symbols-outlined text-primary-container">trending_up</span>
+                    <Icon name="trending_up" className="w-5 h-5 text-primary-container" />
                   </div>
                   <div className="text-3xl font-black mt-2 font-headline text-on-surface">94.8%</div>
                   <div className="text-sm opacity-60">Accuracy in predictive modeling</div>
@@ -68,7 +73,7 @@ export default function Estrategia() {
                   <span className="text-5xl font-black opacity-10 font-headline group-hover:opacity-30 transition-opacity">01</span>
                   <div className="mt-[-2rem] flex items-center gap-4">
                     <div className="w-16 h-16 bg-secondary-container flex items-center justify-center purple-glow">
-                      <span className="material-symbols-outlined text-3xl text-white">search_insights</span>
+                      <Icon name="search_insights" className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold font-headline">Exploration</h3>
                   </div>
@@ -78,10 +83,10 @@ export default function Estrategia() {
                 </p>
                 <ul className="mt-8 space-y-3">
                   <li className="flex items-center gap-2 text-sm font-bold text-primary-container/80 uppercase tracking-tighter">
-                    <span className="material-symbols-outlined text-lg">check_circle</span> Data Mining
+                    <Icon name="check_circle" className="w-5 h-5" /> Data Mining
                   </li>
                   <li className="flex items-center gap-2 text-sm font-bold text-primary-container/80 uppercase tracking-tighter">
-                    <span className="material-symbols-outlined text-lg">check_circle</span> Market Gap Analysis
+                    <Icon name="check_circle" className="w-5 h-5" /> Market Gap Analysis
                   </li>
                 </ul>
               </div>
@@ -92,7 +97,7 @@ export default function Estrategia() {
                   <span className="text-5xl font-black opacity-10 font-headline group-hover:opacity-30 transition-opacity">02</span>
                   <div className="mt-[-2rem] flex items-center gap-4">
                     <div className="w-16 h-16 bg-primary-container flex items-center justify-center lemon-glow">
-                      <span className="material-symbols-outlined text-3xl text-on-primary">architecture</span>
+                      <Icon name="architecture" className="w-8 h-8 text-on-primary" />
                     </div>
                     <h3 className="text-2xl font-bold font-headline">Architecture</h3>
                   </div>
@@ -102,10 +107,10 @@ export default function Estrategia() {
                 </p>
                 <ul className="mt-8 space-y-3">
                   <li className="flex items-center gap-2 text-sm font-bold text-secondary-fixed-dim uppercase tracking-tighter">
-                    <span className="material-symbols-outlined text-lg">check_circle</span> System Design
+                    <Icon name="check_circle" className="w-5 h-5" /> System Design
                   </li>
                   <li className="flex items-center gap-2 text-sm font-bold text-secondary-fixed-dim uppercase tracking-tighter">
-                    <span className="material-symbols-outlined text-lg">check_circle</span> Tech Stack Alignment
+                    <Icon name="check_circle" className="w-5 h-5" /> Tech Stack Alignment
                   </li>
                 </ul>
               </div>
@@ -115,7 +120,7 @@ export default function Estrategia() {
                   <span className="text-5xl font-black opacity-10 font-headline group-hover:opacity-30 transition-opacity">03</span>
                   <div className="mt-[-2rem] flex items-center gap-4">
                     <div className="w-16 h-16 bg-secondary-container flex items-center justify-center purple-glow">
-                      <span className="material-symbols-outlined text-3xl text-white">rocket_launch</span>
+                      <Icon name="rocket_launch" className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold font-headline">Execution</h3>
                   </div>
@@ -125,10 +130,10 @@ export default function Estrategia() {
                 </p>
                 <ul className="mt-8 space-y-3">
                   <li className="flex items-center gap-2 text-sm font-bold text-primary-container/80 uppercase tracking-tighter">
-                    <span className="material-symbols-outlined text-lg">check_circle</span> Agile Deployment
+                    <Icon name="check_circle" className="w-5 h-5" /> Agile Deployment
                   </li>
                   <li className="flex items-center gap-2 text-sm font-bold text-primary-container/80 uppercase tracking-tighter">
-                    <span className="material-symbols-outlined text-lg">check_circle</span> KPI Monitoring
+                    <Icon name="check_circle" className="w-5 h-5" /> KPI Monitoring
                   </li>
                 </ul>
               </div>
@@ -145,7 +150,7 @@ export default function Estrategia() {
                 <div>
                   <div className="flex justify-between items-start">
                     <span className="text-xs font-bold tracking-widest uppercase text-primary-container">Optimization</span>
-                    <span className="material-symbols-outlined text-primary-container">payments</span>
+                    <Icon name="payments" className="w-6 h-6 text-primary-container" />
                   </div>
                   <h3 className="text-2xl font-bold font-headline mt-4">ROI Optimization</h3>
                 </div>
@@ -158,7 +163,7 @@ export default function Estrategia() {
               <div className="bg-secondary-container p-8 flex flex-col justify-between text-white relative overflow-hidden group">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white/10 to-transparent"></div>
                 <div className="relative z-10">
-                  <span className="material-symbols-outlined text-3xl">bolt</span>
+                  <Icon name="bolt" className="w-8 h-8" />
                   <h3 className="text-xl font-bold font-headline mt-4 leading-tight">Decision Speed</h3>
                 </div>
                 <div className="relative z-10 mt-8">
@@ -168,10 +173,12 @@ export default function Estrategia() {
               </div>
               {/* Visual */}
               <div className="bg-surface-container-lowest p-0 relative overflow-hidden group">
-                <img 
+                <Image 
                   alt="Server room lighting" 
-                  className="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgEyrZJX-tHuV2_gKmgQcOa3qIa9ksJ7sdyQGryl0ih5WHqoCrb-xlOyy8f9YPOzjyxdd6_O2mjQSS4WNhf7u4L2TZOIUlwQeQdNVWoojkY9ldp5BHHEd-tU2ml5JHDGz8Xi3DCdec0PZ5ZCMCfb20jPMEfHMiVWHmjxg_H7hm2ij0SDrT-da9T322NPKmVht-ugpv1j-okpnjIdL1OpKJ4c5Vxfp9LdeTLvGwzfW46kjAoKLY3RuOjPi5nej-X4nvzqQwpqZ61fhM" 
+                  className="object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgEyrZJX-tHuV2_gKmgQcOa3qIa9ksJ7sdyQGryl0ih5WHqoCrb-xlOyy8f9YPOzjyxdd6_O2mjQSS4WNhf7u4L2TZOIUlwQeQdNVWoojkY9ldp5BHHEd-tU2ml5JHDGz8Xi3DCdec0PZ5ZCMCfb20jPMEfHMiVWHmjxg_H7hm2ij0SDrT-da9T322NPKmVht-ugpv1j-okpnjIdL1OpKJ4c5Vxfp9LdeTLvGwzfW46kjAoKLY3RuOjPi5nej-X4nvzqQwpqZ61fhM"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6">
@@ -195,14 +202,14 @@ export default function Estrategia() {
                   <h3 className="text-2xl font-bold font-headline mb-4">Integración Ecosistémica</h3>
                   <p className="text-on-surface-variant text-sm leading-relaxed">Conectamos todos los puntos de contacto de tu negocio mediante inteligencia artificial para una visión 360 real.</p>
                   <button className="mt-6 flex items-center gap-2 text-primary-container font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all">
-                    Explorar Ecosistema <span className="material-symbols-outlined">arrow_forward</span>
+                    Explorar Ecosistema <Icon name="arrow_forward" className="w-5 h-5" />
                   </button>
                 </div>
                 <div className="hidden md:block relative w-48 h-48">
                   <div className="absolute inset-0 border-2 border-primary-container/20 rounded-full animate-pulse"></div>
                   <div className="absolute inset-4 border-2 border-secondary/20 rounded-full"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-5xl text-primary-container">hub</span>
+                    <Icon name="hub" className="w-12 h-12 text-primary-container" />
                   </div>
                 </div>
               </div>
