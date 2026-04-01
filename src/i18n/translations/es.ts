@@ -130,7 +130,7 @@ export const es = {
       ecosystem: {
         title: "Integración Ecosistémica",
         desc: "Conectamos todos los puntos de contacto de tu negocio mediante inteligencia artificial para una visión 360 real.",
-        cta: "Explorar Ecosistema",
+        cta: "Explorar Web",
       },
     },
     roadmap: {
@@ -156,7 +156,7 @@ export const es = {
       titleAccent: "Inteligencia Algorítmica",
       subtitle: "Despliégue campañas de performance basadas en atribución algorítmica de precisión cuántica. El fin del desperdicio publicitario.",
       cta1: "INICIAR AUDITORÍA",
-      cta2: "VER ECOSISTEMA",
+      cta2: "SERVICIOS WEB",
     },
     features: {
       title: "Diseñado para el Dominio",
@@ -238,7 +238,7 @@ export const es = {
     },
   },
 
-  // ─── Ecosistema/Web Page ───
+  // ─── Web Page ───
   web: {
     hero: {
       label: "Portafolio de Servicios Web",

@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import Link from 'next/link';
 import { Icon } from "@/components/ui/Icon";
 import { useLanguage } from "@/i18n/LanguageContext";
 import Image from "next/image";
@@ -31,9 +32,11 @@ export default function Marketing() {
                 <button className="bg-primary-container text-on-primary rounded-full px-10 py-4 font-headline font-black uppercase text-sm tracking-widest hover:shadow-[0_0_20px_rgba(213,252,107,0.4)] transition-all w-full sm:w-auto">
                   {t.marketing.hero.cta1}
                 </button>
-                <button className="border-2 border-secondary text-secondary rounded-full px-10 py-4 font-headline font-black uppercase text-sm tracking-widest hover:bg-secondary/10 transition-all w-full sm:w-auto">
-                  {t.marketing.hero.cta2}
-                </button>
+                <Link href="/web" className="w-full sm:w-auto">
+                  <button className="border-2 border-secondary text-secondary rounded-full px-10 py-4 font-headline font-black uppercase text-sm tracking-widest hover:bg-secondary/10 transition-all w-full">
+                    {t.marketing.hero.cta2}
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="relative group">

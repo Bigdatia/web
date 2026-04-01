@@ -13,7 +13,7 @@ const webTypesMeta = [
   { id: "ecommerce", number: "03", icon: "shopping_bag", accentColor: "#cfbdff", demoUrl: "/websites-bigdatia/ecommerce/index.html", key: "ecommerce" as const },
 ];
 
-export default function Ecosistema() {
+export default function WebPage() {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
   const { t } = useLanguage();
 

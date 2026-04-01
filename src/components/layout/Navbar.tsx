@@ -17,7 +17,7 @@ export function Navbar() {
     { href: '/estrategia', label: t.nav.strategy },
     { href: '/marketing', label: t.nav.marketing },
     { href: '/activaciones', label: t.nav.activations },
-    { href: '/ecosistema', label: t.nav.web },
+    { href: '/web', label: t.nav.web },
     { href: '/portafolio', label: t.nav.portfolio },
   ];
 

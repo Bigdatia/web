@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import Link from 'next/link';
 import { Icon } from "@/components/ui/Icon";
 import { useLanguage } from "@/i18n/LanguageContext";
 import Image from "next/image";
@@ -195,9 +196,11 @@ export default function Estrategia() {
               <div className="max-w-md">
                 <h3 className="text-2xl font-bold font-headline mb-4">{t.estrategia.metrics.ecosystem.title}</h3>
                 <p className="text-on-surface-variant text-sm leading-relaxed">{t.estrategia.metrics.ecosystem.desc}</p>
-                <button className="mt-6 flex items-center gap-2 text-primary-container font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all">
-                  {t.estrategia.metrics.ecosystem.cta} <Icon name="arrow_forward" className="w-5 h-5" />
-                </button>
+                <Link href="/web">
+                  <button className="mt-6 flex items-center gap-2 text-primary-container font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all">
+                    {t.estrategia.metrics.ecosystem.cta} <Icon name="arrow_forward" className="w-5 h-5" />
+                  </button>
+                </Link>
               </div>
               <div className="hidden md:block relative w-48 h-48">
                 <div className="absolute inset-0 border-2 border-primary-container/20 rounded-full animate-pulse"></div>

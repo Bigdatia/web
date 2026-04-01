@@ -132,7 +132,7 @@ export const en: Translations = {
       ecosystem: {
         title: "Ecosystemic Integration",
         desc: "We connect all your business touchpoints through artificial intelligence for a real 360° vision.",
-        cta: "Explore Ecosystem",
+        cta: "Explore Web",
       },
     },
     roadmap: {
@@ -158,7 +158,7 @@ export const en: Translations = {
       titleAccent: "Algorithmic Intelligence",
       subtitle: "Deploy performance campaigns based on quantum-precision algorithmic attribution. The end of advertising waste.",
       cta1: "START AUDIT",
-      cta2: "VIEW ECOSYSTEM",
+      cta2: "WEB SERVICES",
     },
     features: {
       title: "Engineered for Dominance",
@@ -240,7 +240,7 @@ export const en: Translations = {
     },
   },
 
-  // ─── Ecosistema/Web Page ───
+  // ─── Web Page ───
   web: {
     hero: {
       label: "Web Services Portfolio",

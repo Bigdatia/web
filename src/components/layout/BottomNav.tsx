@@ -14,7 +14,7 @@ export function BottomNav() {
     { href: '/estrategia', label: t.bottomNav.strategy, icon: 'insights' },
     { href: '/marketing', label: t.bottomNav.marketing, icon: 'campaign' },
     { href: '/activaciones', label: t.bottomNav.activations, icon: 'bolt' },
-    { href: '/ecosistema', label: t.bottomNav.web, icon: 'devices' },
+    { href: '/web', label: t.bottomNav.web, icon: 'devices' },
     { href: '/portafolio', label: t.bottomNav.portfolio, icon: 'folder_open' },
   ];
 
