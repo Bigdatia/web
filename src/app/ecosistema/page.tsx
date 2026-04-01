@@ -108,9 +108,9 @@ const comparisonRows = [
   },
   {
     label: "Tiempo de entrega",
-    landing: "1 – 2 semanas",
-    corporate: "3 – 5 semanas",
-    ecommerce: "6 – 10 semanas",
+    landing: "3 días",
+    corporate: "7 días",
+    ecommerce: "14 días",
   },
 ];
 
