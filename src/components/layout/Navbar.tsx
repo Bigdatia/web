@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Icon } from '@/components/ui/Icon';
 import { LanguageSwitch } from '@/components/ui/LanguageSwitch';
 import { useLanguage } from '@/i18n/LanguageContext';
+import Image from 'next/image';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -26,8 +27,15 @@ export function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 flex justify-between items-center px-6 md:px-12 py-4 z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant/10">
-        <Link href="/" className="text-xl md:text-2xl font-black tracking-tighter text-brand-cream uppercase font-brand">
-          BigdatIA
+        <Link href="/" className="flex items-center gap-2">
+          <Image 
+            src="/logo-2.webp" 
+            alt="BigdatIA Logo" 
+            width={160} 
+            height={40} 
+            className="w-auto h-8 md:h-10 object-contain"
+            priority
+          />
         </Link>
         
         {/* Desktop Links */}
@@ -77,7 +85,15 @@ export function Navbar() {
           </button>
 
           <div className="flex flex-col items-center gap-8">
-            <span className="font-brand font-black text-brand-cream text-3xl tracking-tighter uppercase mb-8">BigdatIA</span>
+            <div className="mb-12">
+              <Image 
+                src="/logo-2.webp" 
+                alt="BigdatIA Logo" 
+                width={200} 
+                height={50} 
+                className="w-auto h-12 md:h-16 object-contain"
+              />
+            </div>
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
