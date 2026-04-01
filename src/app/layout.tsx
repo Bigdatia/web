@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 };
 
 import { BottomNav } from "@/components/layout/BottomNav";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 
 export default function RootLayout({
   children,
@@ -41,8 +42,10 @@ export default function RootLayout({
       className={`${inter.variable} ${montserrat.variable} ${spaceGrotesk.variable} dark`}
     >
       <body className="font-body bg-background text-on-surface selection:bg-brand-lemon selection:text-on-primary">
-        {children}
-        <BottomNav />
+        <LanguageProvider>
+          {children}
+          <BottomNav />
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Icon } from "@/components/ui/Icon";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface WebDemoModalProps {
   isOpen: boolean;
@@ -13,6 +14,7 @@ interface WebDemoModalProps {
 
 export function WebDemoModal({ isOpen, onClose, demoUrl, demoLabel, accentColor }: WebDemoModalProps) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (isOpen) {
@@ -60,7 +62,7 @@ export function WebDemoModal({ isOpen, onClose, demoUrl, demoLabel, accentColor 
             {demoLabel}
           </span>
           <span className="hidden sm:inline text-brand-cream/30 font-space-grotesk text-[10px] uppercase tracking-widest ml-2">
-            Demo Interactivo · BigdatIA
+            {t.web.demoModalTag}
           </span>
         </div>
         <button
@@ -68,7 +70,7 @@ export function WebDemoModal({ isOpen, onClose, demoUrl, demoLabel, accentColor 
           className="flex items-center gap-2 text-brand-cream/60 hover:text-brand-lemon transition-colors group"
         >
           <span className="hidden sm:inline font-space-grotesk text-xs uppercase tracking-widest">
-            Cerrar
+            {t.web.demoModalClose}
           </span>
           <Icon
             name="close"

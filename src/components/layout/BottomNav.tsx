@@ -3,39 +3,39 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Icon } from '@/components/ui/Icon';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export function BottomNav() {
   const pathname = usePathname();
+  const { t } = useLanguage();
 
   const navLinks = [
-    { href: '/', label: 'Home', icon: 'grid_view' },
-    { href: '/estrategia', label: 'Strategy', icon: 'insights' },
-    { href: '/marketing', label: 'Marketing', icon: 'campaign' },
-    { href: '/activaciones', label: 'Actives', icon: 'bolt' },
-    { href: '/ecosistema', label: 'Web', icon: 'devices' },
+    { href: '/', label: t.bottomNav.home, icon: 'grid_view' },
+    { href: '/estrategia', label: t.bottomNav.strategy, icon: 'insights' },
+    { href: '/marketing', label: t.bottomNav.marketing, icon: 'campaign' },
+    { href: '/activaciones', label: t.bottomNav.activations, icon: 'bolt' },
+    { href: '/ecosistema', label: t.bottomNav.web, icon: 'devices' },
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-lowest/90 backdrop-blur-2xl flex justify-around items-center py-4 px-2 z-50 rounded-t-2xl border-t border-outline-variant/10 shadow-[0_-10px_40px_rgba(117,51,255,0.2)]">
-      {navLinks.map((link) => {
-        const isActive = pathname === link.href;
-        return (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={`flex flex-col items-center justify-center font-space-grotesk text-[10px] uppercase tracking-[0.1em] transition-all duration-300 active:scale-90 ${
-              isActive ? 'text-brand-lemon font-bold' : 'text-brand-cream/50 hover:text-brand-lemon'
-            }`}
-          >
-            <Icon 
-              name={link.icon} 
-              className="w-6 h-6 mb-1"
-              filled={isActive}
-            />
-            <span>{link.label}</span>
-          </Link>
-        );
-      })}
+    <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-surface-container-lowest/95 backdrop-blur-xl border-t border-outline-variant/15">
+      <div className="flex justify-around items-center py-2 px-1">
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`flex flex-col items-center gap-0.5 px-2 py-1.5 rounded-lg transition-colors ${
+                isActive ? 'text-brand-lemon' : 'text-brand-cream/40'
+              }`}
+            >
+              <Icon name={link.icon} className="w-5 h-5" filled={isActive} />
+              <span className="text-[9px] font-bold uppercase tracking-wider font-space-grotesk">{link.label}</span>
+            </Link>
+          );
+        })}
+      </div>
     </nav>
   );
 }

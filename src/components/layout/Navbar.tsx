@@ -4,17 +4,20 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Icon } from '@/components/ui/Icon';
+import { LanguageSwitch } from '@/components/ui/LanguageSwitch';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navLinks = [
-    { href: '/', label: 'Inicio' },
-    { href: '/estrategia', label: 'Estrategia' },
-    { href: '/marketing', label: 'Marketing' },
-    { href: '/activaciones', label: 'Activaciones' },
-    { href: '/ecosistema', label: 'Web' },
+    { href: '/', label: t.nav.home },
+    { href: '/estrategia', label: t.nav.strategy },
+    { href: '/marketing', label: t.nav.marketing },
+    { href: '/activaciones', label: t.nav.activations },
+    { href: '/ecosistema', label: t.nav.web },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -46,9 +49,10 @@ export function Navbar() {
           })}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <LanguageSwitch />
           <button className="hidden sm:block bg-brand-lemon text-on-primary px-6 py-2 rounded-full font-bold hover:scale-95 active:scale-90 transition-transform text-sm">
-            Get Started
+            {t.nav.getStarted}
           </button>
           
           {/* Mobile Menu Toggle */}
@@ -88,13 +92,16 @@ export function Navbar() {
                 </Link>
               );
             })}
-            <button className="mt-8 bg-brand-lemon text-on-primary px-10 py-4 rounded-full font-bold text-xl active:scale-95 transition-transform">
-              Get Started
+            <div className="mt-4">
+              <LanguageSwitch />
+            </div>
+            <button className="mt-4 bg-brand-lemon text-on-primary px-10 py-4 rounded-full font-bold text-xl active:scale-95 transition-transform">
+              {t.nav.getStarted}
             </button>
           </div>
 
           <div className="absolute bottom-12 text-brand-cream/30 font-space-grotesk text-[10px] tracking-[0.3em] uppercase">
-            Precision Luminescence © 2024
+            {t.footer.copyright} © {new Date().getFullYear()}
           </div>
       </div>
     </>
