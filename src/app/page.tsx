@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Icon } from "@/components/ui/Icon";
 import { YouTubeFacade } from "@/components/ui/YouTubeFacade";
+import { InstagramFeed } from "@/components/ui/InstagramFeed";
 import { useLanguage } from "@/i18n/LanguageContext";
 import Image from "next/image";
 
@@ -140,50 +141,12 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-black font-headline mb-4 uppercase tracking-tighter">{t.home.content.title}</h2>
               <p className="text-xl text-on-surface-variant max-w-lg">{t.home.content.subtitle}</p>
             </div>
-            <a className="text-brand-cream/60 hover:text-brand-lemon transition-colors font-space-grotesk text-sm uppercase tracking-widest border-b border-brand-cream/20 pb-2 inline-flex items-center gap-2" href="https://instagram.com/bigdatia_agency" target="_blank" rel="noopener noreferrer">
+            <a className="text-brand-cream/60 hover:text-brand-lemon transition-colors font-space-grotesk text-sm uppercase tracking-widest border-b border-brand-cream/20 pb-2 inline-flex items-center gap-2" href="https://www.instagram.com/bigdatia" target="_blank" rel="noopener noreferrer">
               {t.home.content.cta} <Icon name="open_in_new" className="w-4 h-4" />
             </a>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="aspect-square relative group overflow-hidden border border-outline-variant/20">
-              <Image 
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-                alt="Modern high-tech workspace" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO_52gs_KQErliO9o9y1J567IKKoPE5vyfFcqk3Qk_H-FEthqZe7V2YDTZhdGISrvdHR6Z_MOjFVr0PynkFfwY6HbQQ3ZlW45YEMZnY5tpIg4dfR0hvrMgx0Ew58okNreVex68CnDGjjeFLSdSnzmSsbrbcquUSRKo6YqUCDb0KnxbVB3QHlzBWI3o4uMWIWArmOzl_6cQ4TinRQW3f1BzYDnTrIj_m3c605JZc7xGdz5OuCrwmI0hsNxCzBveLCs3GIlrjMdThs4X"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-brand-purple/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                <Icon name="favorite" className="w-8 h-8 text-brand-cream mb-4" filled />
-                <p className="text-brand-cream font-bold text-xl">{t.home.content.img1}</p>
-              </div>
-            </div>
-            <div className="aspect-square relative group overflow-hidden border border-outline-variant/20">
-              <Image 
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-                alt="Sleek laptop on a dark desk displaying complex data" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB65SLIrycrP6i_xrehsddUbt4QTuIPMyW9oT3dtq7wYZ5mjFN-ObFOvu8CWrfyBn_SAFTZRSX8C9SOveiVg_r0LGERPDzwQod8nvpgE5csl_mvoymN8qCik-bojPKZPIKIaIwrDQXW3fHPuxN_KoJV0QYlJegSbrlXTRcbT61BnUmUrtfguEoljUpiYhddHhWXOyUT43kvIJOHbUV5GbjQ1Hk2zjYhp9FvtnVKfaAR2CgJI8F1K-5rUx6M_RdoKypoCmETTSknzwoH"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-brand-purple/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                <Icon name="favorite" className="w-8 h-8 text-brand-cream mb-4" filled />
-                <p className="text-brand-cream font-bold text-xl">{t.home.content.img2}</p>
-              </div>
-            </div>
-            <div className="aspect-square relative group overflow-hidden border border-outline-variant/20">
-              <Image 
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-                alt="Interior of a cutting-edge server room" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp80rro4MC5Da2rApvt05GVklOAlxi8VIOfL4c1cU4QbATpDou0NodDnOVaYk32_-3yhChFpp1hC9XX9R7qq3IFlxdqLLmT-oocTK7FqSvrWO30n8YRbfkVOfzy3pU2pH90zfKxKbJscMUDGyC-dxI26zN5TCTum2NKU_yzZyuuGA8KCqYXGotBsiSN5neZGxyGT12YBfC8iR-i-XImMatYYOQqJF_GL_8Jkjy20yr7UZugCPFWwVJ2q9iSseNoT3nQays8CeQEXyz"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-brand-purple/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                <Icon name="favorite" className="w-8 h-8 text-brand-cream mb-4" filled />
-                <p className="text-brand-cream font-bold text-xl">{t.home.content.img3}</p>
-              </div>
-            </div>
+            <InstagramFeed />
           </div>
         </section>
 

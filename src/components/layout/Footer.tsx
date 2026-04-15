@@ -23,7 +23,7 @@ export function Footer() {
       
       <div className="flex flex-col items-start md:items-end gap-6">
         <div className="flex flex-wrap gap-x-8 gap-y-4">
-          <a className="font-space-grotesk text-xs uppercase tracking-widest text-brand-cream/50 hover:text-brand-lemon transition-colors" href="https://instagram.com/bigdatia_agency" target="_blank" rel="noopener noreferrer">
+          <a className="font-space-grotesk text-xs uppercase tracking-widest text-brand-cream/50 hover:text-brand-lemon transition-colors" href="https://www.instagram.com/bigdatia" target="_blank" rel="noopener noreferrer">
             {t.footer.instagram}
           </a>
           <a className="font-space-grotesk text-xs uppercase tracking-widest text-brand-cream/50 hover:text-brand-lemon transition-colors" href="https://linkedin.com/company/bigdatia" target="_blank" rel="noopener noreferrer">
