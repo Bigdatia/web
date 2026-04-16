@@ -81,7 +81,7 @@ export default function Home() {
         <section className="max-w-[1440px] mx-auto px-8 mb-40">
           <h2 className="text-3xl md:text-5xl font-black font-headline mb-16 uppercase tracking-tighter text-center md:text-left">{t.home.services.title} <span className="text-brand-purple">{t.home.services.titleAccent}</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[300px]">
-            <div className="md:col-span-2 md:row-span-2 bg-surface-container-highest p-12 relative overflow-hidden flex flex-col justify-end group border border-outline-variant/10">
+            <div className="aspect-video md:aspect-auto md:col-span-2 md:row-span-2 bg-surface-container-highest p-12 relative overflow-hidden flex flex-col justify-end group border border-outline-variant/10">
               <div className="absolute top-0 right-0 p-8">
                 <span className="text-brand-lemon font-space-grotesk text-sm uppercase tracking-widest">{t.home.services.consulting.label}</span>
               </div>
