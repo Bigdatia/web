@@ -43,10 +43,10 @@ export default function Estrategia() {
             <div className="relative group">
               <div className="absolute -inset-4 bg-secondary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative aspect-square surface-container-highest overflow-hidden border border-outline-variant/15">
-                <Image 
-                  alt="Data visualization interface" 
-                  className="object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKMMd0XxoWLWbIX-fhEj64SCN-zg9o0gkbMaMvX0vWgkdReSwz5kWMEtKtqAIQ0Zw1WKCszB1ORLoIzDQ4fwkhkCDCzAYTKAS5OMKxtUgkl8695uc0lk7-swYuF7ByBWJICiMWu2zp8bF0B8Obhg3VwgpcfB6RGy_wjKBIoWHIGOsr8IrxsVT29REr8LSrKUAuaBkris1tYiDUV_F6oQ5LZg9gmsopUjqpw99I80KhyuDZSsMqFZ3MJv2_3eveN_8IL4oi5RsxICOt"
+                <Image
+                  alt="Data visualization interface"
+                  className="object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
+                  src="/bg.webp"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
