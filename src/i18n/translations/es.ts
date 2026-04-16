@@ -89,7 +89,7 @@ export const es = {
   // ─── Estrategia Page ───
   estrategia: {
     hero: {
-      badge: "Estrategia de Inteligencia 2024",
+      badge: "Estrategia de Inteligencia 2026",
       title: "Consultoría Estratégica que",
       titleAccent: "Escala",
       titleEnd: "Negocios",
@@ -221,7 +221,7 @@ export const es = {
       subtitle: "Precisión e Impacto",
       scroll: "DESLIZA PARA DESCUBRIR",
       card1: { label: "Campaña Global", title: "Cyber-Punk Activation", desc: "Transformación de espacios urbanos en entornos digitales interactivos para el lanzamiento de flagship stores." },
-      card2: { label: "2024 / TECNOLOGÍA", title: "VR Eco-Systems" },
+      card2: { label: "2026 / TECNOLOGÍA", title: "VR Eco-Systems" },
       card3: { title: "Phygital Pop-ups" },
       stat1: "98%",
       stat1Label: "RECORDACIÓN DE MARCA",

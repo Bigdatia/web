@@ -91,7 +91,7 @@ export const en: Translations = {
   // ─── Estrategia Page ───
   estrategia: {
     hero: {
-      badge: "Intelligence Strategy 2024",
+      badge: "Intelligence Strategy 2026",
       title: "Strategic Consulting that",
       titleAccent: "Scales",
       titleEnd: "Businesses",
@@ -223,7 +223,7 @@ export const en: Translations = {
       subtitle: "Precision & Impact",
       scroll: "SCROLL TO DISCOVER",
       card1: { label: "Global Campaign", title: "Cyber-Punk Activation", desc: "Transformation of urban spaces into interactive digital environments for flagship store launches." },
-      card2: { label: "2024 / TECH", title: "VR Eco-Systems" },
+      card2: { label: "2026 / TECH", title: "VR Eco-Systems" },
       card3: { title: "Phygital Pop-ups" },
       stat1: "98%",
       stat1Label: "BRAND RECALL",
