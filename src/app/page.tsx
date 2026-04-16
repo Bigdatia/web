@@ -151,14 +151,14 @@ export default function Home() {
         </section>
 
         {/* Ecosystem Section */}
-        <section className="max-w-[1440px] mx-auto px-8 mb-40 text-center flex flex-col items-center">
-          <span className="text-brand-cream/30 font-space-grotesk text-xs uppercase tracking-[0.5em] mb-12 block">{t.home.ecosystem.label}</span>
+        <section className="max-w-[1440px] mx-auto px-8 mb-8 text-center flex flex-col items-center">
+          <span className="text-brand-cream/30 font-space-grotesk text-xs uppercase tracking-[0.5em] mb-4 block">{t.home.ecosystem.label}</span>
           <div className="flex flex-wrap justify-center items-center gap-16 md:gap-32 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             <div className="text-3xl font-black font-headline tracking-tighter text-brand-cream">Darrum</div>
             <div className="text-3xl font-black font-headline tracking-tighter text-brand-cream">Nueve99</div>
             <div className="text-3xl font-black font-headline tracking-tighter text-brand-cream">Four44</div>
           </div>
-          <div className="mt-20 relative h-32 w-full max-w-4xl mx-auto flex items-center justify-center pointer-events-none">
+          <div className="mt-4 relative h-8 w-full max-w-4xl mx-auto flex items-center justify-center pointer-events-none">
             <div className="absolute w-px h-full bg-gradient-to-b from-brand-lemon/40 to-transparent"></div>
             <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-brand-purple/40 to-transparent"></div>
             <div className="w-4 h-4 rounded-full bg-brand-lemon blur-sm"></div>
