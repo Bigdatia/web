@@ -278,15 +278,12 @@ export default function Estrategia() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-8 relative overflow-hidden">
+      <section className="py-32 px-8 relative overflow-hidden bg-background border-t border-outline-variant/15">
         <div className="absolute inset-0 bg-secondary-container opacity-5"></div>
         <div className="max-w-[1440px] mx-auto text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-black font-headline mb-8 uppercase tracking-tighter leading-none text-center">
-            {t.estrategia.cta.title} <br/> <span className="text-primary-container">{t.estrategia.cta.titleAccent}</span>?
-          </h2>
-          <p className="text-xl text-on-surface-variant max-w-2xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-5xl font-black font-headline mb-12 uppercase tracking-tighter leading-tight text-center text-on-surface max-w-4xl mx-auto">
             {t.estrategia.cta.subtitle}
-          </p>
+          </h2>
           <div className="flex justify-center">
             <button className="bg-primary-container text-on-primary-container rounded-full px-12 py-6 font-bold text-xl hover:scale-105 transition-transform duration-300 shadow-[0_20px_40px_rgba(213,252,107,0.2)]">
               {t.estrategia.cta.button}

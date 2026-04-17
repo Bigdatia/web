@@ -144,7 +144,7 @@ export const es = {
     cta: {
       title: "¿Listo para redefinir tu",
       titleAccent: "Futuro Digital",
-      subtitle: "Nuestras auditorías han ayudado a empresas Fortune 500 a identificar más de $500M en oportunidades de eficiencia operativa.",
+      subtitle: "Nuestras auditorías han ayudado a empresas a identificar más de $500M en oportunidades de eficiencia operativa.",
       button: "SOLICITAR AUDITORÍA ESTRATÉGICA",
     },
   },

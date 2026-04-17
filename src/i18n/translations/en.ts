@@ -146,7 +146,7 @@ export const en: Translations = {
     cta: {
       title: "Ready to redefine your",
       titleAccent: "Digital Future",
-      subtitle: "Our audits have helped Fortune 500 companies identify over $500M in operational efficiency opportunities.",
+      subtitle: "Our audits have helped companies identify over $500M in operational efficiency opportunities.",
       button: "REQUEST STRATEGIC AUDIT",
     },
   },
