@@ -304,7 +304,7 @@ export const es = {
         complexity: { label: "Complejidad", landing: "Baja", corporate: "Media", ecommerce: "Alta" },
         seo: { label: "SEO", landing: "Básico", corporate: "Avanzado", ecommerce: "Avanzado + Productos" },
         idealFor: { label: "Ideal para", landing: "Campañas", corporate: "Empresas", ecommerce: "Tiendas online" },
-        delivery: { label: "Tiempo de entrega", landing: "3 días", corporate: "7 días", ecommerce: "14 días" },
+        delivery: { label: "Tiempo de entrega", landing: "7 días", corporate: "14 días", ecommerce: "28 días" },
       },
     },
     process: {

@@ -306,7 +306,7 @@ export const en: Translations = {
         complexity: { label: "Complexity", landing: "Low", corporate: "Medium", ecommerce: "High" },
         seo: { label: "SEO", landing: "Basic", corporate: "Advanced", ecommerce: "Advanced + Products" },
         idealFor: { label: "Ideal for", landing: "Campaigns", corporate: "Companies", ecommerce: "Online stores" },
-        delivery: { label: "Delivery time", landing: "3 days", corporate: "7 days", ecommerce: "14 days" },
+        delivery: { label: "Delivery time", landing: "7 days", corporate: "14 days", ecommerce: "28 days" },
       },
     },
     process: {
