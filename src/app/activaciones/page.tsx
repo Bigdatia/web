@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Icon } from "@/components/ui/Icon";
+import { YouTubeFacade } from "@/components/ui/YouTubeFacade";
 import { useLanguage } from "@/i18n/LanguageContext";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,24 +51,10 @@ export default function Activaciones() {
           <div className="mt-24 w-full max-w-5xl relative group">
             <div className="absolute -inset-1 bg-secondary opacity-20 blur-2xl group-hover:opacity-30 transition-opacity"></div>
             <div className="relative bg-surface-container-highest aspect-video w-full overflow-hidden border border-outline-variant border-opacity-15 shadow-2xl">
-              <Image 
-                alt="Immersive digital installation" 
-                className="object-cover opacity-60 mix-blend-luminosity grayscale group-hover:grayscale-0 group-hover:opacity-90 transition-all duration-700" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZAFqm9Hkfodlp0XtfQ3Q9Tt7oVNTlDrRc1r8IE7wDM03F7Pqg78hPH_B48AI6JmpfaBliUxzihFXRKNNBYxa75b1UlBd9IP1V62TFAIZxCpPEYe6MRtGijRWRjxWzydFSF3LGVqQrQIzs1jL3AJr3NfkCmig-QWhqvVb7no7DKqGTDAjXLzD0yhk9OrEi5Br1eocPWQxHeI0Ix-C78op_5MOOn9XfBZp-hVNwaEcUha-0TS715qD-N7kZhMQrQdlVs6EKncUMr4A8"
-                fill
-                sizes="(max-width: 768px) 100vw, 80vw"
-                priority
+              <YouTubeFacade 
+                videoId="YHFZvvepnbM"
+                title="BigdatIA Activaciones"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full bg-primary-container flex items-center justify-center text-on-primary cursor-pointer hover:scale-110 transition-transform">
-                  <Icon name="play_arrow" className="w-10 h-10" filled />
-                </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 h-20 bg-surface-variant bg-opacity-60 backdrop-blur-2xl flex items-center px-8">
-                <div className="flex-1 h-1 bg-on-surface-variant bg-opacity-30 relative overflow-hidden">
-                  <div className="absolute top-0 left-0 h-full w-1/3 bg-primary-fixed"></div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
