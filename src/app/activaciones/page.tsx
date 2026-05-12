@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Icon } from "@/components/ui/Icon";
 import { useLanguage } from "@/i18n/LanguageContext";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Activaciones() {
   const { t } = useLanguage();
@@ -29,12 +30,20 @@ export default function Activaciones() {
               {t.activaciones.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button className="bg-primary-container text-on-primary px-10 py-5 font-headline font-bold text-lg uppercase tracking-wider rounded-full transition-all hover:scale-105 purple-glow w-full sm:w-auto">
+              <a 
+                href="https://wa.me/573164856744?text=Hola%2C%20quiero%20iniciar%20un%20proyecto%20de%20activaci%C3%B3n%20de%20marca%20con%20BigdatIA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary-container text-on-primary px-10 py-5 font-headline font-bold text-lg uppercase tracking-wider rounded-full transition-all hover:scale-105 purple-glow w-full sm:w-auto text-center"
+              >
                 {t.activaciones.hero.cta1}
-              </button>
-              <button className="border-2 border-secondary text-secondary px-10 py-5 font-headline font-bold text-lg uppercase tracking-wider rounded-full hover:bg-secondary hover:bg-opacity-10 transition-all w-full sm:w-auto">
+              </a>
+              <Link 
+                href="/portafolio"
+                className="border-2 border-secondary text-secondary px-10 py-5 font-headline font-bold text-lg uppercase tracking-wider rounded-full hover:bg-secondary hover:bg-opacity-10 transition-all w-full sm:w-auto text-center"
+              >
                 {t.activaciones.hero.cta2}
-              </button>
+              </Link>
             </div>
           </div>
 

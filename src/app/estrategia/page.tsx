@@ -32,12 +32,20 @@ export default function Estrategia() {
                 {t.estrategia.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4">
-                <button className="bg-primary-container text-on-primary-container rounded-full px-10 py-5 font-bold text-lg hover:shadow-[0_0_20px_rgba(213,252,107,0.4)] transition-all w-full sm:w-auto">
+                <a 
+                  href="https://wa.me/573164856744?text=Hola%2C%20quiero%20solicitar%20una%20auditor%C3%ADa%20estrat%C3%A9gica%20para%20mi%20negocio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-primary-container text-on-primary-container rounded-full px-10 py-5 font-bold text-lg hover:shadow-[0_0_20px_rgba(213,252,107,0.4)] transition-all w-full sm:w-auto text-center"
+                >
                   {t.estrategia.hero.cta1}
-                </button>
-                <button className="border-2 border-secondary text-secondary rounded-full px-10 py-5 font-bold text-lg hover:bg-secondary/10 transition-all w-full sm:w-auto">
+                </a>
+                <a 
+                  href="#metodologia"
+                  className="border-2 border-secondary text-secondary rounded-full px-10 py-5 font-bold text-lg hover:bg-secondary/10 transition-all w-full sm:w-auto text-center"
+                >
                   {t.estrategia.hero.cta2}
-                </button>
+                </a>
               </div>
             </div>
             <div className="relative group">
@@ -66,7 +74,7 @@ export default function Estrategia() {
         </section>
 
       {/* Methodology */}
-      <section className="py-24 px-8 bg-surface-container-low">
+      <section id="metodologia" className="py-24 px-8 bg-surface-container-low">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-black font-headline mb-4 uppercase tracking-tighter">{t.estrategia.methodology.title} <span className="text-primary-container">{t.estrategia.methodology.titleAccent}</span></h2>
@@ -285,9 +293,14 @@ export default function Estrategia() {
             {t.estrategia.cta.subtitle}
           </h2>
           <div className="flex justify-center">
-            <button className="bg-primary-container text-on-primary-container rounded-full px-12 py-6 font-bold text-xl hover:scale-105 transition-transform duration-300 shadow-[0_20px_40px_rgba(213,252,107,0.2)]">
+            <a 
+              href="https://wa.me/573164856744?text=Hola%2C%20quiero%20solicitar%20una%20auditor%C3%ADa%20estrat%C3%A9gica%20para%20mi%20negocio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary-container text-on-primary-container rounded-full px-12 py-6 font-bold text-xl hover:scale-105 transition-transform duration-300 shadow-[0_20px_40px_rgba(213,252,107,0.2)] text-center"
+            >
               {t.estrategia.cta.button}
-            </button>
+            </a>
           </div>
         </div>
       </section>

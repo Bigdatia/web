@@ -29,9 +29,14 @@ export default function Marketing() {
                 {t.marketing.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4">
-                <button className="bg-primary-container text-on-primary rounded-full px-10 py-4 font-headline font-black uppercase text-sm tracking-widest hover:shadow-[0_0_20px_rgba(213,252,107,0.4)] transition-all w-full sm:w-auto">
+                <a 
+                  href="https://wa.me/573164856744?text=Hola%2C%20quiero%20iniciar%20una%20auditor%C3%ADa%20de%20marketing%20con%20BigdatIA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-primary-container text-on-primary rounded-full px-10 py-4 font-headline font-black uppercase text-sm tracking-widest hover:shadow-[0_0_20px_rgba(213,252,107,0.4)] transition-all w-full sm:w-auto text-center"
+                >
                   {t.marketing.hero.cta1}
-                </button>
+                </a>
                 <Link href="/web" className="w-full sm:w-auto">
                   <button className="border-2 border-secondary text-secondary rounded-full px-10 py-4 font-headline font-black uppercase text-sm tracking-widest hover:bg-secondary/10 transition-all w-full">
                     {t.marketing.hero.cta2}
