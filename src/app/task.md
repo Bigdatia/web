@@ -24,4 +24,4 @@
 - [x] Añadir "Frase de Cierre / Manifiesto"
   - Texto centralizado de gran impacto antes del Footer.
 - [x] Modificar `src/components/layout/Footer.tsx`
-  - Añadir dirección, enlaces legales y teléfono proporcionado (+573164151731).
+  - Añadir dirección, enlaces legales y teléfono proporcionado (+573164856744).

@@ -11,7 +11,7 @@ export const es = {
   },
   footer: {
     location: "Bucaramanga, Colombia",
-    whatsapp: "WhatsApp: +57 316 415 1731",
+    whatsapp: "WhatsApp: +57 316 485 6744",
     instagram: "Instagram",
     linkedin: "LinkedIn",
     policies: "Políticas",
@@ -340,7 +340,7 @@ export const es = {
       s3title: "3. Protección de Datos",
       s3text: "Implementamos medidas de seguridad técnicas y organizativas para proteger su información personal contra el acceso no autorizado, la alteración, la divulgación o la destrucción.",
       s4title: "4. Contacto",
-      s4text: "Para cualquier consulta relacionada con esta política de privacidad, contáctenos a través de WhatsApp al +57 316 415 1731 o visite nuestras oficinas en Bucaramanga, Colombia.",
+      s4text: "Para cualquier consulta relacionada con esta política de privacidad, contáctenos a través de WhatsApp al +57 316 485 6744 o visite nuestras oficinas en Bucaramanga, Colombia.",
     },
     terms: {
       title: "Términos y Condiciones",
@@ -354,7 +354,7 @@ export const es = {
       s4title: "4. Limitación de Responsabilidad",
       s4text: "BigdatIA no será responsable de daños indirectos, incidentales o consecuentes derivados del uso o la imposibilidad de uso de nuestros servicios o sitio web.",
       s5title: "5. Contacto",
-      s5text: "Para preguntas sobre estos términos, contáctenos a través de WhatsApp al +57 316 415 1731 o visite nuestras oficinas en Bucaramanga, Colombia.",
+      s5text: "Para preguntas sobre estos términos, contáctenos a través de WhatsApp al +57 316 485 6744 o visite nuestras oficinas en Bucaramanga, Colombia.",
     },
   },
   portfolio: {

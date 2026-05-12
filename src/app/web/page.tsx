@@ -217,7 +217,7 @@ export default function WebPage() {
               <p className="text-on-surface-variant max-w-xl mx-auto mb-10 text-lg">{t.web.cta.subtitle}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/573164151731?text=Hola%2C%20me%20interesa%20cotizar%20un%20sitio%20web"
+                  href="https://wa.me/573164856744?text=Hola%2C%20me%20interesa%20cotizar%20un%20sitio%20web"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-brand-lemon text-on-primary rounded-full px-10 py-4 font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_30px_#D5FC6B] transition-all duration-300 hover:scale-[0.98] active:scale-95"

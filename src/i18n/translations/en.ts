@@ -13,7 +13,7 @@ export const en: Translations = {
   },
   footer: {
     location: "Bucaramanga, Colombia",
-    whatsapp: "WhatsApp: +57 316 415 1731",
+    whatsapp: "WhatsApp: +57 316 485 6744",
     instagram: "Instagram",
     linkedin: "LinkedIn",
     policies: "Privacy Policy",
@@ -342,7 +342,7 @@ export const en: Translations = {
       s3title: "3. Data Protection",
       s3text: "We implement technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure or destruction.",
       s4title: "4. Contact",
-      s4text: "For any inquiries related to this privacy policy, contact us via WhatsApp at +57 316 415 1731 or visit our offices in Bucaramanga, Colombia.",
+      s4text: "For any inquiries related to this privacy policy, contact us via WhatsApp at +57 316 485 6744 or visit our offices in Bucaramanga, Colombia.",
     },
     terms: {
       title: "Terms & Conditions",
@@ -356,7 +356,7 @@ export const en: Translations = {
       s4title: "4. Limitation of Liability",
       s4text: "BigdatIA shall not be liable for indirect, incidental or consequential damages arising from the use or inability to use our services or website.",
       s5title: "5. Contact",
-      s5text: "For questions about these terms, contact us through WhatsApp at +57 316 415 1731 or visit our offices in Bucaramanga, Colombia.",
+      s5text: "For questions about these terms, contact us through WhatsApp at +57 316 485 6744 or visit our offices in Bucaramanga, Colombia.",
     },
   },
   portfolio: {

@@ -19,7 +19,7 @@ Se diseñaron estructuras completas utilizando la paleta de colores de la interf
 - **Manifiesto:** Un diseño tipográfico enorme y de gran impacto visual integrado al fondo con la frase núcleo y filosofía de la empresa antes del footer.
 
 ### 3. Actualización de `src/components/layout/Footer.tsx`
-- **Modernización:** Se reorganizó el componente de pie de página para darle mayor peso institucional, ubicando la dirección física en Bucaramanga y un acceso directo estructurado al **WhatsApp (+573164151731)** enlazado vía *wa.me*.
+- **Modernización:** Se reorganizó el componente de pie de página para darle mayor peso institucional, ubicando la dirección física en Bucaramanga y un acceso directo estructurado al **WhatsApp (+573164856744)** enlazado vía *wa.me*.
 
 > [!TIP]
 > Dado que la página creció en extensión vertical y en la jerarquía de la información, te recomiendo deslizar hasta abajo (*scroll*) lentamente en la versión local para comprobar que la narrativa tiene una transición armónica.

@@ -17,7 +17,7 @@ export function Footer() {
         </div>
         <div className="font-space-grotesk text-sm uppercase tracking-widest text-brand-cream/70 flex items-center gap-2">
            <Icon name="call" className="w-5 h-5 text-brand-lemon" filled />
-           <a href="https://wa.me/573164151731" target="_blank" rel="noopener noreferrer" className="hover:text-brand-lemon transition-colors">{t.footer.whatsapp}</a>
+           <a href="https://wa.me/573164856744" target="_blank" rel="noopener noreferrer" className="hover:text-brand-lemon transition-colors">{t.footer.whatsapp}</a>
         </div>
       </div>
       
