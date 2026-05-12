@@ -37,25 +37,26 @@ export default function Marketing() {
                 >
                   {t.marketing.hero.cta1}
                 </a>
-                <Link href="/web" className="w-full sm:w-auto">
+                <Link href="/portafolio" className="w-full sm:w-auto">
                   <button className="border-2 border-secondary text-secondary rounded-full px-10 py-4 font-headline font-black uppercase text-sm tracking-widest hover:bg-secondary/10 transition-all w-full">
                     {t.marketing.hero.cta2}
                   </button>
                 </Link>
               </div>
             </div>
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-secondary to-primary-container opacity-20 blur-2xl group-hover:opacity-30 transition duration-1000"></div>
-              <div className="relative bg-surface-container-highest aspect-video overflow-hidden border border-outline-variant/20 shadow-2xl">
-                <Image 
-                  className="object-cover" 
-                  alt="Futuristic data visualization of high-frequency trading neural networks" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0upJvKd0b_WFqQVomGX5L2XpWAbYUPT45ws6uGYUwzs7Cyn6bdu9yg3WuiYi229GtkYPbwHflxsQQSHNOeHqDSlw0pgag9tsY7isUjp5JMMDyUfLXzeOenoz489WbpAIo_e3l34LEQcn0Pves7Ze2sA8Rry3NcyBa2lhmC6IV9BU5NKsRYdZCpyn1rmgdW9ZbkK4hQeBFvHLxZbWSNPHchjGXsR2W9fUaCi-qY0c5UzNELZl-ZzbBOwZUyrPgDBkzCEab7Tu9AMf4"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+            <div className="relative">
+              <div className="bg-surface-container-highest border border-outline-variant/10 overflow-hidden">
+                {[
+                  { num: "01", label: t.marketing.hero.service1 },
+                  { num: "02", label: t.marketing.hero.service2 },
+                  { num: "03", label: t.marketing.hero.service3 },
+                ].map((item, i, arr) => (
+                  <div key={i} className={`flex items-center gap-8 px-8 py-8${i < arr.length - 1 ? ' border-b border-outline-variant/10' : ''}`}>
+                    <span className="text-primary-container font-headline font-black text-5xl italic leading-none shrink-0">{item.num}</span>
+                    <p className="font-headline font-bold text-xl uppercase tracking-tight">{item.label}</p>
+                    <Icon name="arrow_forward" className="w-5 h-5 text-on-surface/20 ml-auto shrink-0" />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -80,13 +81,6 @@ export default function Marketing() {
                   <h3 className="text-3xl font-headline font-extrabold mb-2 uppercase italic tracking-tighter">{t.marketing.features.card1.title}</h3>
                   <p className="text-on-surface/60 max-w-md">{t.marketing.features.card1.desc}</p>
                 </div>
-                <Image 
-                  className="absolute inset-0 object-cover opacity-20 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" 
-                  alt="Abstract 3D data architecture" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxG9LpOhofCKAAZQ3OnLopFkDmCalahD9TpMBlnbNi28ti8iXLwfBIK2Y4px9eLCpWB1PX3RuF3aUQBOOkS8vdc6kXgMjjQBtHlk1oCawQy55-E57DF-0b5ZWl4t3Ek03e04H73SHP_KMynqQE2prVRI7nLDzajzAtAKg4KKp1slN1zFrKSHty78JzQRgRRMzJ6u5RYsE6iYxha_CHw6BZj1ULC0WP5g3lvRk8pnMiH15Lbac0AtDvgt_2IFrL2X1EbJxiQk085KVy"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 66vw"
-                />
               </div>
               <div className="md:col-span-4 bg-surface-container-high p-8 flex flex-col justify-between border-l-4 border-secondary purple-glow-underlay">
                 <div>
@@ -110,7 +104,7 @@ export default function Marketing() {
                     <span className="text-primary-container font-headline font-bold italic">{t.marketing.features.card3.value}</span>
                   </div>
                   <div className="w-full bg-on-surface/10 h-1">
-                    <div className="bg-primary-container h-full w-[99.8%] shadow-[0_0_8px_#caf161]"></div>
+                    <div className="bg-primary-container h-full w-[95%] shadow-[0_0_8px_#caf161]"></div>
                   </div>
                 </div>
               </div>
@@ -118,20 +112,14 @@ export default function Marketing() {
                 <div className="lg:w-1/2 z-10">
                   <h3 className="text-2xl font-headline font-bold mb-4 uppercase tracking-tight">{t.marketing.features.card4.title}</h3>
                   <p className="text-on-surface/60 text-sm mb-6">{t.marketing.features.card4.desc}</p>
-                  <button className="text-primary-container font-label text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+                  <Link href="/portafolio" className="text-primary-container font-label text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
                     {t.marketing.features.card4.cta} <Icon name="arrow_forward" className="w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
-                <div className="lg:w-1/2 relative aspect-video">
-                  <Image 
-                    className="rounded shadow-2xl opacity-80 group-hover:opacity-100 transition-opacity object-cover" 
-                    alt="High tech server room with glowing fiber optic cables" 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV4IRheU1Zq5kFBpYlyzlnmnWJgLMIn8hIU8l9PfvSb2Co0D9gY7BdXQ9YzwYZmjerepdmIEYH6Wv6zZnh_my8gXPpT2xMxHPaWkN_kdcIdSRJhpQ-2yHD_5FKlWIlGwh0YFg7sS-vrKugifPU8S3XA7kSgRh1fvMn9dWb9pJvhb1QPEDXrE51OS51BTtOg35ptL3FdBH_sI0UOobqEIsAgdPlmf9V5zEUqyQ89iSA_RXErrL_lEVKc7krlb0NLLufyG4D6GYotfgW"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                  />
-                  <div className="absolute -bottom-4 -right-4 bg-secondary p-4 text-on-secondary font-headline font-bold text-xs uppercase tracking-tighter z-10">
-                    {t.marketing.features.card4.badge}
+                <div className="lg:w-1/2 flex items-center justify-center">
+                  <div className="border border-outline-variant/20 p-8 text-center">
+                    <div className="text-5xl font-headline font-black text-primary-container italic mb-3">Real.</div>
+                    <div className="text-xs uppercase tracking-[0.3em] text-on-surface/40 font-label">{t.marketing.features.card4.badge}</div>
                   </div>
                 </div>
               </div>
@@ -149,9 +137,9 @@ export default function Marketing() {
                 <div className="relative bg-surface-container-highest p-2">
                   <div className="relative aspect-video">
                     <Image 
-                      className="grayscale brightness-75 hover:grayscale-0 transition-all duration-700 cursor-crosshair object-cover" 
-                      alt="Conceptual fintech interface" 
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjQKwYIq-xhV0BOXGBrqbdKKdyCGPofnmXE4ub84pS3ajeOAFH3jcb__dXhPae-_-VBXAd8Vmalvmh4l2Q-6-LTH-69FVAjUU4cdb4Fx39Si_SzjIVgyDzIQgcK422IZdvV3dLRPEpgCOvk3mgxsxRARS4UstCgfJrINsiGwaj91lMV4MVTKX_qNCib6IqUs_4Y1MYGGGTMBQiCP_WrK6gRg66IA-YQ6AnLCO_KancDKjOoxTia41j2XPSIlFKlyigP6vtfvlheSnJ"
+                      className="grayscale brightness-75 hover:grayscale-0 transition-all duration-700 cursor-crosshair object-cover"
+                      alt="Campo de Creadores — plataforma para creadores de contenido"
+                      src="/portfolio-media/campo.png"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
@@ -195,31 +183,25 @@ export default function Marketing() {
         </section>
 
         {/* Conversion Section */}
-        <section className="py-32 px-8 bg-primary-container text-on-primary relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-on-primary/5 -skew-x-12 translate-x-32"></div>
+        <section className="py-32 px-8 relative overflow-hidden bg-background border-t border-outline-variant/15">
+          <div className="absolute inset-0 bg-secondary-container opacity-5"></div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-3xl md:text-5xl font-headline font-black mb-8 uppercase tracking-tighter leading-none">
-                {t.marketing.cta.title}
+            <h2 className="text-3xl md:text-5xl font-headline font-black mb-6 uppercase tracking-tighter leading-tight">
+              {t.marketing.cta.title}
             </h2>
-            <p className="text-lg md:text-xl font-medium mb-12 opacity-80 max-w-2xl mx-auto uppercase tracking-wide">
-                {t.marketing.cta.subtitle}
+            <p className="text-lg md:text-xl text-on-surface/60 mb-12 max-w-2xl mx-auto">
+              {t.marketing.cta.subtitle}
             </p>
-            <form className="flex flex-col md:flex-row gap-0 max-w-2xl mx-auto group">
-              <input 
-                className="flex-grow rounded-t-full md:rounded-l-full md:rounded-tr-none bg-on-primary/10 border-2 border-on-primary/30 px-6 py-5 text-on-primary placeholder:text-on-primary/40 font-headline font-bold uppercase tracking-widest focus:ring-0 focus:border-on-primary outline-none transition-all" 
-                placeholder={t.marketing.cta.placeholder}
-                type="email"
-              />
-              <button 
-                className="bg-on-primary rounded-b-full md:rounded-r-full md:rounded-bl-none text-primary-container px-10 py-5 font-headline font-black uppercase tracking-tighter text-lg hover:bg-on-primary/90 transition-all active:scale-95" 
-                type="submit"
+            <div className="flex justify-center">
+              <a
+                href="https://wa.me/573164856744?text=Hola%2C%20quiero%20hablar%20sobre%20marketing%20para%20mi%20marca%20con%20BigdatIA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary-container text-on-primary-container rounded-full px-12 py-6 font-headline font-black text-xl uppercase tracking-tight hover:scale-105 transition-transform duration-300 shadow-[0_20px_40px_rgba(213,252,107,0.2)]"
               >
                 {t.marketing.cta.button}
-              </button>
-            </form>
-            <p className="mt-8 text-[10px] uppercase tracking-[0.4em] font-black opacity-40">
-                {t.footer.copyright} © {new Date().getFullYear()}
-            </p>
+              </a>
+            </div>
           </div>
         </section>
       </main>
