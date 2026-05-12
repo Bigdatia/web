@@ -7,6 +7,7 @@ import { YouTubeFacade } from "@/components/ui/YouTubeFacade";
 import { InstagramFeed } from "@/components/ui/InstagramFeed";
 import { useLanguage } from "@/i18n/LanguageContext";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -26,12 +27,20 @@ export default function Home() {
               {t.home.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-4 pt-4">
-              <button className="bg-brand-lemon text-on-primary rounded-full px-8 py-4 font-bold text-lg hover:scale-95 active:scale-90 transition-transform w-full sm:w-auto">
+              <a 
+                href="https://wa.me/573164856744?text=Hola%2C%20quiero%20iniciar%20una%20estrategia%20con%20BigdatIA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-brand-lemon text-on-primary rounded-full px-8 py-4 font-bold text-lg hover:scale-95 active:scale-90 transition-transform w-full sm:w-auto text-center"
+              >
                 {t.home.hero.cta1}
-              </button>
-              <button className="border-2 border-brand-purple rounded-full text-brand-purple px-8 py-4 font-bold text-lg hover:bg-brand-purple/10 transition-colors w-full sm:w-auto">
+              </a>
+              <Link 
+                href="/portafolio"
+                className="border-2 border-brand-purple rounded-full text-brand-purple px-8 py-4 font-bold text-lg hover:bg-brand-purple/10 transition-colors w-full sm:w-auto text-center"
+              >
                 {t.home.hero.cta2}
-              </button>
+              </Link>
             </div>
           </div>
           <div className="relative group">
