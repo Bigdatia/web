@@ -142,6 +142,38 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Ecosystem Section (Brands Marquee) */}
+        <section className="w-full overflow-hidden py-8 bg-surface-container-lowest border-y border-outline-variant/5 mb-40">
+          <div className="max-w-[1440px] mx-auto px-8 mb-6">
+            <span className="text-brand-purple font-space-grotesk text-sm uppercase tracking-widest">Ecosistema</span>
+          </div>
+          <div className="flex whitespace-nowrap animate-marquee">
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex items-center gap-20 md:gap-32 px-12">
+                {[
+                  { src: "/sponsors/gatorade.svg", alt: "Gatorade", cls: "h-40 max-w-[800px]" },
+                  { src: "/sponsors/don-jacobo.svg", alt: "Don Jacobo", cls: "h-40 max-w-[800px]" },
+                  { src: "/sponsors/mr-jersey.svg", alt: "Mr. Jersey", cls: "h-40 max-w-[800px]" },
+                  { src: "/sponsors/sebastian.svg", alt: "Sebastian", cls: "h-40 max-w-[800px]" },
+                  { src: "/sponsors/tu-licorera.svg", alt: "Tu Licorera", cls: "h-40 max-w-[1200px]" },
+                  { src: "/sponsors/wm.svg", alt: "WM", cls: "h-40 max-w-[800px]" },
+                ].map((logo) => (
+                  <div key={logo.alt} className="flex items-center justify-center opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={600}
+                      height={300}
+                      className={`object-contain w-auto ${logo.cls}`}
+                      unoptimized
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Contenido Social (Instagram Feed Integration) */}
         <section className="max-w-[1440px] mx-auto px-8 mb-40">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
@@ -156,21 +188,6 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <InstagramFeed />
-          </div>
-        </section>
-
-        {/* Ecosystem Section */}
-        <section className="max-w-[1440px] mx-auto px-8 mb-8 text-center flex flex-col items-center">
-          <span className="text-brand-cream/30 font-space-grotesk text-xs uppercase tracking-[0.5em] mb-4 block">{t.home.ecosystem.label}</span>
-          <div className="flex flex-wrap justify-center items-center gap-16 md:gap-32 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            <div className="text-3xl font-black font-headline tracking-tighter text-brand-cream">Darrum</div>
-            <div className="text-3xl font-black font-headline tracking-tighter text-brand-cream">Nueve99</div>
-            <div className="text-3xl font-black font-headline tracking-tighter text-brand-cream">Four44</div>
-          </div>
-          <div className="mt-4 relative h-8 w-full max-w-4xl mx-auto flex items-center justify-center pointer-events-none">
-            <div className="absolute w-px h-full bg-gradient-to-b from-brand-lemon/40 to-transparent"></div>
-            <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-brand-purple/40 to-transparent"></div>
-            <div className="w-4 h-4 rounded-full bg-brand-lemon blur-sm"></div>
           </div>
         </section>
 

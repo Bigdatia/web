@@ -83,6 +83,7 @@ export const es = {
     },
     ecosystem: {
       label: "Socios y Ecosistema",
+      title: "Marcas que confían en nosotros",
     },
   },
 

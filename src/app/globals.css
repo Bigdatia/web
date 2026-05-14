@@ -57,6 +57,11 @@
   --font-body: var(--font-inter), sans-serif;
   --font-label: var(--font-inter), sans-serif;
   --font-space-grotesk: var(--font-space-grotesk), sans-serif;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
 
 @layer base {
@@ -76,5 +81,8 @@
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
   }
 }

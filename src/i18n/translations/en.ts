@@ -85,6 +85,7 @@ export const en: Translations = {
     },
     ecosystem: {
       label: "Partners & Ecosystem",
+      title: "Brands that trust us",
     },
   },
 
