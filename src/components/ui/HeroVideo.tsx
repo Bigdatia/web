@@ -84,6 +84,7 @@ export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded, aut
     <>
       <video
         ref={videoRef}
+        autoPlay={autoPlay}
         muted={isMuted}
         playsInline
         onEnded={onEnded}
