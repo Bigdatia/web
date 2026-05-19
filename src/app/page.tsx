@@ -208,16 +208,16 @@ export default function Home() {
           <div className="max-w-[1440px] mx-auto px-8 mb-6">
             <span className="text-brand-purple font-space-grotesk text-sm uppercase tracking-widest">Ecosistema</span>
           </div>
-          <div className="flex whitespace-nowrap animate-marquee">
+          <div className="flex animate-marquee will-change-transform">
             {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex items-center gap-10 md:gap-32 px-8 md:px-12">
+              <div key={i} className="flex shrink-0 items-center gap-10 md:gap-32 px-5 md:px-16">
                 {[
-                  { src: "/sponsors/gatorade.svg", alt: "Gatorade", cls: "h-10 md:h-40 max-w-[200px] md:max-w-[800px]" },
-                  { src: "/sponsors/don-jacobo.svg", alt: "Don Jacobo", cls: "h-10 md:h-40 max-w-[200px] md:max-w-[800px]" },
-                  { src: "/sponsors/mr-jersey.svg", alt: "Mr. Jersey", cls: "h-10 md:h-40 max-w-[200px] md:max-w-[800px]" },
-                  { src: "/sponsors/sebastian.svg", alt: "Sebastian", cls: "h-10 md:h-40 max-w-[200px] md:max-w-[800px]" },
-                  { src: "/sponsors/tu-licorera.svg", alt: "Tu Licorera", cls: "h-10 md:h-40 max-w-[200px] md:max-w-[1200px]" },
-                  { src: "/sponsors/wm.svg", alt: "WM", cls: "h-10 md:h-40 max-w-[200px] md:max-w-[800px]" },
+                  { src: "/sponsors/gatorade.svg", alt: "Gatorade", cls: "h-40 max-w-[800px]" },
+                  { src: "/sponsors/don-jacobo.svg", alt: "Don Jacobo", cls: "h-40 max-w-[800px]" },
+                  { src: "/sponsors/mr-jersey.svg", alt: "Mr. Jersey", cls: "h-40 max-w-[800px]" },
+                  { src: "/sponsors/sebastian.svg", alt: "Sebastian", cls: "h-40 max-w-[800px]" },
+                  { src: "/sponsors/tu-licorera.svg", alt: "Tu Licorera", cls: "h-40 max-w-[1200px]" },
+                  { src: "/sponsors/wm.svg", alt: "WM", cls: "h-40 max-w-[800px]" },
                 ].map((logo) => (
                   <div key={logo.alt} className="flex items-center justify-center opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
                     <Image
