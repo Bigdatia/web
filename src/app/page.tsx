@@ -101,12 +101,13 @@ export default function Home() {
                     Omitir
                   </button>
                 )}
-                <div className="purple-aura relative z-10 w-[100vw] max-w-[100vw] md:max-w-none h-[100dvh] md:h-[72vh] md:max-h-[680px] md:aspect-[9/16] rounded-none md:rounded-xl overflow-hidden bg-black md:border border-outline-variant/15">
+                <div className="purple-aura relative z-10 w-[100vw] max-w-[100vw] md:w-auto md:max-w-none h-[100dvh] md:h-[72vh] md:max-h-[680px] md:aspect-[9/16] rounded-none md:rounded-xl overflow-hidden bg-black md:border border-outline-variant/15">
                   <HeroVideo
                     src="/video-vertical-hero.webm"
                     fallbackFormats={["webm"]}
                     onEnded={handleVideoEnded}
                     autoPlay={isFirstLoad}
+                    isPaused={!showMobileVideo}
                   />
                 </div>
                 <div className="absolute -inset-4 bg-brand-purple/20 blur-[100px] -z-10 rounded-full hidden md:block"></div>
