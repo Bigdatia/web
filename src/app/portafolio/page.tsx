@@ -186,6 +186,7 @@ export default function PortfolioPage() {
   const portfolioData = t.portfolio.projects;
   const [filter, setFilter] = useState('all');
   const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const preloadTimer = setTimeout(() => {
@@ -226,23 +227,90 @@ export default function PortfolioPage() {
               </h1>
             </div>
 
-            {/* Filters - FORCED SINGLE LINE */}
-            <div className="flex flex-nowrap md:flex-wrap gap-2 overflow-x-auto max-w-full no-scrollbar pb-4 xl:pb-0 pt-4 xl:pt-0 w-full xl:w-auto">
-              <FilterButton icon="grid_view" active={filter === 'all'} onClick={() => setFilter('all')}>
-                {t.portfolio.filters.all}
-              </FilterButton>
-              <FilterButton icon="videocam" active={filter === 'video'} onClick={() => setFilter('video')}>
-                {t.portfolio.filters.video}
-              </FilterButton>
-              <FilterButton icon="smartphone" active={filter === 'social'} onClick={() => setFilter('social')}>
-                {t.portfolio.filters.social}
-              </FilterButton>
-              <FilterButton icon="edit" active={filter === 'branding'} onClick={() => setFilter('branding')}>
-                {t.portfolio.filters.branding}
-              </FilterButton>
-              <FilterButton icon="desktop_windows" active={filter === 'web'} onClick={() => setFilter('web')}>
-                {t.portfolio.filters.web}
-              </FilterButton>
+            {/* Filters — dropdown en mobile, botones en desktop */}
+            <div className="w-full xl:w-auto pt-4 xl:pt-0">
+
+              {/* Mobile: dropdown */}
+              <div className="relative md:hidden">
+                <button
+                  onClick={() => setDropdownOpen((o) => !o)}
+                  className="flex items-center justify-between w-full gap-3 px-5 py-3 border-2 border-outline-variant bg-transparent text-on-surface font-bold uppercase tracking-wider text-sm transition-colors hover:border-brand-lemon"
+                >
+                  <span className="flex items-center gap-2">
+                    <Icon
+                      name={
+                        filter === 'all' ? 'grid_view'
+                        : filter === 'video' ? 'videocam'
+                        : filter === 'social' ? 'smartphone'
+                        : filter === 'branding' ? 'edit'
+                        : 'desktop_windows'
+                      }
+                      className="w-4 h-4 text-brand-lemon"
+                    />
+                    {filter === 'all' ? t.portfolio.filters.all
+                      : filter === 'video' ? t.portfolio.filters.video
+                      : filter === 'social' ? t.portfolio.filters.social
+                      : filter === 'branding' ? t.portfolio.filters.branding
+                      : t.portfolio.filters.web}
+                  </span>
+                  <Icon
+                    name={dropdownOpen ? 'expand_less' : 'expand_more'}
+                    className="w-5 h-5 text-brand-lemon"
+                  />
+                </button>
+
+                {dropdownOpen && (
+                  <>
+                    {/* Backdrop para cerrar al tocar fuera */}
+                    <div
+                      className="fixed inset-0 z-10"
+                      onClick={() => setDropdownOpen(false)}
+                    />
+                    <div className="absolute left-0 right-0 top-full mt-1 z-20 border-2 border-outline-variant bg-surface-container-lowest shadow-[0_8px_32px_rgba(0,0,0,0.6)] overflow-hidden">
+                      {[
+                        { key: 'all', icon: 'grid_view', label: t.portfolio.filters.all },
+                        { key: 'video', icon: 'videocam', label: t.portfolio.filters.video },
+                        { key: 'social', icon: 'smartphone', label: t.portfolio.filters.social },
+                        { key: 'branding', icon: 'edit', label: t.portfolio.filters.branding },
+                        { key: 'web', icon: 'desktop_windows', label: t.portfolio.filters.web },
+                      ].map((opt) => (
+                        <button
+                          key={opt.key}
+                          onClick={() => { setFilter(opt.key); setDropdownOpen(false); }}
+                          className={`flex items-center gap-3 w-full px-5 py-4 text-sm font-bold uppercase tracking-wider transition-colors border-b border-outline-variant/20 last:border-0
+                            ${filter === opt.key
+                              ? 'bg-brand-lemon text-on-primary'
+                              : 'text-on-surface-variant hover:bg-surface-container hover:text-brand-lemon'
+                            }`}
+                        >
+                          <Icon name={opt.icon} className="w-4 h-4" />
+                          {opt.label}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* Desktop: botones horizontales */}
+              <div className="hidden md:flex flex-wrap gap-2">
+                <FilterButton icon="grid_view" active={filter === 'all'} onClick={() => setFilter('all')}>
+                  {t.portfolio.filters.all}
+                </FilterButton>
+                <FilterButton icon="videocam" active={filter === 'video'} onClick={() => setFilter('video')}>
+                  {t.portfolio.filters.video}
+                </FilterButton>
+                <FilterButton icon="smartphone" active={filter === 'social'} onClick={() => setFilter('social')}>
+                  {t.portfolio.filters.social}
+                </FilterButton>
+                <FilterButton icon="edit" active={filter === 'branding'} onClick={() => setFilter('branding')}>
+                  {t.portfolio.filters.branding}
+                </FilterButton>
+                <FilterButton icon="desktop_windows" active={filter === 'web'} onClick={() => setFilter('web')}>
+                  {t.portfolio.filters.web}
+                </FilterButton>
+              </div>
+
             </div>
           </div>
 
