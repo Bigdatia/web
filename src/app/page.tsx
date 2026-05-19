@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className={`w-full max-w-[100vw] overflow-x-clip transition-all duration-700 pb-24 md:pb-0 ${showMobileVideo ? 'pt-0 md:pt-32' : 'pt-24 md:pt-32'}`}>
+      <main className={`w-full max-w-[100vw] overflow-x-hidden transition-all duration-700 pb-24 md:pb-0 ${showMobileVideo ? 'pt-0 md:pt-32' : 'pt-24 md:pt-32'}`}>
         {/* Hero Section */}
         <section className={`max-w-[1440px] mx-auto min-h-[calc(100dvh-8rem)] flex items-center justify-center transition-all duration-700 ${showMobileVideo ? 'px-0 md:px-8' : 'px-4 md:px-8'}`}>
           <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center w-full">
@@ -210,21 +210,21 @@ export default function Home() {
           </div>
           <div className="flex w-max animate-marquee will-change-transform">
             {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex shrink-0 items-center gap-10 md:gap-32 px-5 md:px-16">
+              <div key={i} className="flex shrink-0 items-center gap-8 md:gap-32 px-4 md:px-16">
                 {[
-                  { src: "/sponsors/gatorade.svg", alt: "Gatorade", cls: "h-40 max-w-[800px]" },
-                  { src: "/sponsors/don-jacobo.svg", alt: "Don Jacobo", cls: "h-40 max-w-[800px]" },
-                  { src: "/sponsors/mr-jersey.svg", alt: "Mr. Jersey", cls: "h-40 max-w-[800px]" },
-                  { src: "/sponsors/sebastian.svg", alt: "Sebastian", cls: "h-40 max-w-[800px]" },
-                  { src: "/sponsors/tu-licorera.svg", alt: "Tu Licorera", cls: "h-40 max-w-[1200px]" },
-                  { src: "/sponsors/wm.svg", alt: "WM", cls: "h-40 max-w-[800px]" },
+                  { src: "/sponsors/gatorade.svg", alt: "Gatorade", cls: "h-24 md:h-40" },
+                  { src: "/sponsors/don-jacobo.svg", alt: "Don Jacobo", cls: "h-24 md:h-40" },
+                  { src: "/sponsors/mr-jersey.svg", alt: "Mr. Jersey", cls: "h-24 md:h-40" },
+                  { src: "/sponsors/sebastian.svg", alt: "Sebastian", cls: "h-24 md:h-40" },
+                  { src: "/sponsors/tu-licorera.svg", alt: "Tu Licorera", cls: "h-24 md:h-40" },
+                  { src: "/sponsors/wm.svg", alt: "WM", cls: "h-24 md:h-40" },
                 ].map((logo) => (
                   <div key={logo.alt} className="flex items-center justify-center opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
                     <Image
                       src={logo.src}
                       alt={logo.alt}
-                      width={600}
-                      height={300}
+                      width={320}
+                      height={320}
                       className={`object-contain w-auto ${logo.cls}`}
                       unoptimized
                     />

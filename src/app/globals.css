@@ -75,6 +75,7 @@
     color: var(--color-brand-cream);
     max-width: 100vw;
     overflow-x: hidden;
+    overscroll-behavior-x: none;
   }
 }
 @layer utilities {
@@ -94,9 +95,12 @@
     overflow: hidden;
     overflow-x: hidden;
     contain: paint;
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
   }
   .animate-marquee {
     animation: marquee 5.6s linear infinite;
+    touch-action: pan-y;
     will-change: transform;
   }
 }
