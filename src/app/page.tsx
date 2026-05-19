@@ -54,6 +54,7 @@ export default function Home() {
                     src="/video-vertical-hero.webm"
                     nextSectionId="social-proof"
                     variant="desktop"
+                    fallbackFormats={["webm"]}
                   />
                 </div>
                 <div className="absolute -inset-4 bg-brand-purple/20 blur-[100px] -z-10 rounded-full"></div>

@@ -6,10 +6,11 @@ interface HeroVideoProps {
   src: string;
   nextSectionId?: string;
   variant?: "mobile" | "desktop" | "both";
+  fallbackFormats?: ("mp4" | "webm")[];
 }
 
-// src sin extensión, el componente añade .mp4 y .webm como fuentes
-export function HeroVideo({ src, nextSectionId, variant = "both" }: HeroVideoProps) {
+// src sin extensión, el componente añade .mp4 y .webm como fuentes por defecto
+export function HeroVideo({ src, nextSectionId, variant = "both", fallbackFormats = ["mp4", "webm"] }: HeroVideoProps) {
   const [showOverlay, setShowOverlay] = useState(false);
   const [fading, setFading] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
@@ -115,33 +116,34 @@ export function HeroVideo({ src, nextSectionId, variant = "both" }: HeroVideoPro
             Omitir
           </button>
           <video
-            ref={mobileVideoRef}
-            autoPlay
-            muted
-            playsInline
-            onEnded={dismiss}
-            onError={dismiss}
-            className="w-full h-full object-cover"
+          ref={mobileVideoRef}
+          autoPlay
+          muted
+          playsInline
+          onEnded={dismiss}
+          onError={dismiss}
+          className="w-full h-full object-cover"
           >
-            <source src={`${srcBase}.mp4`} type="video/mp4" />
-            <source src={`${srcBase}.webm`} type="video/webm" />
+          {fallbackFormats.map((format) => (
+            <source key={format} src={`${srcBase}.${format}`} type={`video/${format}`} />
+          ))}
           </video>
-        </div>
-      )}
+          </div>
+          )}
 
-      {/* Desktop: video inline */}
-      {(variant === "desktop" || variant === "both") && (
-        <video
+          {/* Desktop: video inline */}
+          {(variant === "desktop" || variant === "both") && (
+          <video
           autoPlay
           muted
           playsInline
           onEnded={handleDesktopEnded}
           className={`${variant === 'both' ? 'hidden md:block ' : ''}w-full h-full absolute inset-0 object-cover`}
-        >
-          <source src={`${srcBase}.mp4`} type="video/mp4" />
-          <source src={`${srcBase}.webm`} type="video/webm" />
-        </video>
-      )}
-    </>
+          >
+          {fallbackFormats.map((format) => (
+          <source key={format} src={`${srcBase}.${format}`} type={`video/${format}`} />
+          ))}
+          </video>
+          )}    </>
   );
 }
