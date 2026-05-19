@@ -8,11 +8,22 @@ import { InstagramFeed } from "@/components/ui/InstagramFeed";
 import { useLanguage } from "@/i18n/LanguageContext";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const { t } = useLanguage();
   const [showMobileVideo, setShowMobileVideo] = useState(true);
+
+  useEffect(() => {
+    if (showMobileVideo && window.innerWidth < 768) {
+      document.body.classList.add("video-playing");
+    } else {
+      document.body.classList.remove("video-playing");
+    }
+    return () => {
+      document.body.classList.remove("video-playing");
+    };
+  }, [showMobileVideo]);
 
   const handleVideoEnded = () => {
     if (window.innerWidth < 768) {
@@ -29,12 +40,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pt-24 md:pt-32 pb-24 md:pb-0">
+      <main className={`transition-all duration-700 pb-24 md:pb-0 ${showMobileVideo ? 'pt-0 md:pt-32' : 'pt-24 md:pt-32'}`}>
         {/* Hero Section */}
-        <section className="max-w-[1440px] mx-auto px-8 min-h-[calc(100dvh-8rem)] flex items-center justify-center">
+        <section className="max-w-[1440px] mx-auto px-4 md:px-8 min-h-[calc(100dvh-8rem)] flex items-center justify-center">
           <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center w-full">
             {/* Columna izquierda (abajo en móvil): textos */}
-            <div className="space-y-8 mt-4 md:mt-0">
+            <div className={`space-y-8 mt-4 md:mt-0 transition-all duration-1000 ${showMobileVideo ? 'opacity-0 translate-y-8 md:opacity-100 md:translate-y-0' : 'opacity-100 translate-y-0'}`}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black font-headline leading-[1.1] md:leading-[0.9] tracking-tighter text-brand-cream text-center md:text-left uppercase">
                 {t.home.hero.title} <span className="text-brand-lemon">{t.home.hero.titleAccent}</span>
               </h1>
@@ -62,19 +73,19 @@ export default function Home() {
             {/* Columna derecha (arriba en móvil): video centrado */}
             <div 
               className={`flex items-center justify-center w-full transition-all duration-1000 ease-in-out origin-top md:max-h-none md:opacity-100 md:overflow-visible md:mb-0
-              ${!showMobileVideo ? 'max-h-0 opacity-0 mb-0 overflow-hidden' : 'max-h-[850px] opacity-100 mb-8'}`}
+              ${!showMobileVideo ? 'max-h-0 opacity-0 mb-0 overflow-hidden' : 'max-h-[100vh] opacity-100 mb-4'}`}
             >
-              <div className="relative group w-full max-w-sm md:max-w-none mx-auto">
+              <div className="relative group w-full md:max-w-none mx-auto flex justify-center">
                 {/* Botón Omitir en móvil */}
                 {showMobileVideo && (
                   <button 
                     onClick={handleSkip}
-                    className="md:hidden absolute top-4 right-4 z-50 text-white/80 hover:text-white text-[10px] font-bold uppercase tracking-widest bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 transition-colors"
+                    className="md:hidden absolute top-6 right-6 z-50 text-white/80 hover:text-white text-[10px] font-bold uppercase tracking-widest bg-black/40 px-4 py-2 rounded-full backdrop-blur-md border border-white/10 transition-colors"
                   >
                     Omitir
                   </button>
                 )}
-                <div className="purple-aura relative z-10 h-[65vh] md:h-[72vh] max-h-[680px] aspect-[9/16] rounded-xl overflow-hidden bg-surface-container-highest border border-outline-variant/15">
+                <div className="purple-aura relative z-10 w-full max-w-[500px] md:max-w-none h-[85vh] md:h-[72vh] md:max-h-[680px] md:aspect-[9/16] rounded-xl overflow-hidden bg-black border border-outline-variant/15">
                   <HeroVideo
                     src="/video-vertical-hero.webm"
                     fallbackFormats={["webm"]}

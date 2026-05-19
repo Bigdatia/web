@@ -86,3 +86,11 @@
     animation: marquee 28s linear infinite;
   }
 }
+
+/* Ocultar barra de navegación superior e inferior mientras el hero video está reproduciéndose en móvil */
+body.video-playing nav {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
