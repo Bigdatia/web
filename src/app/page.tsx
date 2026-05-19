@@ -8,21 +8,33 @@ import { InstagramFeed } from "@/components/ui/InstagramFeed";
 import { useLanguage } from "@/i18n/LanguageContext";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
   const { t } = useLanguage();
+  const [showMobileVideo, setShowMobileVideo] = useState(true);
+
+  const handleVideoEnded = () => {
+    if (window.innerWidth < 768) {
+      setShowMobileVideo(false);
+    } else {
+      document.getElementById("social-proof")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleSkip = () => {
+    setShowMobileVideo(false);
+  };
 
   return (
     <>
       <Navbar />
-      {/* Mobile Hero Video Overlay, placed outside hidden containers to ensure it renders correctly on mobile */}
-      <HeroVideo src="/video-vertical-hero.webm" variant="mobile" />
       <main className="pt-24 md:pt-32 pb-24 md:pb-0">
         {/* Hero Section */}
         <section className="max-w-[1440px] mx-auto px-8 min-h-[calc(100dvh-8rem)] flex items-center justify-center">
-          <div className="grid md:grid-cols-2 gap-8 items-center w-full">
-            {/* Columna izquierda: textos */}
-            <div className="space-y-8">
+          <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center w-full">
+            {/* Columna izquierda (abajo en móvil): textos */}
+            <div className="space-y-8 mt-4 md:mt-0">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black font-headline leading-[1.1] md:leading-[0.9] tracking-tighter text-brand-cream text-center md:text-left uppercase">
                 {t.home.hero.title} <span className="text-brand-lemon">{t.home.hero.titleAccent}</span>
               </h1>
@@ -46,15 +58,27 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            {/* Columna derecha: video centrado — oculto en mobile */}
-            <div className="hidden md:flex items-center justify-center">
-              <div className="relative group">
-                <div className="purple-aura relative z-10 h-[72vh] max-h-[680px] aspect-[9/16] rounded-xl overflow-hidden bg-surface-container-highest border border-outline-variant/15">
+            
+            {/* Columna derecha (arriba en móvil): video centrado */}
+            <div 
+              className={`flex items-center justify-center w-full transition-all duration-1000 ease-in-out origin-top md:max-h-none md:opacity-100 md:overflow-visible md:mb-0
+              ${!showMobileVideo ? 'max-h-0 opacity-0 mb-0 overflow-hidden' : 'max-h-[850px] opacity-100 mb-8'}`}
+            >
+              <div className="relative group w-full max-w-sm md:max-w-none mx-auto">
+                {/* Botón Omitir en móvil */}
+                {showMobileVideo && (
+                  <button 
+                    onClick={handleSkip}
+                    className="md:hidden absolute top-4 right-4 z-50 text-white/80 hover:text-white text-[10px] font-bold uppercase tracking-widest bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 transition-colors"
+                  >
+                    Omitir
+                  </button>
+                )}
+                <div className="purple-aura relative z-10 h-[65vh] md:h-[72vh] max-h-[680px] aspect-[9/16] rounded-xl overflow-hidden bg-surface-container-highest border border-outline-variant/15">
                   <HeroVideo
                     src="/video-vertical-hero.webm"
-                    nextSectionId="social-proof"
-                    variant="desktop"
                     fallbackFormats={["webm"]}
+                    onEnded={handleVideoEnded}
                   />
                 </div>
                 <div className="absolute -inset-4 bg-brand-purple/20 blur-[100px] -z-10 rounded-full"></div>
