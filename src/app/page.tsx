@@ -15,6 +15,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      {/* Mobile Hero Video Overlay, placed outside hidden containers to ensure it renders correctly on mobile */}
+      <HeroVideo src="/video-vertical-hero.webm" variant="mobile" />
       <main className="pt-24 md:pt-32 pb-24 md:pb-0">
         {/* Hero Section */}
         <section className="max-w-[1440px] mx-auto px-8 min-h-[calc(100dvh-8rem)] flex items-center justify-center">
@@ -51,6 +53,7 @@ export default function Home() {
                   <HeroVideo
                     src="/video-vertical-hero.webm"
                     nextSectionId="social-proof"
+                    variant="desktop"
                   />
                 </div>
                 <div className="absolute -inset-4 bg-brand-purple/20 blur-[100px] -z-10 rounded-full"></div>
