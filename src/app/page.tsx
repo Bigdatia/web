@@ -204,7 +204,7 @@ export default function Home() {
         </section>
 
         {/* Ecosystem Section (Brands Marquee) */}
-        <section className="w-full overflow-hidden py-8 bg-surface-container-lowest border-y border-outline-variant/5 mb-40">
+        <section className="w-full marquee-container py-8 bg-surface-container-lowest border-y border-outline-variant/5 mb-40">
           <div className="max-w-[1440px] mx-auto px-8 mb-6">
             <span className="text-brand-purple font-space-grotesk text-sm uppercase tracking-widest">Ecosistema</span>
           </div>
