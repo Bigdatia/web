@@ -39,9 +39,9 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${montserrat.variable} ${spaceGrotesk.variable} dark`}
+      className={`${inter.variable} ${montserrat.variable} ${spaceGrotesk.variable} dark max-w-full overflow-x-hidden`}
     >
-      <body className="font-body bg-background text-on-surface selection:bg-brand-lemon selection:text-on-primary overflow-x-hidden">
+      <body className="font-body bg-background text-on-surface selection:bg-brand-lemon selection:text-on-primary max-w-[100vw] overflow-x-hidden">
         <LanguageProvider>
           {children}
           <BottomNav />

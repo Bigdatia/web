@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className={`transition-all duration-700 pb-24 md:pb-0 ${showMobileVideo ? 'pt-0 md:pt-32' : 'pt-24 md:pt-32'}`}>
+      <main className={`w-full max-w-[100vw] overflow-x-clip transition-all duration-700 pb-24 md:pb-0 ${showMobileVideo ? 'pt-0 md:pt-32' : 'pt-24 md:pt-32'}`}>
         {/* Hero Section */}
         <section className={`max-w-[1440px] mx-auto min-h-[calc(100dvh-8rem)] flex items-center justify-center transition-all duration-700 ${showMobileVideo ? 'px-0 md:px-8' : 'px-4 md:px-8'}`}>
           <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center w-full">
@@ -204,11 +204,11 @@ export default function Home() {
         </section>
 
         {/* Ecosystem Section (Brands Marquee) */}
-        <section className="w-full marquee-container py-8 bg-surface-container-lowest border-y border-outline-variant/5 mb-40">
+        <section className="relative w-full max-w-[100vw] marquee-container py-8 bg-surface-container-lowest border-y border-outline-variant/5 mb-40">
           <div className="max-w-[1440px] mx-auto px-8 mb-6">
             <span className="text-brand-purple font-space-grotesk text-sm uppercase tracking-widest">Ecosistema</span>
           </div>
-          <div className="flex animate-marquee will-change-transform">
+          <div className="flex w-max animate-marquee will-change-transform">
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex shrink-0 items-center gap-10 md:gap-32 px-5 md:px-16">
                 {[
