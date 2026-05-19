@@ -6,14 +6,17 @@ interface HeroVideoProps {
   src: string;
   fallbackFormats?: ("mp4" | "webm")[];
   onEnded?: () => void;
+  autoPlay?: boolean;
 }
 
 // src sin extensión, el componente añade las extensiones indicadas en fallbackFormats
-export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded }: HeroVideoProps) {
+export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded, autoPlay = true }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Autoplay fallback y seguridad (especialmente útil en móviles con ahorro de batería)
   useEffect(() => {
+    if (!autoPlay) return;
+
     const video = videoRef.current;
     if (!video) return;
 
@@ -44,14 +47,14 @@ export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded }: H
     }, 4000);
 
     return () => clearTimeout(checkPlaybackTimeout);
-  }, [onEnded]);
+  }, [onEnded, autoPlay]);
 
   const srcBase = src.replace(/\.(webm|mp4|mov)$/i, "");
 
   return (
     <video
       ref={videoRef}
-      autoPlay
+      autoPlay={autoPlay}
       muted
       playsInline
       onEnded={onEnded}

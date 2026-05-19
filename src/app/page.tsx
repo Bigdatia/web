@@ -10,9 +10,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+// Variable global para detectar si es la primera vez que se carga el módulo (reset tras F5 real)
+let globalVideoPlayedThisSession = false;
+
 export default function Home() {
   const { t } = useLanguage();
-  const [showMobileVideo, setShowMobileVideo] = useState(true);
+  
+  // Si la variable global es falsa, significa que es la primera vez (F5).
+  // Si es verdadera, significa que vino navegando desde otra pestaña mediante React Router.
+  const [isFirstLoad] = useState(!globalVideoPlayedThisSession);
+  
+  // En móvil, solo se muestra (e intenta reproducir) en el first load
+  const [showMobileVideo, setShowMobileVideo] = useState(isFirstLoad);
+
+  useEffect(() => {
+    // Al montar el componente por primera vez en esta sesión de carga, marcamos que ya lo vimos.
+    if (isFirstLoad) {
+      globalVideoPlayedThisSession = true;
+    }
+  }, [isFirstLoad]);
 
   useEffect(() => {
     if (showMobileVideo && window.innerWidth < 768) {
@@ -90,6 +106,7 @@ export default function Home() {
                     src="/video-vertical-hero.webm"
                     fallbackFormats={["webm"]}
                     onEnded={handleVideoEnded}
+                    autoPlay={isFirstLoad}
                   />
                 </div>
                 <div className="absolute -inset-4 bg-brand-purple/20 blur-[100px] -z-10 rounded-full hidden md:block"></div>
