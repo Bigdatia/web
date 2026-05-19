@@ -13,7 +13,7 @@ interface HeroVideoProps {
 // src sin extensión, el componente añade las extensiones indicadas en fallbackFormats
 export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded, autoPlay = true, isPaused = false }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true); // Iniciar siempre silenciado (Opción 2 literal)
   const [showUnmuteButton, setShowUnmuteButton] = useState(false);
 
   // Efecto para pausar el video manualmente cuando se solicite
@@ -23,6 +23,7 @@ export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded, aut
 
     if (isPaused) {
       video.pause();
+      setShowUnmuteButton(false); // Ocultar el botón si está forzado a pausar
     }
   }, [isPaused]);
 
@@ -37,24 +38,14 @@ export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded, aut
 
     const tryPlay = async () => {
       try {
-        // Intenta reproducir con sonido
-        video.muted = false;
-        setIsMuted(false);
+        // Opción 2: Reproducir SIEMPRE en silencio primero para asegurar el autoplay
+        video.muted = true;
+        setIsMuted(true);
         await video.play();
         isPlaying = true;
-        setShowUnmuteButton(false);
+        setShowUnmuteButton(true); // Mostrar siempre el botón de "Tocar para escuchar"
       } catch (err) {
-        console.log("Autoplay con sonido bloqueado. Intentando sin sonido...", err);
-        // Si falla (por políticas del navegador), silencia el video e intenta de nuevo
-        setIsMuted(true);
-        video.muted = true; // Forzar el atributo directamente para el segundo intento
-        try {
-          await video.play();
-          isPlaying = true;
-          setShowUnmuteButton(true); // Mostrar botón de "Tocar para escuchar"
-        } catch (muteErr) {
-          console.log("Autoplay sin sonido también falló:", muteErr);
-        }
+        console.log("Autoplay sin sonido falló:", err);
       }
     };
 
@@ -93,7 +84,6 @@ export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded, aut
     <>
       <video
         ref={videoRef}
-        autoPlay={autoPlay}
         muted={isMuted}
         playsInline
         onEnded={onEnded}

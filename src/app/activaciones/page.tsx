@@ -72,48 +72,81 @@ export default function Activaciones() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
-            <div className="md:col-span-8 md:row-span-2 relative group overflow-hidden bg-surface-container-highest border border-outline-variant border-opacity-15">
-              <Image 
-                alt="Big Event" 
-                className="object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHyOX4K9-dtDY8Sc1F6HHXzN_Fa-6qFddOYTFohDzVse1KYsgJg6NinsqkZiMIL3IqtGRtOtM7K1wFmjH19hHt8pJf_SDo3g6M6_EIaxXgm6-DTeTtt4i1VHlVmPXr5j1bFdfT6Uyd4hEpqtGN8_zieQCC2ssj4Z0_NxVK2Nnw7LKRc0qa5Xbm2nuj39BtZRZbxUOXcC82tLyTrxCHMWZbMUfGJZJPMcFkzOmrdutokkhB34m5tt8Ua2AsCdBeW2kS8garondSbcAC"
-                fill
-                sizes="(max-width: 768px) 100vw, 66vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
-              <div className="absolute bottom-0 left-0 p-10">
+            <a
+              href="https://www.instagram.com/reel/DPC6OHOiXYo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:col-span-8 md:row-span-2 relative group overflow-hidden bg-surface-container-highest border border-outline-variant border-opacity-15 block"
+            >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
+              >
+                <source src="/1.MP4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 pointer-events-none"></div>
+              <div className="absolute bottom-0 left-0 p-10 pointer-events-none">
                 <span className="font-label text-xs uppercase tracking-widest text-primary-fixed mb-2 block">{t.activaciones.portfolio.card1.label}</span>
                 <h3 className="font-headline text-2xl md:text-4xl font-black text-on-surface uppercase mb-4 tracking-tighter">{t.activaciones.portfolio.card1.title}</h3>
                 <p className="text-on-surface-variant max-w-md">{t.activaciones.portfolio.card1.desc}</p>
               </div>
-            </div>
+              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <Icon name="open_in_new" className="w-5 h-5 text-white" />
+              </div>
+            </a>
 
-            <div className="md:col-span-4 md:row-span-1 relative group overflow-hidden bg-surface-container-highest border border-outline-variant border-opacity-15">
-              <Image 
-                alt="VR Experience" 
-                className="object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbuLaKVPf7rq7TaiP5KCpv9DMZUSE60vbvDwv4bgVQG_HNBwnveZxIkGx-8I1UNrDQZs9KOAn1pL5QUYVbyaTQ43WfZ3fCRgXrh-lmefsRDVuzCkHVQmvcuI-_Lk3LP4aMRuhadD868KBb7GL-MSog-i8MTbkHS9uH9SkcLRDnDDCt4ZO9G-_Ub5ltOpbpeqxsuJbV8VXRawtWcbUutzcYGk0l0C4XX27Uc5eaxU_VJvvdM9mfp3pKmV3Qdi9_NvNHLdw9aXZqlA5A"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute top-6 right-6 font-label text-xs text-secondary-fixed">{t.activaciones.portfolio.card2.label}</div>
-              <div className="absolute bottom-6 left-6">
+            <a
+              href="https://www.instagram.com/reel/DRf2v2FifV5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:col-span-4 md:row-span-1 relative group overflow-hidden bg-surface-container-highest border border-outline-variant border-opacity-15 block"
+            >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700"
+              >
+                <source src="/2.MP4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 pointer-events-none"></div>
+              <div className="absolute top-6 right-6 font-label text-xs text-secondary-fixed pointer-events-none">{t.activaciones.portfolio.card2.label}</div>
+              <div className="absolute bottom-6 left-6 pointer-events-none">
                 <h3 className="font-headline text-xl font-bold text-on-surface uppercase">{t.activaciones.portfolio.card2.title}</h3>
               </div>
-            </div>
+              <div className="absolute top-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <Icon name="open_in_new" className="w-5 h-5 text-white" />
+              </div>
+            </a>
 
-            <div className="md:col-span-4 md:row-span-1 relative group overflow-hidden bg-surface-container-highest border border-outline-variant border-opacity-15">
-              <Image 
-                alt="Neon Installation" 
-                className="object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5qvPq_mPyG6aWc35etvURPoCxTlFtnzVlMtJ3nMM5QnQBs4QBbEq_nDT4nCM_EiJDtNtSZktmxtGYawDbSdd6dwGxVQ9nsbUGR7dV9VPD9LuOPpzfC0CSlQCrTXMZFeMk6uNdJBIq-O0qIqglHWnOnywlTF8um7mAnijgPcz4Fk0szRkpkr1gfdIhAS_gY4ulV4pG0XdC1D1Jfu62tQc7BHhYL94g8ILpZs9K0D9H5wPpN6Za9zT9-8RZq9ETkJHFS4_1w5kbg9Ua"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute bottom-6 left-6">
+            <a
+              href="https://www.instagram.com/reel/DSKxq8Uj9Qq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:col-span-4 md:row-span-1 relative group overflow-hidden bg-surface-container-highest border border-outline-variant border-opacity-15 block"
+            >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700"
+              >
+                <source src="/3.MP4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 pointer-events-none"></div>
+              <div className="absolute bottom-6 left-6 pointer-events-none">
                 <h3 className="font-headline text-xl font-bold text-on-surface uppercase">{t.activaciones.portfolio.card3.title}</h3>
               </div>
-            </div>
+              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <Icon name="open_in_new" className="w-5 h-5 text-white" />
+              </div>
+            </a>
 
             <div className="md:col-span-12 md:row-span-1 bg-surface-container-highest border border-outline-variant border-opacity-15 p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
               <div className="absolute -right-20 top-0 w-64 h-64 bg-secondary opacity-10 blur-3xl"></div>
