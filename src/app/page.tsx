@@ -3,7 +3,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Icon } from "@/components/ui/Icon";
-import { YouTubeFacade } from "@/components/ui/YouTubeFacade";
+import { HeroVideo } from "@/components/ui/HeroVideo";
 import { InstagramFeed } from "@/components/ui/InstagramFeed";
 import { useLanguage } from "@/i18n/LanguageContext";
 import Image from "next/image";
@@ -18,45 +18,49 @@ export default function Home() {
       <main className="pt-24 md:pt-32 pb-24 md:pb-0">
         {/* Hero Section */}
         <section className="max-w-[1440px] mx-auto px-8 min-h-[calc(100dvh-8rem)] flex items-center justify-center">
-          <div className="grid md:grid-cols-2 gap-16 items-center w-full">
-          <div className="space-y-8">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black font-headline leading-[1.1] md:leading-[0.9] tracking-tighter text-brand-cream text-center md:text-left uppercase">
-              {t.home.hero.title} <span className="text-brand-lemon">{t.home.hero.titleAccent}</span>
-            </h1>
-            <p className="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed text-center md:text-left mx-auto md:mx-0">
-              {t.home.hero.subtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-4 pt-4">
-              <a 
-                href="https://wa.me/573164856744?text=Hola%2C%20quiero%20iniciar%20una%20estrategia%20con%20BigdatIA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-brand-lemon text-on-primary rounded-full px-8 py-4 font-bold text-lg hover:scale-95 active:scale-90 transition-transform w-full sm:w-auto text-center"
-              >
-                {t.home.hero.cta1}
-              </a>
-              <Link 
-                href="/portafolio"
-                className="border-2 border-brand-purple rounded-full text-brand-purple px-8 py-4 font-bold text-lg hover:bg-brand-purple/10 transition-colors w-full sm:w-auto text-center"
-              >
-                {t.home.hero.cta2}
-              </Link>
+          <div className="grid md:grid-cols-2 gap-8 items-center w-full">
+            {/* Columna izquierda: textos */}
+            <div className="space-y-8">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black font-headline leading-[1.1] md:leading-[0.9] tracking-tighter text-brand-cream text-center md:text-left uppercase">
+                {t.home.hero.title} <span className="text-brand-lemon">{t.home.hero.titleAccent}</span>
+              </h1>
+              <p className="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed text-center md:text-left mx-auto md:mx-0">
+                {t.home.hero.subtitle}
+              </p>
+              <div className="flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-4 pt-4">
+                <a
+                  href="https://wa.me/573164856744?text=Hola%2C%20quiero%20iniciar%20una%20estrategia%20con%20BigdatIA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-brand-lemon text-on-primary rounded-full px-8 py-4 font-bold text-lg hover:scale-95 active:scale-90 transition-transform w-full sm:w-auto text-center"
+                >
+                  {t.home.hero.cta1}
+                </a>
+                <Link
+                  href="/portafolio"
+                  className="border-2 border-brand-purple rounded-full text-brand-purple px-8 py-4 font-bold text-lg hover:bg-brand-purple/10 transition-colors w-full sm:w-auto text-center"
+                >
+                  {t.home.hero.cta2}
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="relative group">
-            <div className="purple-aura relative z-10 aspect-video rounded-xl overflow-hidden bg-surface-container-highest border border-outline-variant/15">
-              <YouTubeFacade 
-                videoId="RQDA5DHNk4M"
-                title="BigdatIA Video Principal"
-              />
+            {/* Columna derecha: video centrado — oculto en mobile */}
+            <div className="hidden md:flex items-center justify-center">
+              <div className="relative group">
+                <div className="purple-aura relative z-10 h-[72vh] max-h-[680px] aspect-[9/16] rounded-xl overflow-hidden bg-surface-container-highest border border-outline-variant/15">
+                  <HeroVideo
+                    src="/video-vertical-hero.webm"
+                    nextSectionId="social-proof"
+                  />
+                </div>
+                <div className="absolute -inset-4 bg-brand-purple/20 blur-[100px] -z-10 rounded-full"></div>
+              </div>
             </div>
-            <div className="absolute -inset-4 bg-brand-purple/20 blur-[100px] -z-10 rounded-full"></div>
-          </div>
           </div>
         </section>
 
         {/* Social Proof / Data Block */}
-        <section className="w-full bg-surface-container-low py-16 mb-32">
+        <section id="social-proof" className="w-full bg-surface-container-low py-16 mb-32">
           <div className="max-w-[1440px] mx-auto px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-black font-headline text-brand-cream tracking-tighter uppercase mb-4">
