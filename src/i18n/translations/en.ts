@@ -25,7 +25,7 @@ export const en: Translations = {
     home: "Home",
     strategy: "Strategy",
     marketing: "Marketing",
-    activations: "Actives",
+    activations: "Activations",
     web: "Web",
     portfolio: "Portfolio",
   },
@@ -385,7 +385,7 @@ export const en: Translations = {
     projects: [
       {
         id: 1,
-        title: "Daisho: What if?",
+        title: "Y si si?",
         category: "video",
         image: "/portfolio-media/Daisho.jpg",
         description: "Music video. Production and post-production with an artistic approach.",

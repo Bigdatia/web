@@ -23,7 +23,7 @@ export const es = {
     home: "Inicio",
     strategy: "Estrategia",
     marketing: "Marketing",
-    activations: "Activos",
+    activations: "Activaciones",
     web: "Web",
     portfolio: "Portafolio",
   },
@@ -383,7 +383,7 @@ export const es = {
     projects: [
       {
         id: 1,
-        title: "Daisho: Y si si?",
+        title: "Y si si?",
         category: "video",
         image: "/portfolio-media/Daisho.jpg",
         description: "Videoclip musical. Producción y post-producción con enfoque artístico.",
