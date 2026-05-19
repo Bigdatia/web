@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const BEHOLD_FEED_URL = "https://feeds.behold.so/LOtyOXLVYX4KYSHEhn0K";
+const BEHOLD_FEED_URL = process.env.NEXT_PUBLIC_BEHOLD_FEED_URL ?? "https://feeds.behold.so/LOtyOXLVYX4KYSHEhn0K";
 
 interface BeholdPost {
   id: string;

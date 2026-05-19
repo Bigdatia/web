@@ -86,7 +86,7 @@ export function WebDemoModal({ isOpen, onClose, demoUrl, demoLabel, accentColor 
           src={demoUrl}
           className="w-full h-full bg-white"
           title={demoLabel}
-          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          sandbox="allow-scripts allow-popups allow-forms"
         />
       </div>
     </div>
