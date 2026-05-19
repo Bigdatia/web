@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface HeroVideoProps {
   src: string;
@@ -12,6 +12,7 @@ interface HeroVideoProps {
 // src sin extensión, el componente añade las extensiones indicadas en fallbackFormats
 export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded, autoPlay = true }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(false);
 
   // Autoplay fallback y seguridad (especialmente útil en móviles con ahorro de batería)
   useEffect(() => {
@@ -24,10 +25,20 @@ export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded, aut
 
     const tryPlay = async () => {
       try {
+        // Intenta reproducir con sonido
         await video.play();
         isPlaying = true;
       } catch (err) {
-        console.log("Autoplay prevented or failed:", err);
+        console.log("Autoplay con sonido bloqueado. Intentando sin sonido...", err);
+        // Si falla (por políticas del navegador), silencia el video e intenta de nuevo
+        setIsMuted(true);
+        video.muted = true; // Forzar el atributo directamente para el segundo intento
+        try {
+          await video.play();
+          isPlaying = true;
+        } catch (muteErr) {
+          console.log("Autoplay sin sonido también falló:", muteErr);
+        }
       }
     };
 
@@ -55,7 +66,7 @@ export function HeroVideo({ src, fallbackFormats = ["mp4", "webm"], onEnded, aut
     <video
       ref={videoRef}
       autoPlay={autoPlay}
-      muted
+      muted={isMuted}
       playsInline
       onEnded={onEnded}
       onError={onEnded}
