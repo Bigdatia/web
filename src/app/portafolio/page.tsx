@@ -227,14 +227,15 @@ export default function PortfolioPage() {
               </h1>
             </div>
 
-            {/* Filters — dropdown en mobile, botones en desktop */}
+            {/* Filters — accordion en mobile, botones en desktop */}
             <div className="w-full xl:w-auto pt-4 xl:pt-0">
 
-              {/* Mobile: dropdown */}
-              <div className="relative md:hidden">
+              {/* Mobile: acordeón inline (sin z-index ni absolute — evita bugs iOS) */}
+              <div className="md:hidden border-2 border-outline-variant overflow-hidden">
+                {/* Trigger */}
                 <button
                   onClick={() => setDropdownOpen((o) => !o)}
-                  className="flex items-center justify-between w-full gap-3 px-5 py-3 border-2 border-outline-variant bg-transparent text-on-surface font-bold uppercase tracking-wider text-sm transition-colors hover:border-brand-lemon"
+                  className="flex items-center justify-between w-full gap-3 px-5 py-4 bg-transparent text-on-surface font-bold uppercase tracking-wider text-sm"
                 >
                   <span className="flex items-center gap-2">
                     <Icon
@@ -247,11 +248,13 @@ export default function PortfolioPage() {
                       }
                       className="w-4 h-4 text-brand-lemon"
                     />
-                    {filter === 'all' ? t.portfolio.filters.all
-                      : filter === 'video' ? t.portfolio.filters.video
-                      : filter === 'social' ? t.portfolio.filters.social
-                      : filter === 'branding' ? t.portfolio.filters.branding
-                      : t.portfolio.filters.web}
+                    <span>
+                      {filter === 'all' ? t.portfolio.filters.all
+                        : filter === 'video' ? t.portfolio.filters.video
+                        : filter === 'social' ? t.portfolio.filters.social
+                        : filter === 'branding' ? t.portfolio.filters.branding
+                        : t.portfolio.filters.web}
+                    </span>
                   </span>
                   <Icon
                     name={dropdownOpen ? 'expand_less' : 'expand_more'}
@@ -259,36 +262,30 @@ export default function PortfolioPage() {
                   />
                 </button>
 
+                {/* Opciones — expansión inline, sin positioning */}
                 {dropdownOpen && (
-                  <>
-                    {/* Backdrop para cerrar al tocar fuera */}
-                    <div
-                      className="fixed inset-0 z-10"
-                      onClick={() => setDropdownOpen(false)}
-                    />
-                    <div className="absolute left-0 right-0 top-full mt-1 z-20 border-2 border-outline-variant bg-surface-container-lowest shadow-[0_8px_32px_rgba(0,0,0,0.6)] overflow-hidden">
-                      {[
-                        { key: 'all', icon: 'grid_view', label: t.portfolio.filters.all },
-                        { key: 'video', icon: 'videocam', label: t.portfolio.filters.video },
-                        { key: 'social', icon: 'smartphone', label: t.portfolio.filters.social },
-                        { key: 'branding', icon: 'edit', label: t.portfolio.filters.branding },
-                        { key: 'web', icon: 'desktop_windows', label: t.portfolio.filters.web },
-                      ].map((opt) => (
-                        <button
-                          key={opt.key}
-                          onClick={() => { setFilter(opt.key); setDropdownOpen(false); }}
-                          className={`flex items-center gap-3 w-full px-5 py-4 text-sm font-bold uppercase tracking-wider transition-colors border-b border-outline-variant/20 last:border-0
-                            ${filter === opt.key
-                              ? 'bg-brand-lemon text-on-primary'
-                              : 'text-on-surface-variant hover:bg-surface-container hover:text-brand-lemon'
-                            }`}
-                        >
-                          <Icon name={opt.icon} className="w-4 h-4" />
-                          {opt.label}
-                        </button>
-                      ))}
-                    </div>
-                  </>
+                  <div className="border-t-2 border-outline-variant">
+                    {[
+                      { key: 'all',      icon: 'grid_view',       label: t.portfolio.filters.all },
+                      { key: 'video',    icon: 'videocam',        label: t.portfolio.filters.video },
+                      { key: 'social',   icon: 'smartphone',      label: t.portfolio.filters.social },
+                      { key: 'branding', icon: 'edit',            label: t.portfolio.filters.branding },
+                      { key: 'web',      icon: 'desktop_windows', label: t.portfolio.filters.web },
+                    ].map((opt) => (
+                      <button
+                        key={opt.key}
+                        onClick={() => { setFilter(opt.key); setDropdownOpen(false); }}
+                        className={`flex items-center gap-3 w-full px-5 py-4 text-sm font-bold uppercase tracking-wider transition-colors border-b border-outline-variant/30 last:border-0
+                          ${filter === opt.key
+                            ? 'bg-brand-lemon text-on-primary'
+                            : 'bg-surface-container-lowest text-on-surface-variant'
+                          }`}
+                      >
+                        <Icon name={opt.icon} className="w-4 h-4" />
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
                 )}
               </div>
 
