@@ -167,7 +167,7 @@ export default function Home() {
                 </video>
               </div>
               <div className="relative z-10">
-                <h3 className="text-3xl font-black font-headline mb-6 text-brand-cream leading-none whitespace-pre-line">{t.home.services.consulting.title}</h3>
+                <h3 className="hidden md:block text-3xl font-black font-headline mb-6 text-brand-cream leading-none whitespace-pre-line">{t.home.services.consulting.title}</h3>
                 <a href="/estrategia" className="inline-flex items-center gap-2 text-brand-lemon font-bold tracking-widest uppercase hover:gap-4 transition-all">
                   {t.home.services.consulting.cta} <Icon name="arrow_forward" className="w-5 h-5" />
                 </a>
