@@ -42,10 +42,10 @@ export default function Home() {
       <Navbar />
       <main className={`transition-all duration-700 pb-24 md:pb-0 ${showMobileVideo ? 'pt-0 md:pt-32' : 'pt-24 md:pt-32'}`}>
         {/* Hero Section */}
-        <section className="max-w-[1440px] mx-auto px-4 md:px-8 min-h-[calc(100dvh-8rem)] flex items-center justify-center">
+        <section className={`max-w-[1440px] mx-auto min-h-[calc(100dvh-8rem)] flex items-center justify-center transition-all duration-700 ${showMobileVideo ? 'px-0 md:px-8' : 'px-4 md:px-8'}`}>
           <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center w-full">
             {/* Columna izquierda (abajo en móvil): textos */}
-            <div className={`space-y-8 mt-4 md:mt-0 transition-all duration-1000 ${showMobileVideo ? 'opacity-0 translate-y-8 md:opacity-100 md:translate-y-0' : 'opacity-100 translate-y-0'}`}>
+            <div className={`space-y-8 mt-4 md:mt-0 transition-all duration-1000 px-4 md:px-0 ${showMobileVideo ? 'opacity-0 translate-y-8 md:opacity-100 md:translate-y-0' : 'opacity-100 translate-y-0'}`}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black font-headline leading-[1.1] md:leading-[0.9] tracking-tighter text-brand-cream text-center md:text-left uppercase">
                 {t.home.hero.title} <span className="text-brand-lemon">{t.home.hero.titleAccent}</span>
               </h1>
@@ -73,7 +73,7 @@ export default function Home() {
             {/* Columna derecha (arriba en móvil): video centrado */}
             <div 
               className={`flex items-center justify-center w-full transition-all duration-1000 ease-in-out origin-top md:max-h-none md:opacity-100 md:overflow-visible md:mb-0
-              ${!showMobileVideo ? 'max-h-0 opacity-0 mb-0 overflow-hidden' : 'max-h-[100vh] opacity-100 mb-4'}`}
+              ${!showMobileVideo ? 'max-h-0 opacity-0 mb-0 overflow-hidden' : 'max-h-[100dvh] opacity-100 mb-4'}`}
             >
               <div className="relative group w-full md:max-w-none mx-auto flex justify-center">
                 {/* Botón Omitir en móvil */}
@@ -85,14 +85,14 @@ export default function Home() {
                     Omitir
                   </button>
                 )}
-                <div className="purple-aura relative z-10 w-full max-w-[500px] md:max-w-none h-[85vh] md:h-[72vh] md:max-h-[680px] md:aspect-[9/16] rounded-xl overflow-hidden bg-black border border-outline-variant/15">
+                <div className="purple-aura relative z-10 w-[100vw] max-w-[100vw] md:max-w-none h-[100dvh] md:h-[72vh] md:max-h-[680px] md:aspect-[9/16] rounded-none md:rounded-xl overflow-hidden bg-black md:border border-outline-variant/15">
                   <HeroVideo
                     src="/video-vertical-hero.webm"
                     fallbackFormats={["webm"]}
                     onEnded={handleVideoEnded}
                   />
                 </div>
-                <div className="absolute -inset-4 bg-brand-purple/20 blur-[100px] -z-10 rounded-full"></div>
+                <div className="absolute -inset-4 bg-brand-purple/20 blur-[100px] -z-10 rounded-full hidden md:block"></div>
               </div>
             </div>
           </div>
