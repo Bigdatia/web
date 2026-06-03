@@ -60,9 +60,14 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <LanguageSwitch />
-          <button className="hidden sm:block bg-brand-lemon text-on-primary px-6 py-2 rounded-full font-bold hover:scale-95 active:scale-90 transition-transform text-sm">
+          <a 
+            href="https://wa.me/573164856744?text=Hola%2C%20quiero%20empezar%20un%20proyecto%20con%20BigdatIA" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hidden sm:block bg-brand-lemon text-on-primary px-6 py-2 rounded-full font-bold hover:scale-95 active:scale-90 transition-transform text-sm"
+          >
             {t.nav.getStarted}
-          </button>
+          </a>
           
           {/* Mobile Menu Toggle */}
           <button 
@@ -112,9 +117,15 @@ export function Navbar() {
             <div className="mt-4">
               <LanguageSwitch />
             </div>
-            <button className="mt-4 bg-brand-lemon text-on-primary px-10 py-4 rounded-full font-bold text-xl active:scale-95 transition-transform">
+            <a 
+              href="https://wa.me/573164856744?text=Hola%2C%20quiero%20empezar%20un%20proyecto%20con%20BigdatIA" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mt-4 bg-brand-lemon text-on-primary px-10 py-4 rounded-full font-bold text-xl active:scale-95 transition-transform"
+              onClick={() => setIsMenuOpen(false)}
+            >
               {t.nav.getStarted}
-            </button>
+            </a>
           </div>
 
           <div className="absolute bottom-12 text-brand-cream/30 font-space-grotesk text-[10px] tracking-[0.3em] uppercase">

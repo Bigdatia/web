@@ -7,7 +7,7 @@ export const es = {
     activations: "Activaciones",
     web: "Web",
     portfolio: "Portafolio",
-    getStarted: "Comenzar",
+    getStarted: "Comencemos",
   },
   footer: {
     location: "Bucaramanga, Colombia",
